@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rakshith Chandupatla — Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* ── SCREEN VIEW ─────────────────────────────── */
+    :root {
+      --accent:  #00d4aa;
+      --text:    #1a1f2e;
+      --muted:   #4a5568;
+      --border:  #e2e8f0;
+      --bg:      #f8fafc;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 13.5px;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.55;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+
+    /* Screen wrapper */
+    .page-wrapper {
+      max-width: 820px;
+      margin: 32px auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 40px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    /* Print bar (hidden in print) */
+    .print-bar {
+      background: var(--text);
+      padding: 12px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .print-bar span {
+      color: #8b949e;
+      font-size: 13px;
+    }
+
+    .print-bar span strong { color: #00d4aa; }
+
+    .btn-print {
+      background: var(--accent);
+      color: #050a0e;
+      border: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 8px 22px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn-print:hover { background: #00f0c2; }
+
+    /* Resume body */
+    .resume {
+      padding: 40px 48px 48px;
+    }
+
+    /* Header */
+    .r-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-bottom: 20px;
+      border-bottom: 2px solid var(--accent);
+      margin-bottom: 24px;
+      gap: 20px;
+    }
+
+    .r-name {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+    }
+
+    .r-title {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--accent);
+      margin-top: 4px;
+      letter-spacing: 0.3px;
+    }
+
+    .r-contact {
+      text-align: right;
+      font-size: 12.5px;
+      color: var(--muted);
+      line-height: 1.8;
+      flex-shrink: 0;
+    }
+
+    .r-contact a { color: var(--muted); }
+    .r-contact a:hover { color: var(--accent); }
+
+    /* Sections */
+    .r-section {
+      margin-bottom: 22px;
+    }
+
+    .r-section-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 5px;
+      margin-bottom: 13px;
+    }
+
+    /* Summary */
+    .r-summary {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    /* Experience & Education entries */
+    .r-entry { margin-bottom: 16px; }
+
+    .r-entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 3px;
+    }
+
+    .r-entry-role {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .r-entry-date {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+      white-space: nowrap;
+      flex-shrink: 0;
+      padding-top: 2px;
+    }
+
+    .r-entry-company {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .r-entry ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .r-entry li {
+      font-size: 12.5px;
+      color: var(--muted);
+      padding-left: 14px;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .r-entry li::before {
+      content: '▸';
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-size: 10px;
+      top: 2px;
+    }
+
+    .r-entry li strong { color: var(--text); font-weight: 600; }
+
+    /* Tags */
+    .r-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 7px;
+    }
+
+    .r-tag {
+      font-size: 10.5px;
+      font-weight: 500;
+      padding: 2px 8px;
+      border-radius: 12px;
+      background: #f0fdfb;
+      border: 1px solid #b2f5ea;
+      color: #0d9488;
+    }
+
+    /* Education */
+    .edu-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .edu-degree { font-size: 14px; font-weight: 700; color: var(--text); }
+    .edu-school { font-size: 12.5px; color: var(--accent); font-weight: 600; margin-top: 2px; }
+    .edu-detail { font-size: 12px; color: var(--muted); margin-top: 2px; }
+    .edu-date {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* Skills grid */
+    .skills-table {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px 32px;
+    }
+
+    .skill-row { display: flex; flex-direction: column; gap: 3px; }
+    .skill-label { font-size: 11.5px; font-weight: 600; color: var(--text); }
+    .skill-value { font-size: 12px; color: var(--muted); }
+
+    /* Projects grid */
+    .proj-entry { margin-bottom: 12px; }
+
+    .proj-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 3px;
+    }
+
+    .proj-name { font-size: 13px; font-weight: 700; color: var(--text); }
+
+    .proj-live {
+      font-size: 10px;
+      font-weight: 700;
+      color: #16a34a;
+      background: #dcfce7;
+      border: 1px solid #86efac;
+      border-radius: 10px;
+      padding: 1px 7px;
+      letter-spacing: 0.5px;
+    }
+
+    .proj-desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+    .proj-link {
+      font-size: 11px;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--accent);
+    }
+
+    /* ── PRINT STYLES ─────────────────────────────── */
+    @media print {
+      @page {
+        size: Letter;
+        margin: 18mm 16mm 18mm 16mm;
+      }
+
+      body { background: #fff; font-size: 12px; }
+
+      .print-bar { display: none !important; }
+
+      .page-wrapper {
+        max-width: 100%;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .resume { padding: 0; }
+
+      .r-section { break-inside: avoid; }
+      .r-entry   { break-inside: avoid; }
+      .proj-entry { break-inside: avoid; }
+
+      a { color: inherit !important; }
+      .proj-link { color: #0d9488 !important; }
+    }
+
+    @media (max-width: 640px) {
+      .resume { padding: 28px 24px; }
+      .r-header { flex-direction: column; }
+      .r-contact { text-align: left; }
+      .skills-table { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-wrapper">
+
+  <!-- Print bar (screen only) -->
+  <div class="print-bar">
+    <span>📄 <strong>Tip:</strong> Click "Save as PDF" → set Destination to "Save as PDF" in the print dialog</span>
+    <button class="btn-print" onclick="window.print()">🖨 Save as PDF</button>
+  </div>
+
+  <div class="resume">
+
+    <!-- HEADER -->
+    <div class="r-header">
+      <div>
+        <div class="r-name">Rakshith Chandupatla</div>
+        <div class="r-title">Data Analyst &amp; ML Engineer · Healthcare Analytics</div>
+      </div>
+      <div class="r-contact">
+        Jersey City, NJ<br />
+        <a href="mailto:rakshithchandupatla1@gmail.com">rakshithchandupatla1@gmail.com</a><br />
+        862-215-6222<br />
+        <a href="https://linkedin.com/in/rakshith-ch" target="_blank">linkedin.com/in/rakshith-ch</a><br />
+        <a href="https://github.com/Rakshithch" target="_blank">github.com/Rakshithch</a><br />
+        <a href="https://rakshithch.github.io" target="_blank">rakshithch.github.io</a>
+      </div>
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="r-section">
+      <div class="r-section-title">Summary</div>
+      <p class="r-summary">
+        Data Analyst &amp; ML Engineer with 3+ years of experience in healthcare analytics, specializing in
+        ML-powered claims processing, population health modeling, and HIPAA-compliant data pipelines.
+        Reduced claim denials by <strong>18%</strong> at Change Healthcare using machine learning on EDI 837/835 data.
+        Built predictive population health models achieving <strong>ROC-AUC 0.80–0.90</strong> at Optum.
+        M.S. Computer Science, Pace University (GPA 3.90/4.00). Open to Data Analyst, ML Engineer,
+        Analytics Engineer, and Healthcare Data roles.
+      </p>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <div class="r-section">
+      <div class="r-section-title">Experience</div>
+
+      <div class="r-entry">
+        <div class="r-entry-header">
+          <div class="r-entry-role">Data Analyst</div>
+          <div class="r-entry-date">Jun 2025 – Present</div>
+        </div>
+        <div class="r-entry-company">Change Healthcare</div>
+        <ul>
+          <li>Built ML-powered denial prevention system reducing claim denials by <strong>18%</strong> across payer pipelines</li>
+          <li>Engineered predictive features from ASC X12 EDI (837/835) transaction data using Python</li>
+          <li>Designed end-to-end HIPAA-compliant data pipelines for high-volume claims processing</li>
+          <li>Created Tableau and Power BI dashboards surfacing denial trends to executive stakeholders</li>
+        </ul>
+        <div class="r-tags">
+          <span class="r-tag">Python</span><span class="r-tag">Machine Learning</span>
+          <span class="r-tag">ASC X12 EDI 837/835</span><span class="r-tag">HIPAA</span>
+          <span class="r-tag">Tableau</span><span class="r-tag">Power BI</span><span class="r-tag">SQL</span>
+        </div>
+      </div>
+
+      <div class="r-entry">
+        <div class="r-entry-header">
+          <div class="r-entry-role">Data Analyst</div>
+          <div class="r-entry-date">Aug 2024 – May 2025</div>
+        </div>
+        <div class="r-entry-company">UnitedHealth Group / Optum</div>
+        <ul>
+          <li>Developed predictive population health models achieving <strong>ROC-AUC 0.80–0.90</strong> using Scikit-learn</li>
+          <li>Built SQL + Python ETL pipelines processing claims and eligibility data for 1M+ members</li>
+          <li>Delivered HEDIS quality measure reporting and risk adjustment analytics for compliance teams</li>
+          <li>Automated reporting workflows, reducing manual effort by <strong>60%</strong></li>
+        </ul>
+        <div class="r-tags">
+          <span class="r-tag">Python</span><span class="r-tag">SQL</span>
+          <span class="r-tag">Scikit-learn</span><span class="r-tag">HEDIS</span>
+          <span class="r-tag">Risk Adjustment</span><span class="r-tag">ETL</span><span class="r-tag">AWS</span>
+        </div>
+      </div>
+
+      <div class="r-entry">
+        <div class="r-entry-header">
+          <div class="r-entry-role">Data Engineer</div>
+          <div class="r-entry-date">May 2022 – Nov 2022</div>
+        </div>
+        <div class="r-entry-company">Phoenix Global</div>
+        <ul>
+          <li>Designed Hadoop-based data integration pipelines ingesting and transforming large-scale datasets</li>
+          <li>Built Power BI dashboards for operational and financial reporting used by leadership teams</li>
+          <li>Automated EDA workflows with Python, reducing analysis turnaround time by <strong>40%</strong></li>
+        </ul>
+        <div class="r-tags">
+          <span class="r-tag">Hadoop</span><span class="r-tag">Python</span>
+          <span class="r-tag">Power BI</span><span class="r-tag">Data Pipelines</span><span class="r-tag">EDA</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="r-section">
+      <div class="r-section-title">Education</div>
+      <div class="edu-row">
+        <div>
+          <div class="edu-degree">Master of Science — Computer Science</div>
+          <div class="edu-school">Pace University, New York, NY</div>
+          <div class="edu-detail">GPA: 3.90 / 4.00 · Machine Learning, Deep Learning, Healthcare Analytics, NLP, Computer Vision, Big Data</div>
+        </div>
+        <div class="edu-date">May 2025</div>
+      </div>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="r-section">
+      <div class="r-section-title">Featured Projects</div>
+
+      <div class="proj-entry">
+        <div class="proj-header">
+          <span class="proj-name">Healthcare Claims Dashboard</span>
+          <span class="proj-live">● LIVE</span>
+        </div>
+        <div class="proj-desc">ML-powered claims analytics dashboard with denial prediction, revenue cycle KPIs, and Plotly visualizations. Built with Python, Streamlit, Scikit-learn, Random Forest.</div>
+        <div class="proj-link">https://healthcare-claims-dashboard-bhxjqyzktp7ki52i4upfol.streamlit.app</div>
+      </div>
+
+      <div class="proj-entry">
+        <div class="proj-header">
+          <span class="proj-name">Healthcare RAG Q&amp;A App</span>
+          <span class="proj-live">● LIVE</span>
+        </div>
+        <div class="proj-desc">RAG application for querying healthcare documents using LangChain, FAISS vector search, HuggingFace models, and Streamlit.</div>
+        <div class="proj-link">https://healthcare-rag-cxha667k82f6yanv8cwd3r.streamlit.app</div>
+      </div>
+
+      <div class="proj-entry">
+        <div class="proj-header"><span class="proj-name">MindWell AI — Mental Health Analytics</span></div>
+        <div class="proj-desc">NLP-powered capstone platform for sentiment analysis and well-being trend detection. Python, NLP, JavaScript.</div>
+      </div>
+
+      <div class="proj-entry">
+        <div class="proj-header"><span class="proj-name">Face Detection (WIDER FACE) &amp; Object Detection (Faster R-CNN)</span></div>
+        <div class="proj-desc">Deep learning computer vision pipelines using PyTorch, Faster R-CNN, ResNet-50, and transfer learning for face/object detection and pothole segmentation.</div>
+      </div>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="r-section">
+      <div class="r-section-title">Technical Skills</div>
+      <div class="skills-table">
+        <div class="skill-row">
+          <span class="skill-label">Languages &amp; Query</span>
+          <span class="skill-value">Python, SQL, TypeScript, JavaScript</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">ML / AI</span>
+          <span class="skill-value">Scikit-learn, PyTorch, TensorFlow, LangChain, FAISS, HuggingFace, NLP</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Data &amp; Visualization</span>
+          <span class="skill-value">Pandas, NumPy, Tableau, Power BI, Streamlit, Plotly</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Engineering &amp; Cloud</span>
+          <span class="skill-value">AWS S3/EC2, Docker, Hadoop, MySQL, MongoDB, Jenkins, Git</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Healthcare Domain</span>
+          <span class="skill-value">HIPAA, ASC X12 EDI (837/835), HEDIS, Risk Adjustment, Claims Analytics</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Certifications / Standards</span>
+          <span class="skill-value">HIPAA Compliance, Population Health Modeling, Revenue Cycle Analytics</span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /.resume -->
+</div><!-- /.page-wrapper -->
+
+</body>
+</html>
