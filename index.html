@@ -1898,11 +1898,30 @@
         <button class="filter-btn" data-filter="ml">ML / AI</button>
         <button class="filter-btn" data-filter="cv">Computer Vision</button>
         <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+        <button class="filter-btn" data-filter="dataeng">Data Engineering</button>
       </div>
 
       <div class="projects-grid" id="projectsGrid">
 
-        <!-- 1. Healthcare Claims Dashboard — FEATURED LIVE -->
+        <!-- 1. Healthcare Claims Analytics Pipeline — FEATURED -->
+        <article class="project-card featured reveal" data-category="dataeng" aria-label="Healthcare Claims Analytics Pipeline project">
+          <div class="project-icon">🏗️</div>
+          <h3 class="project-name">Healthcare Claims Analytics Pipeline</h3>
+          <p class="project-desc">Production-grade ETL pipeline processing healthcare claims data into a PostgreSQL star schema. Computes HEDIS quality metrics, orchestrates multi-stage transformations via SQLAlchemy, and ships as a fully containerized Docker service.</p>
+          <div class="project-tags">
+            <span class="tag accent">Python</span>
+            <span class="tag accent">PostgreSQL</span>
+            <span class="tag">SQLAlchemy</span>
+            <span class="tag">Docker</span>
+            <span class="tag">HEDIS</span>
+            <span class="tag">Star Schema</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Rakshithch/healthcare-claims-pipeline" target="_blank" rel="noopener" class="btn-project secondary">⌥ GitHub</a>
+          </div>
+        </article>
+
+        <!-- 2. Healthcare Claims Dashboard — FEATURED LIVE -->
         <article class="project-card featured reveal" data-category="live ml" aria-label="Healthcare Claims Dashboard project">
           <div class="live-badge"><span class="dot"></span>LIVE</div>
           <div class="project-icon">🏥</div>
