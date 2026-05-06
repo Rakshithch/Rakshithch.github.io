@@ -3,12 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rakshith Chandupatla — Data Engineer & Analyst</title>
-  <meta name="description" content="Rakshith Chandupatla — Data Engineer and Analyst specializing in Snowflake, dbt, PySpark, Databricks, and healthcare analytics. Based in Jersey City, NJ." />
-  <meta name="keywords" content="Data Engineer, Analytics Engineer, Snowflake, dbt, PySpark, Databricks, Delta Lake, AWS, Healthcare Analytics, Rakshith Chandupatla" />
+  <title>Rakshith Chandupatla — Healthcare Data Analyst</title>
+  <meta name="description" content="Healthcare Data Analyst specializing in SQL, Python, Power BI, Tableau, claims analytics, HEDIS reporting, and ML-assisted denial prevention. Based in Jersey City, NJ." />
+  <meta name="keywords" content="Data Analyst, Healthcare Data Analyst, BI Analyst, SQL, Python, Power BI, Tableau, Claims Analytics, HEDIS, HIPAA, Rakshith Chandupatla" />
+  <link rel="canonical" href="https://rakshithch.github.io/" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Rakshith Chandupatla — Healthcare Data Analyst" />
+  <meta property="og:description" content="SQL, Python, Power BI/Tableau, claims analytics, HEDIS reporting, and ML-assisted healthcare analytics." />
+  <meta property="og:url" content="https://rakshithch.github.io/" />
+  <meta property="og:image" content="https://rakshithch.github.io/assets/social-card.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rakshith Chandupatla — Healthcare Data Analyst" />
+  <meta name="twitter:description" content="Data Analyst focused on healthcare claims, KPI dashboards, SQL/Python analytics, and denial prevention." />
+  <meta name="twitter:image" content="https://rakshithch.github.io/assets/social-card.svg" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Rakshith Chandupatla",
+    "jobTitle": "Healthcare Data Analyst",
+    "url": "https://rakshithch.github.io/",
+    "email": "mailto:rakshith.ch04@gmail.com",
+    "telephone": "+1-862-215-6222",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Jersey City",
+      "addressRegion": "NJ",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://linkedin.com/in/rakshith-ch",
+      "https://github.com/Rakshithch"
+    ],
+    "knowsAbout": ["Healthcare analytics", "SQL", "Python", "Power BI", "Tableau", "Claims analytics", "HEDIS", "HIPAA", "Machine learning"]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&amp;family=DM+Mono:wght@300;400;500&amp;family=Outfit:wght@300;400;500;600&amp;display=swap" rel="stylesheet" />
   <style>
     :root {
       --void: #020408;
@@ -321,7 +354,7 @@
     .stat-label {
       font-family: var(--font-mono);
       font-size: 10px;
-      color: var(--text-3);
+      color: var(--text-2);
       letter-spacing: 2px;
       text-transform: uppercase;
     }
@@ -331,7 +364,7 @@
       position: absolute; bottom: 40px; left: 5%;
       font-family: var(--font-mono);
       font-size: 10px;
-      color: var(--text-3);
+      color: var(--text-2);
       letter-spacing: 3px;
       text-transform: uppercase;
       display: flex; align-items: center; gap: 12px;
@@ -345,6 +378,45 @@
     @keyframes scrollPulse {
       0%, 100% { opacity: 0.3; width: 40px; }
       50% { opacity: 1; width: 60px; }
+    }
+
+    .impact-strip {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      margin: -40px 5% 0;
+      border: 1px solid var(--border);
+      background: var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .impact-item {
+      background: rgba(6,13,20,0.96);
+      padding: 22px 24px;
+      min-height: 120px;
+    }
+    .impact-metric {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--cyan);
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    .impact-label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--text-2);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .impact-copy {
+      font-size: 13px;
+      color: var(--text-2);
+      line-height: 1.55;
     }
 
     /* ===== SECTION SHARED ===== */
@@ -733,6 +805,29 @@
       line-height: 1.7;
       flex: 1;
     }
+    .project-proof {
+      display: grid;
+      gap: 8px;
+      padding: 14px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: rgba(0,200,255,0.035);
+    }
+    .proof-row {
+      display: grid;
+      grid-template-columns: 58px 1fr;
+      gap: 10px;
+      font-size: 12px;
+      color: var(--text-2);
+      line-height: 1.45;
+    }
+    .proof-label {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      color: var(--cyan);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
     .project-tech { display: flex; flex-wrap: wrap; gap: 5px; }
     .project-tech span {
       font-family: var(--font-mono);
@@ -840,14 +935,14 @@
     .footer-left {
       font-family: var(--font-mono);
       font-size: 12px;
-      color: var(--text-3);
+      color: var(--text-2);
     }
     .footer-left span { color: var(--cyan); }
     .footer-right { display: flex; gap: 24px; }
     .footer-right a {
       font-family: var(--font-mono);
       font-size: 11px;
-      color: var(--text-3);
+      color: var(--text-2);
       letter-spacing: 1px;
       text-transform: uppercase;
       transition: color 0.3s;
@@ -883,6 +978,7 @@
     /* ===== RESPONSIVE ===== */
     @media (max-width: 1024px) {
       .hero-stats { display: none; }
+      .impact-strip { grid-template-columns: repeat(2, 1fr); }
       .projects-grid { grid-template-columns: repeat(2, 1fr); }
       .stack-grid { grid-template-columns: repeat(2, 1fr); }
     }
@@ -893,6 +989,7 @@
       .about-photo-frame { display: none; }
       .exp-item { grid-template-columns: 1fr; }
       .exp-left { border-right: none; border-bottom: 1px solid var(--border); }
+      .impact-strip { margin-top: 0; grid-template-columns: 1fr; }
       .projects-grid { grid-template-columns: 1fr; }
       .stack-grid { grid-template-columns: 1fr 1fr; }
     }
@@ -927,7 +1024,7 @@
   <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
 
-  <div class="hero-eyebrow">Available for hire</div>
+  <div class="hero-eyebrow">Open to Data Analyst, BI Analyst, Healthcare Analytics, and Analytics Engineer roles</div>
 
   <h1 class="hero-name">
     <div class="line-1">Rakshith</div>
@@ -935,21 +1032,23 @@
   </h1>
 
   <div class="hero-title">
-    <span>Data Engineer</span>
+    <span>Healthcare Data Analyst</span>
     <span class="hero-title-sep">/</span>
-    <span>Analytics Engineer</span>
+    <span>SQL &amp; Python</span>
     <span class="hero-title-sep">/</span>
-    <span>Healthcare Data</span>
+    <span>Power BI &amp; Tableau</span>
   </div>
 
   <p class="hero-desc">
-    Building <strong>production-grade data pipelines</strong> on Snowflake, dbt, PySpark & AWS.
-    3+ years in healthcare analytics — X12 EDI, HEDIS, HIPAA.
-    M.S. Computer Science, Pace University. Based in <strong>Jersey City, NJ</strong>.
+    Turning healthcare claims, HEDIS, and revenue-cycle data into
+    <strong>decision-ready dashboards, SQL/Python analysis, and ML-assisted denial insights</strong>.
+    3+ years across HIPAA-aligned analytics, executive reporting, and claims operations.
+    Based in <strong>Jersey City, NJ</strong>.
   </p>
 
   <div class="hero-ctas">
     <a href="#projects" class="btn-primary">View Projects →</a>
+    <a href="resume.html" class="btn-outline" target="_blank">Download Resume ↗</a>
     <a href="#contact" class="btn-outline">Get In Touch</a>
   </div>
 
@@ -978,6 +1077,29 @@
   </div>
 </section>
 
+<div class="impact-strip" aria-label="Business impact highlights">
+  <div class="impact-item">
+    <div class="impact-metric">18%</div>
+    <div class="impact-label">Denial Reduction</div>
+    <div class="impact-copy">Claims ML and denial-driver analysis for payer operations.</div>
+  </div>
+  <div class="impact-item">
+    <div class="impact-metric">35%</div>
+    <div class="impact-label">Workflow Automation</div>
+    <div class="impact-copy">Python/AWS automation reduced recurring manual processing.</div>
+  </div>
+  <div class="impact-item">
+    <div class="impact-metric">5+</div>
+    <div class="impact-label">Business Units</div>
+    <div class="impact-copy">Power BI/Tableau KPI reporting for healthcare leadership teams.</div>
+  </div>
+  <div class="impact-item">
+    <div class="impact-metric">30%</div>
+    <div class="impact-label">SQL Performance</div>
+    <div class="impact-copy">Optimized joins, CTEs, and window queries for population health reporting.</div>
+  </div>
+</div>
+
 <!-- ABOUT -->
 <section id="about">
   <div class="container">
@@ -986,16 +1108,16 @@
       <div class="about-left reveal">
         <div class="about-photo-frame">
           <div class="about-photo-placeholder">
-            <img src="assets/profile.jpg" alt="Rakshith Chandupatla"
+            <img src="assets/profile.svg" alt="Rakshith Chandupatla profile illustration"
               onerror="this.style.display='none'; this.parentElement.textContent='RC';" />
           </div>
         </div>
         <div class="about-corner">Jersey City, NJ</div>
       </div>
       <div class="about-right">
-        <h2 class="section-title reveal">Building data<br/><em>infrastructure</em><br/>that scales.</h2>
+        <h2 class="section-title reveal">Turning data<br/><em>signals</em><br/>into decisions.</h2>
         <p class="about-bio reveal reveal-delay-1">
-          I'm a <strong>Data Engineer and Analytics Engineer</strong> with 3+ years building production-grade pipelines and cloud data warehouses in healthcare. Currently at <strong>Change Healthcare</strong>, previously <strong>Optum / UnitedHealth Group</strong>. My work sits at the intersection of modern data engineering and healthcare domain expertise — X12 EDI claims, HEDIS metrics, HIPAA-compliant architectures.
+          I'm a <strong>Healthcare Data Analyst</strong> with 3+ years translating claims, population health, and revenue-cycle data into trusted dashboards, KPI narratives, and predictive insights. Currently at <strong>Change Healthcare</strong>, previously <strong>Optum / UnitedHealth Group</strong>. My edge is analyst storytelling backed by SQL, Python, healthcare domain knowledge, and ML/data-engineering depth.
         </p>
         <div class="about-facts reveal reveal-delay-2">
           <div class="fact"><span class="fact-icon">◈</span><span>Open to relocation anywhere in the US</span></div>
@@ -1022,6 +1144,42 @@
     <h2 class="section-title reveal">Tools I<br/><em>work with</em></h2>
     <div class="stack-grid reveal reveal-delay-1">
       <div class="stack-cell">
+        <div class="stack-icon">🗄️</div>
+        <div class="stack-name">SQL</div>
+        <div class="stack-desc">CTEs · Window functions · Query tuning</div>
+        <div class="stack-level"><div class="stack-level-fill" data-w="92"></div></div>
+      </div>
+      <div class="stack-cell">
+        <div class="stack-icon">📊</div>
+        <div class="stack-name">Power BI</div>
+        <div class="stack-desc">DAX · KPI dashboards · Executive reporting</div>
+        <div class="stack-level"><div class="stack-level-fill" data-w="86"></div></div>
+      </div>
+      <div class="stack-cell">
+        <div class="stack-icon">📈</div>
+        <div class="stack-name">Tableau</div>
+        <div class="stack-desc">Trend analysis · Denial drivers · Healthcare KPIs</div>
+        <div class="stack-level"><div class="stack-level-fill" data-w="85"></div></div>
+      </div>
+      <div class="stack-cell">
+        <div class="stack-icon">🐍</div>
+        <div class="stack-name">Python</div>
+        <div class="stack-desc">Pandas · NumPy · EDA · Automation</div>
+        <div class="stack-level"><div class="stack-level-fill" data-w="95"></div></div>
+      </div>
+      <div class="stack-cell">
+        <div class="stack-icon">🏥</div>
+        <div class="stack-name">Claims Analytics</div>
+        <div class="stack-desc">X12 837/835 · HEDIS · Denial analysis</div>
+        <div class="stack-level"><div class="stack-level-fill" data-w="90"></div></div>
+      </div>
+      <div class="stack-cell">
+        <div class="stack-icon">🤖</div>
+        <div class="stack-name">ML / AI</div>
+        <div class="stack-desc">Scikit-learn · RAG · Denial risk models</div>
+        <div class="stack-level"><div class="stack-level-fill" data-w="85"></div></div>
+      </div>
+      <div class="stack-cell">
         <div class="stack-icon">❄️</div>
         <div class="stack-name">Snowflake</div>
         <div class="stack-desc">Cloud DWH · Star schema · Analytical views</div>
@@ -1030,19 +1188,19 @@
       <div class="stack-cell">
         <div class="stack-icon">🔧</div>
         <div class="stack-name">dbt</div>
-        <div class="stack-desc">Staging/marts layers · Schema tests · Documentation</div>
+        <div class="stack-desc">Staging/marts layers · Schema tests · Docs</div>
         <div class="stack-level"><div class="stack-level-fill" data-w="78"></div></div>
       </div>
       <div class="stack-cell">
         <div class="stack-icon">⚡</div>
         <div class="stack-name">PySpark</div>
-        <div class="stack-desc">DataFrames · Window functions · Spark SQL</div>
+        <div class="stack-desc">Spark SQL · Provider rankings · Batch analytics</div>
         <div class="stack-level"><div class="stack-level-fill" data-w="78"></div></div>
       </div>
       <div class="stack-cell">
         <div class="stack-icon">🔷</div>
         <div class="stack-name">Databricks</div>
-        <div class="stack-desc">Delta Lake · Serverless compute · Notebooks</div>
+        <div class="stack-desc">Delta Lake · Notebooks · Analytics workloads</div>
         <div class="stack-level"><div class="stack-level-fill" data-w="75"></div></div>
       </div>
       <div class="stack-cell">
@@ -1052,46 +1210,10 @@
         <div class="stack-level"><div class="stack-level-fill" data-w="80"></div></div>
       </div>
       <div class="stack-cell">
-        <div class="stack-icon">🐍</div>
-        <div class="stack-name">Python</div>
-        <div class="stack-desc">Pandas · NumPy · PySpark · ETL pipelines</div>
-        <div class="stack-level"><div class="stack-level-fill" data-w="95"></div></div>
-      </div>
-      <div class="stack-cell">
-        <div class="stack-icon">🗄️</div>
-        <div class="stack-name">SQL</div>
-        <div class="stack-desc">PostgreSQL · Oracle · SQL Server · CTEs</div>
-        <div class="stack-level"><div class="stack-level-fill" data-w="92"></div></div>
-      </div>
-      <div class="stack-cell">
-        <div class="stack-icon">📊</div>
-        <div class="stack-name">Power BI</div>
-        <div class="stack-desc">DAX · Star schema · Executive dashboards</div>
-        <div class="stack-level"><div class="stack-level-fill" data-w="82"></div></div>
-      </div>
-      <div class="stack-cell">
-        <div class="stack-icon">📈</div>
-        <div class="stack-name">Tableau</div>
-        <div class="stack-desc">Desktop/Server · KPI tracking · Healthcare</div>
-        <div class="stack-level"><div class="stack-level-fill" data-w="85"></div></div>
-      </div>
-      <div class="stack-cell">
-        <div class="stack-icon">🏥</div>
-        <div class="stack-name">X12 EDI</div>
-        <div class="stack-desc">837/835/834 · HEDIS · ICD-10 · HIPAA</div>
-        <div class="stack-level"><div class="stack-level-fill" data-w="90"></div></div>
-      </div>
-      <div class="stack-cell">
         <div class="stack-icon">🐳</div>
-        <div class="stack-name">Docker</div>
-        <div class="stack-desc">Containerization · CI/CD · GitHub Actions</div>
+        <div class="stack-name">Docker / CI</div>
+        <div class="stack-desc">Reproducible apps · GitHub Actions · Delivery</div>
         <div class="stack-level"><div class="stack-level-fill" data-w="80"></div></div>
-      </div>
-      <div class="stack-cell">
-        <div class="stack-icon">🤖</div>
-        <div class="stack-name">ML / AI</div>
-        <div class="stack-desc">Scikit-learn · LangChain · Claude API · RAG</div>
-        <div class="stack-level"><div class="stack-level-fill" data-w="85"></div></div>
       </div>
     </div>
   </div>
@@ -1106,16 +1228,16 @@
 
       <div class="exp-item reveal">
         <div class="exp-left">
-          <div class="exp-date">Jun 2024 – Present</div>
+          <div class="exp-date">Jun 2025 – Present</div>
           <div class="exp-company">Change Healthcare</div>
           <div class="exp-current">Current</div>
         </div>
         <div class="exp-right">
-          <div class="exp-role">Data Analyst & ML Engineer</div>
+          <div class="exp-role">Data Analyst &amp; ML Engineer</div>
           <ul class="exp-bullets">
-            <li>Engineered Python ETL/ELT pipelines ingesting 1M+ X12 EDI 837/835 claims monthly into AWS Redshift, maintaining 99%+ data quality and SLA adherence</li>
-            <li>Architected Power BI and Tableau dashboards using Kimball star schema and DAX, delivering HEDIS and operational KPIs to senior leadership across 5+ business units</li>
-            <li>Automated data workflows using AWS (S3, Glue, Lambda) and Claude API, reducing manual processing effort by 35%</li>
+            <li>Analyzed X12 EDI 837/835 claims and denial patterns with SQL/Python, supporting ML-assisted denial prevention that reduced denials by 18%</li>
+            <li>Built Power BI and Tableau dashboards surfacing HEDIS, revenue-cycle, and operational KPIs to leadership across 5+ business units</li>
+            <li>Automated recurring data prep and reporting workflows with Python/AWS, reducing manual processing effort by 35%</li>
           </ul>
           <div class="exp-tags">
             <span class="tag hi">Python</span><span class="tag hi">AWS</span><span class="tag hi">X12 EDI</span>
@@ -1126,13 +1248,13 @@
 
       <div class="exp-item reveal reveal-delay-1">
         <div class="exp-left">
-          <div class="exp-date">Jan 2024 – May 2024</div>
+          <div class="exp-date">Aug 2024 – May 2025</div>
           <div class="exp-company">UnitedHealth / Optum</div>
         </div>
         <div class="exp-right">
           <div class="exp-role">Data Analyst</div>
           <ul class="exp-bullets">
-            <li>Delivered Power BI and Tableau reports for population health analytics across 10+ reporting workspaces</li>
+            <li>Delivered Power BI and Tableau reporting for population health analytics across 10+ reporting workspaces</li>
             <li>Optimized SQL queries (JOINs, window functions, CTEs) against Oracle and SQL Server, reducing execution time by 30%</li>
           </ul>
           <div class="exp-tags">
@@ -1144,7 +1266,7 @@
 
       <div class="exp-item reveal reveal-delay-2">
         <div class="exp-left">
-          <div class="exp-date">Aug 2023 – Dec 2023</div>
+          <div class="exp-date">May 2022 – Nov 2022</div>
           <div class="exp-company">Phoenix Global</div>
         </div>
         <div class="exp-right">
@@ -1178,37 +1300,16 @@
 
     <div class="projects-grid" id="pGrid">
 
-      <div class="project-card featured-card reveal" data-cat="dataeng">
-        <div class="project-badge badge-new">New</div>
-        <div class="project-icon-wrap">⚡</div>
-        <div class="project-name">Healthcare Claims PySpark Analytics</div>
-        <div class="project-desc">End-to-end PySpark pipeline on Databricks — payer denial rate analysis (Medicare 50%, Medicaid 25%), Spark Window functions for provider rankings, $6,400 revenue recovery via Spark SQL, Delta Lake persistence.</div>
-        <div class="project-tech">
-          <span>PySpark</span><span>Databricks</span><span>Delta Lake</span><span>Spark SQL</span><span>Python</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/Rakshithch/healthcare-claims-pyspark" target="_blank" class="project-btn project-btn-ghost">GitHub ↗</a>
-        </div>
-      </div>
-
-      <div class="project-card featured-card reveal reveal-delay-1" data-cat="dataeng">
-        <div class="project-badge badge-new">New</div>
-        <div class="project-icon-wrap">❄️</div>
-        <div class="project-name">Healthcare Claims Data Warehouse</div>
-        <div class="project-desc">Kimball star schema in Snowflake (1 fact + 3 dims). dbt pipeline with staging/marts layers, 12 automated quality tests, 3 analytical views for denial rate, diagnosis cost, and monthly trends.</div>
-        <div class="project-tech">
-          <span>Snowflake</span><span>dbt</span><span>SQL</span><span>Star Schema</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/Rakshithch/snowflake-healthcare-claims" target="_blank" class="project-btn project-btn-ghost">GitHub ↗</a>
-        </div>
-      </div>
-
-      <div class="project-card featured-card reveal reveal-delay-2" data-cat="live ml">
+      <div class="project-card featured-card reveal" data-cat="live ml">
         <div class="project-badge badge-live">Live</div>
         <div class="project-icon-wrap">🏥</div>
         <div class="project-name">Healthcare Claims Dashboard</div>
-        <div class="project-desc">ML-powered claims analytics dashboard with denial prediction, revenue cycle KPIs, and interactive Plotly visualizations. Deployed on Streamlit Cloud.</div>
+        <div class="project-desc">Interactive claims analytics experience for denial risk, revenue-cycle KPIs, payer/provider trends, and executive-ready operational views.</div>
+        <div class="project-proof">
+          <div class="proof-row"><span class="proof-label">Problem</span><span>Operations teams need fast visibility into denial drivers and payment anomalies.</span></div>
+          <div class="proof-row"><span class="proof-label">Tools</span><span>Python, Streamlit, Plotly, Scikit-learn, Random Forest.</span></div>
+          <div class="proof-row"><span class="proof-label">Impact</span><span>Shows analyst judgment across KPIs, filters, model outputs, and business-facing visuals.</span></div>
+        </div>
         <div class="project-tech">
           <span>Python</span><span>Streamlit</span><span>Plotly</span><span>Scikit-learn</span>
         </div>
@@ -1218,11 +1319,52 @@
         </div>
       </div>
 
+      <div class="project-card featured-card reveal reveal-delay-1" data-cat="dataeng">
+        <div class="project-badge badge-new">New</div>
+        <div class="project-icon-wrap">❄️</div>
+        <div class="project-name">Healthcare Claims Data Warehouse</div>
+        <div class="project-desc">Kimball-style Snowflake analytics model with dbt staging/marts, quality tests, and business views for claims trends.</div>
+        <div class="project-proof">
+          <div class="proof-row"><span class="proof-label">Problem</span><span>Raw claim transactions need trusted tables before dashboards and KPI analysis.</span></div>
+          <div class="proof-row"><span class="proof-label">Tools</span><span>Snowflake, dbt, SQL, star schema, automated tests.</span></div>
+          <div class="proof-row"><span class="proof-label">Impact</span><span>Creates reliable denial-rate, diagnosis-cost, and monthly-trend analysis layers.</span></div>
+        </div>
+        <div class="project-tech">
+          <span>Snowflake</span><span>dbt</span><span>SQL</span><span>Star Schema</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Rakshithch/snowflake-healthcare-claims" target="_blank" class="project-btn project-btn-ghost">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="project-card featured-card reveal reveal-delay-2" data-cat="dataeng">
+        <div class="project-badge badge-new">New</div>
+        <div class="project-icon-wrap">⚡</div>
+        <div class="project-name">Healthcare Claims PySpark Analytics</div>
+        <div class="project-desc">Databricks/PySpark analysis for payer denial rates, provider rankings, revenue recovery, and large-scale claims exploration.</div>
+        <div class="project-proof">
+          <div class="proof-row"><span class="proof-label">Problem</span><span>High-volume claims analysis needs scalable transformations and clear business summaries.</span></div>
+          <div class="proof-row"><span class="proof-label">Tools</span><span>PySpark, Databricks, Delta Lake, Spark SQL, Python.</span></div>
+          <div class="proof-row"><span class="proof-label">Impact</span><span>Surfaces payer denial mix and $6,400 revenue recovery opportunity in sample analysis.</span></div>
+        </div>
+        <div class="project-tech">
+          <span>PySpark</span><span>Databricks</span><span>Delta Lake</span><span>Spark SQL</span><span>Python</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Rakshithch/healthcare-claims-pyspark" target="_blank" class="project-btn project-btn-ghost">GitHub ↗</a>
+        </div>
+      </div>
+
       <div class="project-card reveal" data-cat="live ml">
         <div class="project-badge badge-live">Live</div>
         <div class="project-icon-wrap">🤖</div>
-        <div class="project-name">Healthcare RAG Q&A App</div>
-        <div class="project-desc">Retrieval-Augmented Generation app for querying healthcare documents using semantic search and LLM. Powered by LangChain + FAISS vector store.</div>
+        <div class="project-name">Healthcare RAG Q&amp;A App</div>
+        <div class="project-desc">RAG app for asking questions across healthcare policy, claims, denial-management, and compliance reference material.</div>
+        <div class="project-proof">
+          <div class="proof-row"><span class="proof-label">Problem</span><span>Healthcare teams need faster access to source-backed policy and claims guidance.</span></div>
+          <div class="proof-row"><span class="proof-label">Tools</span><span>LangChain, FAISS, HuggingFace embeddings, Streamlit.</span></div>
+          <div class="proof-row"><span class="proof-label">Impact</span><span>Demonstrates analyst research workflow, citations, semantic search, and explainable answers.</span></div>
+        </div>
         <div class="project-tech">
           <span>LangChain</span><span>FAISS</span><span>HuggingFace</span><span>Streamlit</span>
         </div>
@@ -1282,7 +1424,7 @@
 
       <div class="project-card reveal reveal-delay-2" data-cat="ml">
         <div class="project-icon-wrap">🛣️</div>
-        <div class="project-name">Pothole Segmentation — UNet & SegNet</div>
+        <div class="project-name">Pothole Segmentation — UNet &amp; SegNet</div>
         <div class="project-desc">Semantic segmentation of road potholes comparing UNet and SegNet architectures for civil infrastructure monitoring and autonomous driving applications.</div>
         <div class="project-tech">
           <span>PyTorch</span><span>UNet</span><span>SegNet</span><span>Segmentation</span>
@@ -1303,7 +1445,7 @@
       <div class="section-tag" style="justify-content:center">Contact</div>
       <h2 class="contact-big reveal">Let's build<br/><em>something</em></h2>
       <p class="contact-sub reveal reveal-delay-1">
-        Open to Data Engineer, Analytics Engineer, Data Analyst, and BI Engineer roles.<br/>
+        Open to Data Analyst, BI Analyst, Healthcare Analytics, and Analytics Engineer roles.<br/>
         Available immediately. Open to relocation anywhere in the US.
       </p>
       <div class="contact-links reveal reveal-delay-2">
@@ -1315,6 +1457,9 @@
         </a>
         <a href="tel:8622156222" class="contact-link">
           <span class="contact-link-icon">📞</span> 862-215-6222
+        </a>
+        <a href="resume.html" target="_blank" class="contact-link">
+          <span class="contact-link-icon">📄</span> Resume
         </a>
       </div>
       <a href="mailto:rakshith.ch04@gmail.com" class="contact-email-big reveal reveal-delay-3">
