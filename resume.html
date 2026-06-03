@@ -6,9 +6,8 @@
   <title>Rakshith Chandupatla — Resume</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
-    /* ── SCREEN VIEW ─────────────────────────────── */
     :root {
       --accent:  #00d4aa;
       --text:    #1a1f2e;
@@ -29,7 +28,6 @@
 
     a { color: var(--accent); text-decoration: none; }
 
-    /* Screen wrapper */
     .page-wrapper {
       max-width: 820px;
       margin: 32px auto;
@@ -39,7 +37,6 @@
       overflow: hidden;
     }
 
-    /* Print bar (hidden in print) */
     .print-bar {
       background: var(--text);
       padding: 12px 40px;
@@ -48,11 +45,7 @@
       justify-content: space-between;
     }
 
-    .print-bar span {
-      color: #8b949e;
-      font-size: 13px;
-    }
-
+    .print-bar span { color: #8b949e; font-size: 13px; }
     .print-bar span strong { color: #00d4aa; }
 
     .btn-print {
@@ -70,12 +63,8 @@
 
     .btn-print:hover { background: #00f0c2; }
 
-    /* Resume body */
-    .resume {
-      padding: 40px 48px 48px;
-    }
+    .resume { padding: 40px 48px 48px; }
 
-    /* Header */
     .r-header {
       display: flex;
       justify-content: space-between;
@@ -86,21 +75,8 @@
       gap: 20px;
     }
 
-    .r-name {
-      font-size: 28px;
-      font-weight: 700;
-      color: var(--text);
-      letter-spacing: -0.5px;
-      line-height: 1.1;
-    }
-
-    .r-title {
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--accent);
-      margin-top: 4px;
-      letter-spacing: 0.3px;
-    }
+    .r-name { font-size: 28px; font-weight: 700; color: var(--text); letter-spacing: -0.5px; line-height: 1.1; }
+    .r-title { font-size: 14px; font-weight: 500; color: var(--accent); margin-top: 4px; letter-spacing: 0.3px; }
 
     .r-contact {
       text-align: right;
@@ -113,10 +89,7 @@
     .r-contact a { color: var(--muted); }
     .r-contact a:hover { color: var(--accent); }
 
-    /* Sections */
-    .r-section {
-      margin-bottom: 22px;
-    }
+    .r-section { margin-bottom: 22px; }
 
     .r-section-title {
       font-size: 11px;
@@ -129,14 +102,8 @@
       margin-bottom: 13px;
     }
 
-    /* Summary */
-    .r-summary {
-      font-size: 13px;
-      color: var(--muted);
-      line-height: 1.65;
-    }
+    .r-summary { font-size: 13px; color: var(--muted); line-height: 1.65; }
 
-    /* Experience & Education entries */
     .r-entry { margin-bottom: 16px; }
 
     .r-entry-header {
@@ -147,11 +114,7 @@
       margin-bottom: 3px;
     }
 
-    .r-entry-role {
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--text);
-    }
+    .r-entry-role { font-size: 14px; font-weight: 700; color: var(--text); }
 
     .r-entry-date {
       font-family: 'JetBrains Mono', monospace;
@@ -162,12 +125,7 @@
       padding-top: 2px;
     }
 
-    .r-entry-company {
-      font-size: 12.5px;
-      font-weight: 600;
-      color: var(--accent);
-      margin-bottom: 6px;
-    }
+    .r-entry-company { font-size: 12.5px; font-weight: 600; color: var(--accent); margin-bottom: 6px; }
 
     .r-entry ul {
       list-style: none;
@@ -196,13 +154,7 @@
 
     .r-entry li strong { color: var(--text); font-weight: 600; }
 
-    /* Tags */
-    .r-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px;
-      margin-top: 7px;
-    }
+    .r-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 7px; }
 
     .r-tag {
       font-size: 10.5px;
@@ -214,46 +166,20 @@
       color: #0d9488;
     }
 
-    /* Education */
-    .edu-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 12px;
-    }
-
+    .edu-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
     .edu-degree { font-size: 14px; font-weight: 700; color: var(--text); }
     .edu-school { font-size: 12.5px; color: var(--accent); font-weight: 600; margin-top: 2px; }
     .edu-detail { font-size: 12px; color: var(--muted); margin-top: 2px; }
-    .edu-date {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
-      color: var(--muted);
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
+    .edu-date { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); white-space: nowrap; flex-shrink: 0; }
 
-    /* Skills grid */
-    .skills-table {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px 32px;
-    }
-
+    .skills-table { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px 32px; }
     .skill-row { display: flex; flex-direction: column; gap: 3px; }
     .skill-label { font-size: 11.5px; font-weight: 600; color: var(--text); }
     .skill-value { font-size: 12px; color: var(--muted); }
 
-    /* Projects grid */
     .proj-entry { margin-bottom: 12px; }
 
-    .proj-header {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 3px;
-    }
-
+    .proj-header { display: flex; align-items: center; gap: 10px; margin-bottom: 3px; }
     .proj-name { font-size: 13px; font-weight: 700; color: var(--text); }
 
     .proj-live {
@@ -275,30 +201,15 @@
       color: var(--accent);
     }
 
-    /* ── PRINT STYLES ─────────────────────────────── */
     @media print {
-      @page {
-        size: Letter;
-        margin: 18mm 16mm 18mm 16mm;
-      }
-
+      @page { size: Letter; margin: 18mm 16mm 18mm 16mm; }
       body { background: #fff; font-size: 12px; }
-
       .print-bar { display: none !important; }
-
-      .page-wrapper {
-        max-width: 100%;
-        margin: 0;
-        border-radius: 0;
-        box-shadow: none;
-      }
-
+      .page-wrapper { max-width: 100%; margin: 0; border-radius: 0; box-shadow: none; }
       .resume { padding: 0; }
-
       .r-section { break-inside: avoid; }
       .r-entry   { break-inside: avoid; }
       .proj-entry { break-inside: avoid; }
-
       a { color: inherit !important; }
       .proj-link { color: #0d9488 !important; }
     }
@@ -315,7 +226,6 @@
 
 <div class="page-wrapper">
 
-  <!-- Print bar (screen only) -->
   <div class="print-bar">
     <span>📄 <strong>Tip:</strong> Click "Save as PDF" → set Destination to "Save as PDF" in the print dialog</span>
     <button class="btn-print" onclick="window.print()">🖨 Save as PDF</button>
@@ -327,7 +237,7 @@
     <div class="r-header">
       <div>
         <div class="r-name">Rakshith Chandupatla</div>
-        <div class="r-title">Healthcare Data Analyst · SQL · Python · Power BI/Tableau</div>
+        <div class="r-title">Data Analyst &amp; ML Engineer · SQL · Python · Power BI/Tableau</div>
       </div>
       <div class="r-contact">
         Jersey City, NJ<br />
@@ -343,12 +253,11 @@
     <div class="r-section">
       <div class="r-section-title">Summary</div>
       <p class="r-summary">
-        Healthcare Data Analyst with 3+ years of experience turning claims, population health, and
-        revenue-cycle data into SQL/Python analysis, Power BI/Tableau dashboards, and decision-ready KPI
-        narratives. Reduced claim denials by <strong>18%</strong> at Change Healthcare using ML-assisted analysis
-        on EDI 837/835 data. Built predictive population health models achieving <strong>ROC-AUC 0.80-0.90</strong>
-        at Optum. M.S. Computer Science, Pace University (GPA 3.90/4.00). Open to Data Analyst,
-        BI Analyst, Healthcare Analytics, and Analytics Engineer roles.
+        Data Analyst &amp; ML Engineer with 3+ years translating large-scale data into trusted dashboards,
+        KPI narratives, and predictive models across banking, insurance, and tech. Detected anomalies reducing
+        discrepancies by <strong>15%</strong> at Change Healthcare; improved model accuracy by <strong>20%</strong>
+        and processed <strong>5M+ records</strong> at Get Hire Technologies. M.S. Computer Science, Pace University
+        (GPA 3.90/4.00). Open to Data Analyst, Analytics Engineer, ML Engineer, and Data Science roles.
       </p>
     </div>
 
@@ -363,34 +272,34 @@
         </div>
         <div class="r-entry-company">Change Healthcare</div>
         <ul>
-          <li>Analyzed ASC X12 EDI (837/835) claims and denial patterns with SQL/Python, supporting ML-assisted denial prevention that reduced denials by <strong>18%</strong></li>
-          <li>Created Tableau and Power BI dashboards surfacing denial trends, payment anomalies, and revenue-cycle KPIs to executive stakeholders</li>
-          <li>Automated recurring data preparation and reporting workflows for high-volume claims analysis</li>
-          <li>Partnered with product and healthcare SMEs to translate business rules into validated analytics logic under HIPAA constraints</li>
+          <li>Built anomaly detection models in Python/SQL that flagged billing discrepancies, reducing them by <strong>15%</strong> and preventing <strong>$2M+</strong> in annual revenue leakage</li>
+          <li>Designed and automated ETL pipelines processing 5M+ claims records daily, cutting data prep time by <strong>25%</strong></li>
+          <li>Delivered Tableau and Power BI executive dashboards surfacing payment trends, KPIs, and risk signals to senior stakeholders</li>
+          <li>Led <strong>10+ cross-functional analytics initiatives</strong>, partnering with product and operations teams to translate business questions into validated data models</li>
         </ul>
         <div class="r-tags">
-          <span class="r-tag">Python</span><span class="r-tag">Machine Learning</span>
-          <span class="r-tag">ASC X12 EDI 837/835</span><span class="r-tag">HIPAA</span>
-          <span class="r-tag">Tableau</span><span class="r-tag">Power BI</span><span class="r-tag">SQL</span>
+          <span class="r-tag">Python</span><span class="r-tag">SQL</span>
+          <span class="r-tag">Machine Learning</span><span class="r-tag">Tableau</span>
+          <span class="r-tag">Power BI</span><span class="r-tag">ETL</span>
         </div>
       </div>
 
       <div class="r-entry">
         <div class="r-entry-header">
-          <div class="r-entry-role">Data Analyst</div>
+          <div class="r-entry-role">Data Analyst (Co-op)</div>
           <div class="r-entry-date">Aug 2024 – May 2025</div>
         </div>
-        <div class="r-entry-company">UnitedHealth Group / Optum</div>
+        <div class="r-entry-company">Get Hire Technologies Inc</div>
         <ul>
-          <li>Developed predictive population health models achieving <strong>ROC-AUC 0.80-0.90</strong> using Scikit-learn</li>
-          <li>Built SQL + Python analysis pipelines processing claims and eligibility data for 1M+ members</li>
-          <li>Delivered HEDIS quality measure reporting and risk adjustment analytics for compliance and clinical teams</li>
-          <li>Automated reporting workflows, reducing manual effort by <strong>60%</strong></li>
+          <li>Improved ML model accuracy by <strong>20%</strong> through feature engineering and Scikit-learn model tuning on financial and operational datasets</li>
+          <li>Built SQL + Python ETL pipelines processing <strong>5M+ records</strong>, reducing pipeline run time by 30%</li>
+          <li>Developed risk scoring models that reduced false-positive risk flags by <strong>12%</strong>, improving compliance review efficiency</li>
+          <li>Delivered Power BI dashboards tracking <strong>$500K+</strong> in operational savings, used weekly by executive leadership</li>
         </ul>
         <div class="r-tags">
           <span class="r-tag">Python</span><span class="r-tag">SQL</span>
-          <span class="r-tag">Scikit-learn</span><span class="r-tag">HEDIS</span>
-          <span class="r-tag">Risk Adjustment</span><span class="r-tag">ETL</span><span class="r-tag">AWS</span>
+          <span class="r-tag">Scikit-learn</span><span class="r-tag">Power BI</span>
+          <span class="r-tag">ETL</span><span class="r-tag">AWS</span>
         </div>
       </div>
 
@@ -408,7 +317,8 @@
         </ul>
         <div class="r-tags">
           <span class="r-tag">Hadoop</span><span class="r-tag">Python</span>
-          <span class="r-tag">SQL</span><span class="r-tag">Tableau</span><span class="r-tag">Power BI</span><span class="r-tag">EDA</span>
+          <span class="r-tag">SQL</span><span class="r-tag">Tableau</span>
+          <span class="r-tag">Power BI</span><span class="r-tag">EDA</span>
         </div>
       </div>
     </div>
@@ -420,7 +330,7 @@
         <div>
           <div class="edu-degree">Master of Science — Computer Science</div>
           <div class="edu-school">Pace University, New York, NY</div>
-          <div class="edu-detail">GPA: 3.90 / 4.00 · Machine Learning, Deep Learning, Healthcare Analytics, NLP, Computer Vision, Big Data</div>
+          <div class="edu-detail">GPA: 3.90 / 4.00 · Machine Learning, Deep Learning, NLP, Computer Vision, Big Data, Cloud Computing</div>
         </div>
         <div class="edu-date">May 2025</div>
       </div>
@@ -432,30 +342,35 @@
 
       <div class="proj-entry">
         <div class="proj-header">
-          <span class="proj-name">Healthcare Claims Dashboard</span>
+          <span class="proj-name">Claims Analytics Dashboard</span>
           <span class="proj-live">● LIVE</span>
         </div>
-        <div class="proj-desc">Interactive claims analytics dashboard for denial risk, revenue-cycle KPIs, payer/provider trends, and business-facing Plotly visualizations. Built with Python, Streamlit, Scikit-learn, Random Forest.</div>
+        <div class="proj-desc">Interactive analytics dashboard for risk scoring, revenue-cycle KPIs, payer/provider trends, and business-facing Plotly visualizations. Built with Python, Streamlit, Scikit-learn, Random Forest.</div>
         <div class="proj-link">https://healthcare-claims-dashboard-bhxjqyzktp7ki52i4upfol.streamlit.app</div>
       </div>
 
       <div class="proj-entry">
-        <div class="proj-header"><span class="proj-name">Healthcare Claims Data Warehouse</span></div>
+        <div class="proj-header"><span class="proj-name">Claims Data Warehouse — Snowflake &amp; dbt</span></div>
         <div class="proj-desc">Snowflake and dbt analytics model with star schema, automated quality tests, and SQL views for denial rate, diagnosis cost, and monthly claims trend analysis.</div>
       </div>
 
       <div class="proj-entry">
-        <div class="proj-header"><span class="proj-name">Healthcare Claims PySpark Analytics</span></div>
-        <div class="proj-desc">Databricks/PySpark analysis for payer denial mix, provider ranking, Spark SQL transformations, and revenue recovery opportunity summaries.</div>
+        <div class="proj-header"><span class="proj-name">Large-Scale Analytics — PySpark &amp; Databricks</span></div>
+        <div class="proj-desc">Databricks/PySpark analysis for payer mix, provider ranking, Spark SQL transformations, and revenue recovery opportunity summaries at scale.</div>
       </div>
 
       <div class="proj-entry">
         <div class="proj-header">
-          <span class="proj-name">Healthcare RAG Q&amp;A App</span>
+          <span class="proj-name">RAG Q&amp;A App</span>
           <span class="proj-live">● LIVE</span>
         </div>
-        <div class="proj-desc">RAG application for querying healthcare documents using LangChain, FAISS vector search, HuggingFace models, and Streamlit.</div>
+        <div class="proj-desc">RAG app for asking questions across large document corpora with source citations and semantic search, using LangChain, FAISS vector search, HuggingFace models, and Streamlit.</div>
         <div class="proj-link">https://healthcare-rag-cxha667k82f6yanv8cwd3r.streamlit.app</div>
+      </div>
+
+      <div class="proj-entry">
+        <div class="proj-header"><span class="proj-name">Claims ETL Pipeline</span></div>
+        <div class="proj-desc">7-phase production ETL pipeline with 95%+ validation pass rate across 500K+ synthetic records, AWS S3 integration, and Docker containerization.</div>
       </div>
     </div>
 
@@ -477,15 +392,15 @@
         </div>
         <div class="skill-row">
           <span class="skill-label">Engineering &amp; Cloud</span>
-          <span class="skill-value">AWS S3/EC2, Docker, Hadoop, MySQL, MongoDB, Jenkins, Git</span>
+          <span class="skill-value">AWS S3/EC2, Snowflake, dbt, Docker, PySpark, Databricks, Hadoop, Git</span>
         </div>
         <div class="skill-row">
-          <span class="skill-label">Healthcare Domain</span>
-          <span class="skill-value">HIPAA, ASC X12 EDI (837/835), HEDIS, Risk Adjustment, Claims Analytics</span>
+          <span class="skill-label">Databases</span>
+          <span class="skill-value">PostgreSQL, MySQL, MongoDB, Snowflake</span>
         </div>
         <div class="skill-row">
-          <span class="skill-label">Certifications / Standards</span>
-          <span class="skill-value">HIPAA Compliance, Population Health Modeling, Revenue Cycle Analytics</span>
+          <span class="skill-label">Analytics &amp; Modeling</span>
+          <span class="skill-value">Fraud Detection, Anomaly Detection, Risk Modeling, A/B Testing, ETL Design</span>
         </div>
       </div>
     </div>
