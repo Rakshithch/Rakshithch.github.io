@@ -9,7 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --accent:  #00d4aa;
+      --accent:  #006BB6; /* Knicks blue */
+      --accent2: #F58426; /* Knicks orange */
       --text:    #1a1f2e;
       --muted:   #4a5568;
       --border:  #e2e8f0;
@@ -46,11 +47,11 @@
     }
 
     .print-bar span { color: #8b949e; font-size: 13px; }
-    .print-bar span strong { color: #00d4aa; }
+    .print-bar span strong { color: #F58426; }
 
     .btn-print {
-      background: var(--accent);
-      color: #050a0e;
+      background: var(--accent2);
+      color: #fff;
       border: none;
       font-family: 'Inter', sans-serif;
       font-size: 13px;
@@ -61,7 +62,7 @@
       transition: background 0.2s;
     }
 
-    .btn-print:hover { background: #00f0c2; }
+    .btn-print:hover { background: #ff9a3d; }
 
     .resume { padding: 40px 48px 48px; }
 
@@ -70,7 +71,7 @@
       justify-content: space-between;
       align-items: flex-start;
       padding-bottom: 20px;
-      border-bottom: 2px solid var(--accent);
+      border-bottom: 2px solid var(--accent2);
       margin-bottom: 24px;
       gap: 20px;
     }
@@ -145,7 +146,7 @@
 
     .r-entry li::before {
       content: '▸';
-      color: var(--accent);
+      color: var(--accent2);
       position: absolute;
       left: 0;
       font-size: 10px;
@@ -161,9 +162,9 @@
       font-weight: 500;
       padding: 2px 8px;
       border-radius: 12px;
-      background: #f0fdfb;
-      border: 1px solid #b2f5ea;
-      color: #0d9488;
+      background: #eaf3fa;
+      border: 1px solid #b9d8ec;
+      color: #006BB6;
     }
 
     .edu-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
@@ -185,9 +186,9 @@
     .proj-live {
       font-size: 10px;
       font-weight: 700;
-      color: #16a34a;
-      background: #dcfce7;
-      border: 1px solid #86efac;
+      color: #c2620e;
+      background: #fdf0e2;
+      border: 1px solid #f6c391;
       border-radius: 10px;
       padding: 1px 7px;
       letter-spacing: 0.5px;
@@ -211,7 +212,7 @@
       .r-entry   { break-inside: avoid; }
       .proj-entry { break-inside: avoid; }
       a { color: inherit !important; }
-      .proj-link { color: #0d9488 !important; }
+      .proj-link { color: #006BB6 !important; }
     }
 
     @media (max-width: 640px) {
