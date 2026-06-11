@@ -1616,11 +1616,44 @@
       <button class="filter-pill" data-f="dataeng">Data Engineering</button>
       <button class="filter-pill" data-f="live">Live Apps</button>
       <button class="filter-pill" data-f="ml">ML / AI</button>
+      <button class="filter-pill" data-f="analytics">SQL Analytics</button>
     </div>
 
     <div class="projects-grid" id="pGrid">
 
-      <div class="project-card featured-card reveal" data-cat="live ml">
+      <div class="project-card featured-card reveal" data-cat="dataeng ml live">
+        <div class="project-badge badge-live">Live</div>
+        <div class="project-icon-wrap">💸</div>
+        <div class="project-name">Claims Denial Analysis &amp; Prediction</div>
+        <div class="project-desc">End-to-end revenue-cycle analytics: 50k synthetic 837/835-style claims → Snowflake/dbt star schema → EDA → XGBoost denial-risk model with SHAP → 4-page interactive Streamlit dashboard.</div>
+        <div class="project-proof">
+          <div class="proof-row"><span class="proof-label">Problem</span><span>U.S. providers lose ~$262B/year to denied claims — most denials are preventable.</span></div>
+          <div class="proof-row"><span class="proof-label">Tools</span><span>Snowflake, dbt, XGBoost, SHAP, Streamlit, Plotly.</span></div>
+          <div class="proof-row"><span class="proof-label">Impact</span><span>AUC 0.83 risk scorer; surfaces prior-auth as the #1 controllable denial driver (~84% vs ~27%).</span></div>
+        </div>
+        <div class="project-tech">
+          <span>Snowflake</span><span>dbt</span><span>XGBoost</span><span>SHAP</span><span>Streamlit</span>
+        </div>
+        <div class="project-links">
+          <a href="https://healthcare-claims-denial-analysis-e8xeaunfeof8p7tdqi4fdb.streamlit.app/" target="_blank" class="project-btn project-btn-primary">Live Demo ↗</a>
+          <a href="https://github.com/Rakshithch/healthcare-claims-denial-analysis" target="_blank" class="project-btn project-btn-ghost">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-1" data-cat="live ml">
+        <div class="project-badge badge-live">Live</div>
+        <div class="project-icon-wrap">🧑‍💼</div>
+        <div class="project-name">HireFlow AI — Hiring Platform</div>
+        <div class="project-desc">Full-stack AI-powered hiring platform with candidate scoring and re-scoring, bulk actions, realtime updates, team invites, and production monitoring — built with Next.js, TypeScript, Supabase, and Prisma, deployed on Vercel.</div>
+        <div class="project-tech">
+          <span>Next.js</span><span>TypeScript</span><span>Supabase</span><span>Prisma</span><span>Sentry</span>
+        </div>
+        <div class="project-links">
+          <a href="https://hireflow-ai-rust.vercel.app" target="_blank" class="project-btn project-btn-primary">Live App ↗</a>
+        </div>
+      </div>
+
+      <div class="project-card featured-card reveal reveal-delay-2" data-cat="live ml">
         <div class="project-badge badge-live">Live</div>
         <div class="project-icon-wrap">🏥</div>
         <div class="project-name">Claims Analytics Dashboard</div>
@@ -1751,6 +1784,30 @@
         </div>
         <div class="project-links">
           <a href="https://github.com/Rakshithch/pothole-segmentation" target="_blank" class="project-btn project-btn-ghost">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="analytics">
+        <div class="project-icon-wrap">📡</div>
+        <div class="project-name">Telco Customer Churn Analysis</div>
+        <div class="project-desc">Churn analysis across 7,043 customers — Python cleaning and feature engineering, 10 SQL queries with CTEs and window functions, and an HTML dashboard. Month-to-month customers churn at 42.7% with ~$139K monthly revenue at risk.</div>
+        <div class="project-tech">
+          <span>Python</span><span>SQL</span><span>SQLite</span><span>Pandas</span><span>Seaborn</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Rakshithch/telco-customer-churn-analysis" target="_blank" class="project-btn project-btn-ghost">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-1" data-cat="analytics">
+        <div class="project-icon-wrap">🛒</div>
+        <div class="project-name">Superstore Sales Dashboard</div>
+        <div class="project-desc">Profitability analysis of 9,994 retail orders — discount-tier impact analysis (31%+ discounts average −91.5% margin), category and regional breakdowns, SQL with window functions and CTEs, and an HTML dashboard.</div>
+        <div class="project-tech">
+          <span>Python</span><span>SQL</span><span>SQLite</span><span>Pandas</span><span>Matplotlib</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Rakshithch/superstore-sales-dashboard" target="_blank" class="project-btn project-btn-ghost">GitHub ↗</a>
         </div>
       </div>
 
