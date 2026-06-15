@@ -6,7 +6,7 @@
   <title>Rakshith Chandupatla — Data Analyst & ML Engineer</title>
   <meta name="description" content="Data Analyst & ML Engineer specializing in predictive analytics, risk modeling, SQL, Python, Power BI, Tableau, fraud detection, and process automation. Based in Jersey City, NJ." />
   <meta name="keywords" content="Data Analyst, ML Engineer, Analytics Engineer, SQL, Python, Power BI, Tableau, Predictive Analytics, Risk Modeling, Rakshith Chandupatla" />
-  <meta name="theme-color" content="#0a0a0f" />
+  <meta name="theme-color" content="#0b1120" />
   <link rel="canonical" href="https://rakshithch.github.io/" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <meta property="og:type" content="profile" />
@@ -27,778 +27,371 @@
     "url": "https://rakshithch.github.io/",
     "email": "mailto:rakshith.ch04@gmail.com",
     "telephone": "+1-862-215-6222",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Jersey City",
-      "addressRegion": "NJ",
-      "addressCountry": "US"
-    },
-    "sameAs": [
-      "https://linkedin.com/in/rakshith-ch",
-      "https://github.com/Rakshithch"
-    ],
+    "address": { "@type": "PostalAddress", "addressLocality": "Jersey City", "addressRegion": "NJ", "addressCountry": "US" },
+    "sameAs": ["https://linkedin.com/in/rakshith-ch", "https://github.com/Rakshithch"],
     "knowsAbout": ["Predictive analytics", "SQL", "Python", "Power BI", "Tableau", "Risk modeling", "Fraud detection", "Machine learning", "ETL pipelines"]
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400,500,600;1,9..144,400,500&amp;family=DM+Mono:wght@300;400;500&amp;family=Outfit:wght@300;400;500;600&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
   <style>
     /* ============================================================
-       "DATA ATELIER" — editorial portfolio
-       Warm ink base · indigo→teal signature gradient
-       Fraunces display serif · Outfit body · DM Mono labels
+       "DEV CONSOLE" — terminal-grade portfolio
+       Recommended by ui-ux-pro-max: Dark Mode (OLED), JetBrains Mono +
+       IBM Plex Sans ("Developer Mono"), terminal-green accent.
+       SVG icons (no emoji), WCAG-minded contrast, reduced-motion.
        ============================================================ */
     :root {
-      --bg: #0a0a0f;
-      --bg-soft: #0e0e15;
-      --surface: #14141d;
-      --surface-2: #1a1a26;
-      --glass: rgba(20,20,29,0.6);
-      --line: rgba(255,255,255,0.08);
-      --line-strong: rgba(255,255,255,0.16);
+      --bg: #0b1120;
+      --bg-2: #0f172a;
+      --surface: #131c30;
+      --surface-2: #1c2940;
+      --glass: rgba(15,23,42,0.65);
+      --line: rgba(148,163,184,0.13);
+      --line-strong: rgba(148,163,184,0.28);
 
-      --violet: #8b7bff;
-      --violet-deep: #6d5efc;
-      --teal: #41e3c5;
-      --amber: #ffb27a;
-      --grad: linear-gradient(120deg, #8b7bff 0%, #41e3c5 100%);
+      --green: #22c55e;
+      --green-bright: #4ade80;
+      --green-dim: rgba(34,197,94,0.12);
+      --green-glow: rgba(34,197,94,0.45);
+      --cyan: #38bdf8;
+      --amber: #fbbf24;
 
-      --text: #f3f1ee;
-      --text-2: #a4a1b8;
-      --text-3: #62607a;
+      --text: #f1f5f9;
+      --text-2: #94a3b8;
+      --text-3: #5b6b85;
 
-      --font-display: 'Fraunces', Georgia, serif;
-      --font-body: 'Outfit', sans-serif;
-      --font-mono: 'DM Mono', monospace;
+      --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+      --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
       --ease: cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; font-size: 16px; -webkit-font-smoothing: antialiased; }
-
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: var(--font-body);
-      line-height: 1.6;
+      font-family: var(--font-sans);
+      line-height: 1.65;
       overflow-x: hidden;
       cursor: none;
     }
-
     a { color: inherit; text-decoration: none; }
     ul { list-style: none; }
     button { border: none; background: none; font-family: inherit; cursor: none; }
-    ::selection { background: rgba(139,123,255,0.35); color: #fff; }
+    ::selection { background: rgba(34,197,94,0.3); color: #fff; }
 
-    .grad-text {
-      background: var(--grad);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
+    /* keyboard accessibility — visible focus (skill priority #1) */
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--green);
+      outline-offset: 3px;
+      border-radius: 4px;
     }
 
-    /* ===== CUSTOM CURSOR ===== */
+    .ic { display: inline-flex; align-items: center; justify-content: center; }
+    .ic svg { width: 1em; height: 1em; stroke: currentColor; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* ===== CURSOR ===== */
     #cur-dot, #cur-ring {
-      position: fixed; top: 0; left: 0;
-      pointer-events: none; z-index: 9999;
-      border-radius: 50%;
-      transform: translate(-50%,-50%);
-      will-change: transform;
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate(-50%,-50%); will-change: transform;
     }
-    #cur-dot {
-      width: 6px; height: 6px;
-      background: var(--teal);
-      box-shadow: 0 0 12px var(--teal);
-      transition: transform 0.12s;
-    }
-    #cur-ring {
-      width: 34px; height: 34px;
-      border: 1.5px solid rgba(139,123,255,0.5);
-      transition: width 0.4s var(--ease), height 0.4s var(--ease), border-color 0.3s, background 0.3s;
-    }
-    #cur-ring.hovering {
-      width: 56px; height: 56px;
-      border-color: var(--violet);
-      background: rgba(139,123,255,0.06);
-    }
-    @media (pointer: coarse) {
-      #cur-dot, #cur-ring { display: none; }
-      body, button, a { cursor: auto; }
-    }
+    #cur-dot { width: 6px; height: 6px; background: var(--green); box-shadow: 0 0 12px var(--green); transition: transform 0.12s; }
+    #cur-ring { width: 32px; height: 32px; border: 1.5px solid rgba(34,197,94,0.5); transition: width 0.4s var(--ease), height 0.4s var(--ease), border-color 0.3s, background 0.3s; }
+    #cur-ring.hovering { width: 54px; height: 54px; border-color: var(--green); background: rgba(34,197,94,0.06); }
+    @media (pointer: coarse) { #cur-dot, #cur-ring { display: none; } body, button, a { cursor: auto; } }
 
-    /* ===== GRAIN OVERLAY ===== */
+    /* ===== GRAIN ===== */
     body::before {
-      content: '';
-      position: fixed; inset: 0; z-index: 0;
-      pointer-events: none;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
-      opacity: 0.5;
+      content: ''; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      opacity: 0.45;
     }
 
-    /* ===== SCROLLBAR ===== */
     ::-webkit-scrollbar { width: 5px; }
     ::-webkit-scrollbar-track { background: var(--bg); }
-    ::-webkit-scrollbar-thumb { background: var(--violet-deep); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb { background: var(--green); border-radius: 3px; }
 
     /* ===== NAV ===== */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      padding: 22px 5%;
-      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 5%; display: flex; align-items: center; justify-content: space-between;
       transition: background 0.4s, backdrop-filter 0.4s, padding 0.4s, border-color 0.4s;
       border-bottom: 1px solid transparent;
     }
-    nav.solid {
-      background: rgba(10,10,15,0.72);
-      backdrop-filter: blur(20px) saturate(140%);
-      border-bottom: 1px solid var(--line);
-      padding: 16px 5%;
-    }
-    .nav-logo {
-      font-family: var(--font-display);
-      font-size: 19px;
-      font-weight: 600;
-      letter-spacing: 0.3px;
-      display: flex; align-items: center; gap: 10px;
-    }
-    .nav-logo .logo-dot {
-      width: 9px; height: 9px; border-radius: 50%;
-      background: var(--grad);
-      box-shadow: 0 0 12px rgba(65,227,197,0.7);
-    }
-    .nav-links { display: flex; gap: 34px; }
-    .nav-links a {
-      font-family: var(--font-mono);
-      font-size: 12px;
-      color: var(--text-2);
-      letter-spacing: 0.5px;
-      transition: color 0.3s;
-      position: relative;
-    }
-    .nav-links a::after {
-      content: '';
-      position: absolute; bottom: -4px; left: 0; right: 0;
-      height: 1.5px; background: var(--grad);
-      transform: scaleX(0); transform-origin: left;
-      transition: transform 0.35s var(--ease);
-    }
-    .nav-links a:hover { color: var(--text); }
+    nav.solid { background: rgba(11,17,32,0.8); backdrop-filter: blur(18px) saturate(140%); border-bottom: 1px solid var(--line); padding: 14px 5%; }
+    .nav-logo { font-family: var(--font-mono); font-size: 15px; font-weight: 700; letter-spacing: 0.5px; display: flex; align-items: center; gap: 8px; }
+    .nav-logo .br { color: var(--green); }
+    .nav-links { display: flex; gap: 30px; }
+    .nav-links a { font-family: var(--font-mono); font-size: 12.5px; color: var(--text-2); transition: color 0.3s; position: relative; }
+    .nav-links a::before { content: ''; color: var(--green); }
+    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; right: 0; height: 1.5px; background: var(--green); transform: scaleX(0); transform-origin: left; transition: transform 0.35s var(--ease); }
+    .nav-links a:hover { color: var(--green-bright); }
     .nav-links a:hover::after { transform: scaleX(1); }
     .nav-cta {
-      font-family: var(--font-mono);
-      font-size: 12px;
-      color: var(--bg);
-      background: var(--text);
-      padding: 9px 20px;
-      border-radius: 100px;
-      letter-spacing: 0.5px;
-      transition: transform 0.25s var(--ease), box-shadow 0.3s, background 0.3s;
-      will-change: transform;
+      font-family: var(--font-mono); font-size: 12.5px; color: var(--bg); background: var(--green);
+      padding: 9px 18px; border-radius: 6px; font-weight: 600; display: inline-flex; align-items: center; gap: 7px;
+      transition: transform 0.25s var(--ease), box-shadow 0.3s, background 0.3s; will-change: transform;
     }
-    .nav-cta:hover {
-      box-shadow: 0 8px 30px rgba(139,123,255,0.35);
-      background: #fff;
-    }
+    .nav-cta:hover { background: var(--green-bright); box-shadow: 0 8px 26px var(--green-glow); }
 
     /* ===== HERO ===== */
-    #hero {
-      min-height: 100vh;
-      display: flex; align-items: center;
-      padding: 140px 5% 80px;
-      position: relative;
-      overflow: hidden;
-    }
-    /* drifting aurora blobs */
-    .aurora { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
-    .blob {
-      position: absolute; border-radius: 50%;
-      filter: blur(90px); opacity: 0.55;
-      will-change: transform;
-    }
-    .blob-1 {
-      width: 620px; height: 620px;
-      background: radial-gradient(circle, rgba(109,94,252,0.5), transparent 65%);
-      top: -180px; left: -120px;
-      animation: drift1 18s ease-in-out infinite;
-    }
-    .blob-2 {
-      width: 520px; height: 520px;
-      background: radial-gradient(circle, rgba(65,227,197,0.35), transparent 65%);
-      bottom: -160px; right: -80px;
-      animation: drift2 22s ease-in-out infinite;
-    }
-    .blob-3 {
-      width: 360px; height: 360px;
-      background: radial-gradient(circle, rgba(255,178,122,0.22), transparent 65%);
-      top: 40%; left: 45%;
-      animation: drift3 26s ease-in-out infinite;
-    }
-    @keyframes drift1 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(80px,60px) scale(1.12); } }
-    @keyframes drift2 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-70px,-50px) scale(1.08); } }
-    @keyframes drift3 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-60px,40px) scale(1.15); } }
-
-    /* fine plotting grid */
+    #hero { min-height: 100vh; display: flex; align-items: center; padding: 130px 5% 80px; position: relative; overflow: hidden; }
     #hero::before {
-      content: '';
-      position: absolute; inset: 0; z-index: 0;
-      background-image:
-        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
-      background-size: 64px 64px;
-      mask-image: radial-gradient(ellipse 90% 80% at 50% 45%, black 35%, transparent 100%);
+      content: ''; position: absolute; inset: 0; z-index: 0;
+      background-image: linear-gradient(rgba(148,163,184,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(148,163,184,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 85% 75% at 50% 45%, black 35%, transparent 100%);
     }
+    .glow-orb { position: absolute; border-radius: 50%; filter: blur(100px); pointer-events: none; z-index: 0; }
+    .glow-1 { width: 560px; height: 560px; background: radial-gradient(circle, rgba(34,197,94,0.16), transparent 65%); top: -160px; right: -100px; animation: float1 16s ease-in-out infinite; }
+    .glow-2 { width: 460px; height: 460px; background: radial-gradient(circle, rgba(56,189,248,0.1), transparent 65%); bottom: -160px; left: -120px; animation: float2 20s ease-in-out infinite; }
+    @keyframes float1 { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-60px,50px); } }
+    @keyframes float2 { 0%,100% { transform: translate(0,0); } 50% { transform: translate(50px,-40px); } }
 
-    .hero-inner {
-      position: relative; z-index: 1;
-      max-width: 1240px; margin: 0 auto; width: 100%;
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 64px; align-items: center;
-    }
+    .hero-inner { position: relative; z-index: 1; max-width: 1240px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 60px; align-items: center; }
 
-    @keyframes rise { from { opacity: 0; transform: translateY(34px); } to { opacity: 1; transform: translateY(0); } }
-    .r1 { animation: rise 0.9s var(--ease) 0.05s both; }
-    .r2 { animation: rise 0.9s var(--ease) 0.16s both; }
-    .r3 { animation: rise 0.9s var(--ease) 0.28s both; }
-    .r4 { animation: rise 0.9s var(--ease) 0.40s both; }
-    .r5 { animation: rise 0.9s var(--ease) 0.52s both; }
-    .r6 { animation: rise 1s var(--ease) 0.5s both; }
+    @keyframes rise { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    .r1 { animation: rise 0.8s var(--ease) 0.05s both; }
+    .r2 { animation: rise 0.8s var(--ease) 0.18s both; }
+    .r3 { animation: rise 0.8s var(--ease) 0.30s both; }
+    .r4 { animation: rise 0.8s var(--ease) 0.42s both; }
+    .r5 { animation: rise 0.8s var(--ease) 0.54s both; }
+    .r6 { animation: rise 0.9s var(--ease) 0.5s both; }
 
-    .hero-status {
-      display: inline-flex; align-items: center; gap: 10px;
-      font-family: var(--font-mono);
-      font-size: 11.5px;
-      color: var(--text-2);
-      letter-spacing: 0.5px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.02);
-      padding: 7px 14px 7px 12px;
-      border-radius: 100px;
-      margin-bottom: 28px;
-    }
-    .status-dot {
-      width: 7px; height: 7px; border-radius: 50%;
-      background: var(--teal);
-      box-shadow: 0 0 0 0 rgba(65,227,197,0.7);
-      animation: pulse 2s ease-in-out infinite;
-    }
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(65,227,197,0.5); }
-      70% { box-shadow: 0 0 0 7px rgba(65,227,197,0); }
-      100% { box-shadow: 0 0 0 0 rgba(65,227,197,0); }
-    }
+    .prompt { font-family: var(--font-mono); font-size: 14px; color: var(--text-2); margin-bottom: 22px; display: flex; align-items: center; flex-wrap: wrap; gap: 0; }
+    .prompt .usr { color: var(--green); }
+    .prompt .pth { color: var(--cyan); }
+    .prompt .pmt { color: var(--text-3); margin: 0 8px 0 2px; }
+    .prompt .cmd { color: var(--text); }
+    .caret { display: inline-block; width: 9px; height: 17px; background: var(--green); margin-left: 3px; vertical-align: middle; animation: blink 1.1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
 
-    .hero-eyebrow {
-      font-family: var(--font-mono);
-      font-size: 12px;
-      color: var(--text-3);
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 18px;
-    }
+    .hero-name { font-family: var(--font-mono); font-weight: 800; font-size: clamp(40px, 6.4vw, 88px); line-height: 1.0; letter-spacing: -3px; margin-bottom: 18px; }
+    .hero-name .g { color: var(--green); }
+    .hero-role { font-family: var(--font-mono); font-size: clamp(13px, 1.6vw, 16px); color: var(--text-2); margin-bottom: 26px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .hero-role .cmt { color: var(--green); }
+    .hero-role .sep { color: var(--text-3); }
 
-    .hero-name {
-      font-family: var(--font-display);
-      font-weight: 500;
-      font-size: clamp(48px, 6.6vw, 92px);
-      line-height: 0.98;
-      letter-spacing: -1.5px;
-      margin-bottom: 22px;
-    }
-    .hero-name .ln2 { font-style: italic; font-weight: 400; }
-
-    .hero-title {
-      font-family: var(--font-mono);
-      font-size: clamp(13px, 1.5vw, 15px);
-      color: var(--text-2);
-      margin-bottom: 26px;
-      display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
-    }
-    .hero-title .sep { color: var(--violet); }
-
-    .hero-desc {
-      font-size: 17px;
-      color: var(--text-2);
-      max-width: 540px;
-      line-height: 1.8;
-      margin-bottom: 38px;
-    }
-    .hero-desc strong { color: var(--text); font-weight: 500; }
+    .hero-desc { font-size: 17px; color: var(--text-2); max-width: 540px; line-height: 1.8; margin-bottom: 36px; }
+    .hero-desc strong { color: var(--green-bright); font-weight: 500; }
 
     .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
-
     .btn-primary {
-      display: inline-flex; align-items: center; gap: 10px;
-      font-family: var(--font-mono);
-      font-size: 13px;
-      color: var(--bg);
-      background: var(--text);
-      padding: 15px 28px;
-      border-radius: 100px;
-      letter-spacing: 0.3px;
-      transition: transform 0.25s var(--ease), box-shadow 0.35s, background 0.3s;
-      will-change: transform;
-      position: relative; overflow: hidden;
+      display: inline-flex; align-items: center; gap: 9px; font-family: var(--font-mono); font-size: 13px; font-weight: 600;
+      color: var(--bg); background: var(--green); padding: 14px 24px; border-radius: 7px;
+      transition: transform 0.25s var(--ease), box-shadow 0.35s, background 0.3s; will-change: transform;
     }
-    .btn-primary:hover {
-      background: #fff;
-      box-shadow: 0 12px 40px rgba(139,123,255,0.4);
-    }
+    .btn-primary:hover { background: var(--green-bright); box-shadow: 0 12px 36px var(--green-glow); }
     .btn-outline {
-      display: inline-flex; align-items: center; gap: 10px;
-      font-family: var(--font-mono);
-      font-size: 13px;
-      color: var(--text);
-      padding: 14px 26px;
-      border-radius: 100px;
-      border: 1px solid var(--line-strong);
-      letter-spacing: 0.3px;
-      transition: transform 0.25s var(--ease), border-color 0.3s, background 0.3s;
-      will-change: transform;
-      background: transparent;
+      display: inline-flex; align-items: center; gap: 9px; font-family: var(--font-mono); font-size: 13px;
+      color: var(--text); padding: 13px 22px; border-radius: 7px; border: 1px solid var(--line-strong);
+      transition: transform 0.25s var(--ease), border-color 0.3s, background 0.3s; will-change: transform; background: transparent;
     }
-    .btn-outline:hover {
-      border-color: var(--violet);
-      background: rgba(139,123,255,0.07);
-    }
+    .btn-outline:hover { border-color: var(--green); background: var(--green-dim); color: var(--green-bright); }
+    .btn-primary .ic, .btn-outline .ic, .nav-cta .ic { font-size: 15px; }
 
-    /* ===== HERO DATA PANEL ===== */
-    .hero-panel {
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: linear-gradient(160deg, rgba(26,26,38,0.7), rgba(14,14,21,0.5));
-      backdrop-filter: blur(10px);
-      padding: 22px;
-      box-shadow: 0 30px 80px rgba(0,0,0,0.5);
-    }
-    .panel-head {
-      display: flex; align-items: center; justify-content: space-between;
-      margin-bottom: 16px;
-    }
-    .panel-title {
-      font-family: var(--font-mono);
-      font-size: 11px; color: var(--text-2);
-      letter-spacing: 1px; text-transform: uppercase;
-    }
-    .panel-dots { display: flex; gap: 6px; }
-    .panel-dots i { width: 9px; height: 9px; border-radius: 50%; display: block; opacity: 0.7; }
-    .panel-dots i:nth-child(1) { background: var(--amber); }
-    .panel-dots i:nth-child(2) { background: var(--violet); }
-    .panel-dots i:nth-child(3) { background: var(--teal); }
-
-    .chart-wrap {
-      position: relative;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: rgba(0,0,0,0.25);
-      padding: 14px;
-      margin-bottom: 18px;
-      overflow: hidden;
-    }
-    .chart-wrap svg { display: block; width: 100%; height: auto; }
+    /* ===== TERMINAL / IDE PANEL ===== */
+    .hero-panel { border: 1px solid var(--line); border-radius: 12px; background: linear-gradient(160deg, rgba(28,41,64,0.7), rgba(15,23,42,0.55)); backdrop-filter: blur(10px); box-shadow: 0 30px 80px rgba(0,0,0,0.55); overflow: hidden; }
+    .panel-bar { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-bottom: 1px solid var(--line); background: rgba(11,17,32,0.5); }
+    .panel-dots { display: flex; gap: 7px; }
+    .panel-dots i { width: 11px; height: 11px; border-radius: 50%; display: block; }
+    .panel-dots i:nth-child(1) { background: #ef4444; }
+    .panel-dots i:nth-child(2) { background: var(--amber); }
+    .panel-dots i:nth-child(3) { background: var(--green); }
+    .panel-name { font-family: var(--font-mono); font-size: 11.5px; color: var(--text-3); }
+    .panel-body { padding: 20px; }
+    .chart-wrap { position: relative; border: 1px solid var(--line); border-radius: 9px; background: rgba(0,0,0,0.28); padding: 14px; margin-bottom: 16px; overflow: hidden; }
+    .chart-wrap svg.spark { display: block; width: 100%; height: auto; }
     .spark-area { opacity: 0; animation: areaIn 1.4s ease 1.6s forwards; }
     @keyframes areaIn { to { opacity: 1; } }
-    .spark-line {
-      fill: none; stroke-width: 2.5;
-      stroke-linecap: round; stroke-linejoin: round;
-      stroke-dasharray: 620; stroke-dashoffset: 620;
-      animation: draw 2.4s var(--ease) 0.5s forwards;
-      filter: drop-shadow(0 4px 10px rgba(65,227,197,0.35));
-    }
+    .spark-line { fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 620; stroke-dashoffset: 620; animation: draw 2.3s var(--ease) 0.5s forwards; filter: drop-shadow(0 3px 9px rgba(34,197,94,0.4)); }
     @keyframes draw { to { stroke-dashoffset: 0; } }
     .spark-dot { opacity: 0; transform-box: fill-box; transform-origin: center; }
     .spark-dot.show { animation: dotPop 0.5s var(--ease) forwards; }
     @keyframes dotPop { 0% { opacity: 0; transform: scale(0); } 100% { opacity: 1; transform: scale(1); } }
-    .chart-caption {
-      position: absolute; left: 14px; bottom: 10px;
-      font-family: var(--font-mono); font-size: 9.5px;
-      color: var(--text-3); letter-spacing: 1px; text-transform: uppercase;
-    }
-
-    .panel-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-    .pstat {
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      padding: 14px 16px;
-      background: rgba(255,255,255,0.015);
-      transition: border-color 0.3s, transform 0.3s;
-    }
+    .chart-cap { position: absolute; left: 14px; bottom: 10px; font-family: var(--font-mono); font-size: 9.5px; color: var(--text-3); letter-spacing: 0.5px; }
+    .panel-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+    .pstat { border: 1px solid var(--line); border-radius: 8px; padding: 13px 15px; background: rgba(148,163,184,0.02); transition: border-color 0.3s, transform 0.3s; }
     .pstat:hover { border-color: var(--line-strong); transform: translateY(-2px); }
-    .pstat-num {
-      font-family: var(--font-display);
-      font-size: 30px; font-weight: 500;
-      line-height: 1; margin-bottom: 5px;
-    }
-    .pstat-label {
-      font-family: var(--font-mono);
-      font-size: 9.5px; color: var(--text-3);
-      letter-spacing: 1.2px; text-transform: uppercase;
-    }
+    .pstat-num { font-family: var(--font-mono); font-size: 28px; font-weight: 700; line-height: 1; margin-bottom: 5px; color: var(--green); text-shadow: 0 0 14px rgba(34,197,94,0.5); }
+    .pstat-label { font-family: var(--font-mono); font-size: 9.5px; color: var(--text-3); letter-spacing: 0.5px; text-transform: uppercase; }
 
-    .hero-scroll {
-      position: absolute; bottom: 32px; left: 5%;
-      font-family: var(--font-mono);
-      font-size: 10px; color: var(--text-3);
-      letter-spacing: 2px; text-transform: uppercase;
-      display: flex; align-items: center; gap: 12px; z-index: 1;
-    }
-    .scroll-line {
-      width: 38px; height: 1px; background: var(--text-3);
-      animation: scrollPulse 2s ease-in-out infinite;
-    }
-    @keyframes scrollPulse { 0%,100% { opacity: 0.3; width: 38px; } 50% { opacity: 1; width: 58px; } }
+    .hero-scroll { position: absolute; bottom: 30px; left: 5%; font-family: var(--font-mono); font-size: 10px; color: var(--text-3); letter-spacing: 1px; display: flex; align-items: center; gap: 12px; z-index: 1; }
+    .scroll-line { width: 36px; height: 1px; background: var(--text-3); animation: scrollPulse 2s ease-in-out infinite; }
+    @keyframes scrollPulse { 0%,100% { opacity: 0.3; width: 36px; } 50% { opacity: 1; width: 56px; } }
 
     /* ===== MARQUEE ===== */
-    .marquee {
-      position: relative; z-index: 2; overflow: hidden;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      padding: 20px 0;
-      background: var(--bg-soft);
-    }
-    .marquee::before, .marquee::after {
-      content: ''; position: absolute; top: 0; bottom: 0; width: 120px; z-index: 2; pointer-events: none;
-    }
-    .marquee::before { left: 0; background: linear-gradient(90deg, var(--bg-soft), transparent); }
-    .marquee::after { right: 0; background: linear-gradient(-90deg, var(--bg-soft), transparent); }
-    .marquee-track { display: flex; width: max-content; animation: scroll 34s linear infinite; }
+    .marquee { position: relative; z-index: 2; overflow: hidden; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 18px 0; background: var(--bg-2); }
+    .marquee::before, .marquee::after { content: ''; position: absolute; top: 0; bottom: 0; width: 120px; z-index: 2; pointer-events: none; }
+    .marquee::before { left: 0; background: linear-gradient(90deg, var(--bg-2), transparent); }
+    .marquee::after { right: 0; background: linear-gradient(-90deg, var(--bg-2), transparent); }
+    .marquee-track { display: flex; width: max-content; animation: scroll 32s linear infinite; }
     .marquee:hover .marquee-track { animation-play-state: paused; }
     @keyframes scroll { to { transform: translateX(-50%); } }
     .marquee-set { display: flex; align-items: center; }
-    .marquee-set span {
-      font-family: var(--font-display);
-      font-size: 22px; font-weight: 500;
-      color: var(--text-3);
-      padding: 0 26px; white-space: nowrap;
-      display: flex; align-items: center; gap: 26px;
-    }
-    .marquee-set span::after {
-      content: '✦'; font-size: 11px; color: var(--violet); font-family: var(--font-body);
-    }
-    .marquee-set span.em { color: var(--text); font-style: italic; }
+    .marquee-set span { font-family: var(--font-mono); font-size: 14px; font-weight: 500; color: var(--text-3); padding: 0 22px; white-space: nowrap; display: flex; align-items: center; gap: 22px; }
+    .marquee-set span::after { content: '//'; color: var(--green); }
+    .marquee-set span.em { color: var(--text); }
 
-    /* ===== SECTION SHARED ===== */
-    section { padding: 130px 5%; position: relative; }
+    /* ===== SECTIONS ===== */
+    section { padding: 120px 5%; position: relative; }
     .container { max-width: 1180px; margin: 0 auto; }
+    .section-tag { font-family: var(--font-mono); font-size: 12px; color: var(--green); letter-spacing: 0.5px; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+    .section-tag .n { color: var(--text-3); }
+    .section-title { font-family: var(--font-mono); font-size: clamp(30px, 4.4vw, 52px); font-weight: 800; line-height: 1.08; letter-spacing: -2px; margin-bottom: 56px; }
+    .section-title .g { color: var(--green); }
 
-    .section-tag {
-      font-family: var(--font-mono);
-      font-size: 11px; color: var(--text-2);
-      letter-spacing: 2px; text-transform: uppercase;
-      margin-bottom: 18px;
-      display: flex; align-items: center; gap: 12px;
-    }
-    .section-tag::before {
-      content: ''; width: 26px; height: 1.5px; background: var(--grad);
-    }
-    .section-title {
-      font-family: var(--font-display);
-      font-size: clamp(34px, 5vw, 62px);
-      font-weight: 500;
-      line-height: 1.04;
-      letter-spacing: -1px;
-      margin-bottom: 60px;
-    }
-    .section-title em { font-style: italic; font-weight: 400; }
-
-    /* ===== REVEAL ===== */
-    .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
+    .reveal { opacity: 0; transform: translateY(38px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
     .reveal.visible { opacity: 1; transform: translateY(0); }
     .reveal-delay-1 { transition-delay: 0.1s; }
     .reveal-delay-2 { transition-delay: 0.2s; }
     .reveal-delay-3 { transition-delay: 0.3s; }
 
-    /* ===== METRICS BAND ===== */
-    #metrics { background: var(--bg-soft); padding: 90px 5%; }
-    .metrics-grid {
-      display: grid; grid-template-columns: repeat(4, 1fr);
-      gap: 1px; background: var(--line);
-      border: 1px solid var(--line); border-radius: 14px; overflow: hidden;
-    }
-    .metric {
-      background: var(--bg-soft); padding: 32px 28px;
-      position: relative; transition: background 0.3s;
-    }
+    /* ===== METRICS ===== */
+    #metrics { background: var(--bg-2); padding: 84px 5%; }
+    .metrics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+    .metric { background: var(--bg-2); padding: 30px 26px; transition: background 0.3s; }
     .metric:hover { background: var(--surface); }
-    .metric-num {
-      font-family: var(--font-display);
-      font-size: 44px; font-weight: 500; line-height: 1;
-      margin-bottom: 14px;
-    }
+    .metric-num { font-family: var(--font-mono); font-size: 42px; font-weight: 800; line-height: 1; margin-bottom: 14px; color: var(--green); text-shadow: 0 0 16px rgba(34,197,94,0.4); }
     .metric-bar { height: 3px; border-radius: 2px; background: var(--line); overflow: hidden; margin-bottom: 14px; }
-    .metric-bar i { display: block; height: 100%; width: 0; background: var(--grad); border-radius: 2px; transition: width 1.3s var(--ease); }
-    .metric-label {
-      font-family: var(--font-mono);
-      font-size: 10px; color: var(--violet);
-      letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 9px;
-    }
+    .metric-bar i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--green), var(--green-bright)); border-radius: 2px; transition: width 1.3s var(--ease); }
+    .metric-label { font-family: var(--font-mono); font-size: 10px; color: var(--cyan); letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 9px; }
     .metric-copy { font-size: 13px; color: var(--text-2); line-height: 1.55; }
 
     /* ===== ABOUT ===== */
     #about { background: var(--bg); }
-    .about-grid { display: grid; grid-template-columns: 1fr 1.45fr; gap: 80px; align-items: center; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1.45fr; gap: 76px; align-items: center; }
     .about-left { position: relative; }
     .about-photo-frame { position: relative; width: 320px; height: 388px; }
-    .about-photo-frame::before {
-      content: ''; position: absolute; inset: -1px;
-      border-radius: 16px; padding: 1px;
-      background: var(--grad);
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor; mask-composite: exclude;
-      opacity: 0.7;
-    }
-    .about-photo {
-      width: 100%; height: 100%;
-      border-radius: 16px; overflow: hidden;
-      background: var(--surface);
-      display: flex; align-items: center; justify-content: center;
-      font-family: var(--font-display); font-size: 76px; color: var(--violet);
-      position: relative;
-      box-shadow: 0 30px 70px rgba(0,0,0,0.55);
-    }
+    .about-photo-frame::before { content: ''; position: absolute; inset: -1px; border-radius: 14px; padding: 1px; background: linear-gradient(150deg, var(--green), transparent 60%); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; }
+    .about-photo { width: 100%; height: 100%; border-radius: 14px; overflow: hidden; background: var(--surface); display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 70px; font-weight: 800; color: var(--green); box-shadow: 0 30px 70px rgba(0,0,0,0.55); }
     .about-photo img { width: 100%; height: 100%; object-fit: cover; }
-    .about-tag {
-      position: absolute; bottom: -16px; right: -16px;
-      font-family: var(--font-mono); font-size: 10px;
-      color: var(--bg); background: var(--text);
-      letter-spacing: 1px; padding: 8px 14px; border-radius: 100px;
-      z-index: 2; box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-    }
-    .about-glow {
-      position: absolute; inset: -40px -40px auto auto;
-      width: 240px; height: 240px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(139,123,255,0.25), transparent 70%);
-      filter: blur(30px); z-index: -1;
-    }
-    .about-bio { font-size: 17px; color: var(--text-2); line-height: 1.9; margin-bottom: 32px; }
+    .about-tag { position: absolute; bottom: -14px; right: -14px; font-family: var(--font-mono); font-size: 10px; color: var(--bg); background: var(--green); letter-spacing: 0.5px; padding: 7px 13px; border-radius: 6px; z-index: 2; display: flex; align-items: center; gap: 6px; box-shadow: 0 10px 28px rgba(0,0,0,0.4); }
+    .about-glow { position: absolute; inset: -40px -40px auto auto; width: 230px; height: 230px; border-radius: 50%; background: radial-gradient(circle, rgba(34,197,94,0.22), transparent 70%); filter: blur(34px); z-index: -1; }
+    .about-bio { font-size: 17px; color: var(--text-2); line-height: 1.9; margin-bottom: 30px; }
     .about-bio strong { color: var(--text); font-weight: 500; }
-    .about-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 32px; }
-    .fact {
-      display: flex; align-items: flex-start; gap: 10px;
-      padding: 14px 16px; background: var(--surface);
-      border: 1px solid var(--line); border-radius: 10px;
-      font-size: 13px; color: var(--text-2); transition: border-color 0.3s, transform 0.3s;
-    }
+    .about-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; margin-bottom: 30px; }
+    .fact { display: flex; align-items: center; gap: 11px; padding: 14px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 9px; font-size: 13px; color: var(--text-2); transition: border-color 0.3s, transform 0.3s; }
     .fact:hover { border-color: var(--line-strong); transform: translateY(-2px); }
-    .fact-icon { color: var(--teal); font-size: 13px; margin-top: 2px; flex-shrink: 0; }
-    .edu-badge {
-      display: inline-flex; align-items: center; gap: 14px;
-      padding: 16px 22px; background: var(--surface);
-      border: 1px solid var(--line); border-radius: 12px;
-      font-size: 14px;
-    }
-    .edu-badge-icon { font-size: 22px; }
+    .fact .ic { color: var(--green); font-size: 17px; flex-shrink: 0; }
+    .edu-badge { display: inline-flex; align-items: center; gap: 13px; padding: 16px 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; font-size: 14px; }
+    .edu-badge .ic { font-size: 22px; color: var(--green); }
     .edu-badge-title { font-weight: 500; color: var(--text); }
-    .edu-badge-sub { font-family: var(--font-mono); font-size: 11px; color: var(--teal); margin-top: 2px; }
+    .edu-badge-sub { font-family: var(--font-mono); font-size: 11px; color: var(--cyan); margin-top: 2px; }
 
     /* ===== STACK ===== */
-    #stack { background: var(--bg-soft); }
-    .stack-grid {
-      display: grid; grid-template-columns: repeat(4, 1fr);
-      gap: 1px; background: var(--line);
-      border: 1px solid var(--line); border-radius: 14px; overflow: hidden;
-    }
-    .stack-cell {
-      background: var(--bg-soft); padding: 28px 24px;
-      display: flex; flex-direction: column; gap: 8px;
-      transition: background 0.3s; position: relative; overflow: hidden;
-    }
-    .stack-cell::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-      background: var(--grad); transform: scaleX(0); transform-origin: left;
-      transition: transform 0.45s var(--ease);
-    }
+    #stack { background: var(--bg-2); }
+    .stack-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+    .stack-cell { background: var(--bg-2); padding: 26px 24px; display: flex; flex-direction: column; gap: 8px; transition: background 0.3s; position: relative; overflow: hidden; }
+    .stack-cell::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--green); transform: scaleX(0); transform-origin: left; transition: transform 0.45s var(--ease); }
     .stack-cell:hover { background: var(--surface); }
     .stack-cell:hover::before { transform: scaleX(1); }
-    .stack-icon { font-size: 24px; margin-bottom: 4px; }
-    .stack-name { font-family: var(--font-display); font-size: 17px; font-weight: 500; color: var(--text); }
+    .stack-ic { font-size: 24px; color: var(--green); margin-bottom: 6px; }
+    .stack-name { font-family: var(--font-mono); font-size: 15px; font-weight: 600; color: var(--text); }
     .stack-desc { font-size: 12px; color: var(--text-3); font-family: var(--font-mono); line-height: 1.5; }
     .stack-level { margin-top: 10px; height: 3px; background: var(--line); border-radius: 2px; overflow: hidden; }
-    .stack-level-fill { height: 100%; background: var(--grad); border-radius: 2px; width: 0%; transition: width 1.2s var(--ease); }
+    .stack-level-fill { height: 100%; background: linear-gradient(90deg, var(--green), var(--green-bright)); border-radius: 2px; width: 0%; transition: width 1.2s var(--ease); }
 
     /* ===== EXPERIENCE ===== */
     #experience { background: var(--bg); }
     .exp-list { display: flex; flex-direction: column; gap: 14px; }
-    .exp-item {
-      display: grid; grid-template-columns: 220px 1fr; gap: 0;
-      border: 1px solid var(--line); border-radius: 14px; overflow: hidden;
-      transition: border-color 0.3s, transform 0.3s;
-    }
+    .exp-item { display: grid; grid-template-columns: 220px 1fr; gap: 0; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; transition: border-color 0.3s, transform 0.3s; }
     .exp-item:hover { border-color: var(--line-strong); transform: translateY(-3px); }
-    .exp-left {
-      padding: 30px 26px; background: var(--surface);
-      border-right: 1px solid var(--line);
-      display: flex; flex-direction: column; gap: 8px;
-    }
-    .exp-date { font-family: var(--font-mono); font-size: 11px; color: var(--teal); letter-spacing: 0.5px; }
-    .exp-company { font-family: var(--font-display); font-size: 19px; font-weight: 500; color: var(--text); }
-    .exp-current {
-      display: inline-block; font-family: var(--font-mono); font-size: 9px;
-      color: var(--bg); background: var(--teal); padding: 3px 10px; border-radius: 100px;
-      letter-spacing: 1.5px; text-transform: uppercase; width: fit-content;
-    }
-    .exp-right { padding: 30px 34px; background: var(--bg-soft); }
-    .exp-role { font-family: var(--font-display); font-size: 22px; font-weight: 500; color: var(--text); margin-bottom: 16px; }
-    .exp-bullets { display: flex; flex-direction: column; gap: 9px; margin-bottom: 22px; }
-    .exp-bullets li { font-size: 14px; color: var(--text-2); padding-left: 18px; position: relative; line-height: 1.6; }
-    .exp-bullets li::before { content: '→'; position: absolute; left: 0; color: var(--violet); }
+    .exp-left { padding: 28px 26px; background: var(--surface); border-right: 1px solid var(--line); display: flex; flex-direction: column; gap: 8px; }
+    .exp-date { font-family: var(--font-mono); font-size: 11px; color: var(--green); }
+    .exp-company { font-family: var(--font-mono); font-size: 17px; font-weight: 600; color: var(--text); }
+    .exp-current { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 9px; color: var(--bg); background: var(--green); padding: 3px 9px; border-radius: 100px; letter-spacing: 1px; text-transform: uppercase; width: fit-content; }
+    .exp-current::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--bg); }
+    .exp-right { padding: 28px 32px; background: var(--bg-2); }
+    .exp-role { font-family: var(--font-mono); font-size: 20px; font-weight: 700; color: var(--text); margin-bottom: 16px; }
+    .exp-bullets { display: flex; flex-direction: column; gap: 9px; margin-bottom: 20px; }
+    .exp-bullets li { font-size: 14px; color: var(--text-2); padding-left: 20px; position: relative; line-height: 1.6; }
+    .exp-bullets li::before { content: '▹'; position: absolute; left: 0; color: var(--green); font-family: var(--font-mono); }
     .exp-tags { display: flex; flex-wrap: wrap; gap: 7px; }
-    .tag {
-      font-family: var(--font-mono); font-size: 11px; color: var(--text-3);
-      padding: 4px 11px; border: 1px solid var(--line); border-radius: 100px;
-      background: var(--surface); transition: color 0.2s, border-color 0.2s;
-    }
-    .tag.hi { color: var(--violet); border-color: rgba(139,123,255,0.3); }
+    .tag { font-family: var(--font-mono); font-size: 11px; color: var(--text-3); padding: 4px 11px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); transition: color 0.2s, border-color 0.2s; }
+    .tag.hi { color: var(--green); border-color: rgba(34,197,94,0.3); }
 
     /* ===== PROJECTS ===== */
-    #projects { background: var(--bg-soft); }
-    .projects-filter { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 42px; }
-    .filter-pill {
-      font-family: var(--font-mono); font-size: 11px; color: var(--text-3);
-      padding: 8px 18px; border: 1px solid var(--line); border-radius: 100px;
-      background: transparent; letter-spacing: 0.5px; cursor: none; transition: all 0.3s;
-    }
-    .filter-pill:hover { color: var(--text); border-color: var(--line-strong); }
-    .filter-pill.active { color: var(--bg); background: var(--text); border-color: var(--text); }
-
+    #projects { background: var(--bg-2); }
+    .projects-filter { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 40px; }
+    .filter-pill { font-family: var(--font-mono); font-size: 11.5px; color: var(--text-3); padding: 8px 17px; border: 1px solid var(--line); border-radius: 7px; background: transparent; cursor: none; transition: all 0.3s; }
+    .filter-pill:hover { color: var(--green-bright); border-color: var(--line-strong); }
+    .filter-pill.active { color: var(--bg); background: var(--green); border-color: var(--green); }
     .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .project-card {
-      background: var(--surface);
-      border: 1px solid var(--line); border-radius: 16px;
-      padding: 28px; display: flex; flex-direction: column; gap: 14px;
-      position: relative; overflow: hidden;
-      transition: border-color 0.3s, transform 0.4s var(--ease), box-shadow 0.4s;
-      transform-style: preserve-3d; cursor: none;
-    }
-    /* spotlight that tracks the cursor */
-    .project-card::after {
-      content: ''; position: absolute; inset: 0; pointer-events: none;
-      background: radial-gradient(360px circle at var(--mx, 50%) var(--my, 0%), rgba(139,123,255,0.12), transparent 60%);
-      opacity: 0; transition: opacity 0.4s; z-index: 0;
-    }
+    .project-card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 26px; display: flex; flex-direction: column; gap: 14px; position: relative; overflow: hidden; transition: border-color 0.3s, transform 0.4s var(--ease), box-shadow 0.4s; transform-style: preserve-3d; cursor: none; }
+    .project-card::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(340px circle at var(--mx,50%) var(--my,0%), rgba(34,197,94,0.1), transparent 60%); opacity: 0; transition: opacity 0.4s; z-index: 0; }
     .project-card:hover::after { opacity: 1; }
     .project-card > * { position: relative; z-index: 1; }
-    .project-card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-      background: var(--grad); opacity: 0; transition: opacity 0.4s; z-index: 2;
-    }
-    .project-card:hover {
-      border-color: var(--line-strong);
-      box-shadow: 0 26px 60px rgba(0,0,0,0.5);
-    }
+    .project-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--green); opacity: 0; transition: opacity 0.4s; z-index: 2; }
+    .project-card:hover { border-color: var(--line-strong); box-shadow: 0 24px 56px rgba(0,0,0,0.5); }
     .project-card:hover::before { opacity: 1; }
-    .project-card.featured-card {
-      border-color: rgba(139,123,255,0.25);
-      background: linear-gradient(155deg, rgba(139,123,255,0.06), var(--surface) 55%);
-    }
+    .project-card.featured-card { border-color: rgba(34,197,94,0.28); background: linear-gradient(155deg, rgba(34,197,94,0.06), var(--surface) 55%); }
     .project-card.hidden-card { display: none; }
-
-    .project-badge {
-      position: absolute; top: 18px; right: 18px; z-index: 2;
-      font-family: var(--font-mono); font-size: 9px;
-      letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 11px; border-radius: 100px;
-    }
-    .badge-live { color: var(--teal); border: 1px solid rgba(65,227,197,0.4); background: rgba(65,227,197,0.07); }
-    .badge-new { color: var(--amber); border: 1px solid rgba(255,178,122,0.4); background: rgba(255,178,122,0.07); }
-
-    .project-icon-wrap {
-      width: 46px; height: 46px; background: rgba(139,123,255,0.1);
-      border-radius: 12px; display: flex; align-items: center; justify-content: center;
-      font-size: 22px; border: 1px solid var(--line);
-    }
-    .project-name { font-family: var(--font-display); font-size: 19px; font-weight: 500; color: var(--text); line-height: 1.25; padding-right: 48px; }
+    .project-badge { position: absolute; top: 18px; right: 18px; z-index: 2; font-family: var(--font-mono); font-size: 9px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 10px; border-radius: 100px; display: inline-flex; align-items: center; gap: 5px; }
+    .badge-live { color: var(--green); border: 1px solid rgba(34,197,94,0.4); background: rgba(34,197,94,0.08); }
+    .badge-live::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--green); box-shadow: 0 0 7px var(--green); animation: blink 1.4s ease-in-out infinite; }
+    .badge-new { color: var(--cyan); border: 1px solid rgba(56,189,248,0.4); background: rgba(56,189,248,0.08); }
+    .project-ic { width: 46px; height: 46px; background: var(--green-dim); border-radius: 11px; display: flex; align-items: center; justify-content: center; font-size: 22px; color: var(--green); border: 1px solid var(--line); }
+    .project-name { font-family: var(--font-mono); font-size: 16px; font-weight: 600; color: var(--text); line-height: 1.35; padding-right: 48px; }
     .project-desc { font-size: 13px; color: var(--text-2); line-height: 1.7; flex: 1; }
-    .project-proof {
-      display: grid; gap: 8px; padding: 14px;
-      border: 1px solid var(--line); border-radius: 10px; background: rgba(0,0,0,0.18);
-    }
+    .project-proof { display: grid; gap: 8px; padding: 14px; border: 1px solid var(--line); border-radius: 9px; background: rgba(0,0,0,0.2); }
     .proof-row { display: grid; grid-template-columns: 58px 1fr; gap: 10px; font-size: 12px; color: var(--text-2); line-height: 1.45; }
-    .proof-label { font-family: var(--font-mono); font-size: 9px; color: var(--teal); letter-spacing: 1px; text-transform: uppercase; }
+    .proof-label { font-family: var(--font-mono); font-size: 9px; color: var(--green); letter-spacing: 0.5px; text-transform: uppercase; }
     .project-tech { display: flex; flex-wrap: wrap; gap: 6px; }
-    .project-tech span {
-      font-family: var(--font-mono); font-size: 10px; color: var(--text-2);
-      padding: 3px 9px; border: 1px solid var(--line); border-radius: 100px; background: rgba(255,255,255,0.02);
-    }
+    .project-tech span { font-family: var(--font-mono); font-size: 10px; color: var(--text-2); padding: 3px 9px; border: 1px solid var(--line); border-radius: 6px; background: rgba(148,163,184,0.03); }
     .project-links { display: flex; gap: 8px; margin-top: auto; }
-    .project-btn { font-family: var(--font-mono); font-size: 11px; padding: 8px 16px; border-radius: 100px; letter-spacing: 0.3px; transition: all 0.3s; }
-    .project-btn-primary { background: var(--text); color: var(--bg); }
-    .project-btn-primary:hover { box-shadow: 0 6px 20px rgba(139,123,255,0.35); }
+    .project-btn { font-family: var(--font-mono); font-size: 11px; padding: 8px 15px; border-radius: 7px; transition: all 0.3s; display: inline-flex; align-items: center; gap: 6px; }
+    .project-btn .ic { font-size: 13px; }
+    .project-btn-primary { background: var(--green); color: var(--bg); font-weight: 600; }
+    .project-btn-primary:hover { background: var(--green-bright); box-shadow: 0 6px 18px var(--green-glow); }
     .project-btn-ghost { border: 1px solid var(--line-strong); color: var(--text-2); }
-    .project-btn-ghost:hover { border-color: var(--violet); color: var(--text); }
+    .project-btn-ghost:hover { border-color: var(--green); color: var(--green-bright); }
 
     /* ===== CONTACT ===== */
     #contact { background: var(--bg); overflow: hidden; position: relative; }
-    #contact .blob-c {
-      position: absolute; left: 50%; top: 20%; transform: translateX(-50%);
-      width: 600px; height: 600px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(109,94,252,0.18), transparent 65%);
-      filter: blur(60px); pointer-events: none;
-    }
+    #contact .glow-c { position: absolute; left: 50%; top: 18%; transform: translateX(-50%); width: 580px; height: 580px; border-radius: 50%; background: radial-gradient(circle, rgba(34,197,94,0.14), transparent 65%); filter: blur(60px); pointer-events: none; }
     .contact-inner { max-width: 820px; margin: 0 auto; text-align: center; position: relative; z-index: 1; }
-    .contact-big {
-      font-family: var(--font-display);
-      font-size: clamp(44px, 7vw, 96px);
-      font-weight: 500; letter-spacing: -1.5px; line-height: 1; margin-bottom: 26px;
-    }
-    .contact-big em { font-style: italic; font-weight: 400; }
-    .contact-sub { font-size: 17px; color: var(--text-2); margin-bottom: 48px; line-height: 1.7; }
-    .contact-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; margin-bottom: 56px; }
-    .contact-link {
-      display: flex; align-items: center; gap: 10px;
-      padding: 14px 24px; border: 1px solid var(--line); border-radius: 100px;
-      background: var(--surface); font-size: 14px; color: var(--text-2); transition: all 0.3s;
-    }
-    .contact-link:hover { border-color: var(--violet); color: var(--text); transform: translateY(-3px); }
-    .contact-email-big {
-      display: inline-block; font-family: var(--font-mono);
-      font-size: clamp(14px, 2.5vw, 21px); color: var(--text);
-      border-bottom: 1px solid var(--line-strong); padding-bottom: 5px;
-      transition: border-color 0.3s;
-    }
-    .contact-email-big:hover { border-color: var(--violet); }
+    .contact-big { font-family: var(--font-mono); font-size: clamp(36px, 6vw, 76px); font-weight: 800; letter-spacing: -2.5px; line-height: 1.04; margin-bottom: 24px; }
+    .contact-big .g { color: var(--green); }
+    .contact-sub { font-size: 17px; color: var(--text-2); margin-bottom: 46px; line-height: 1.7; }
+    .contact-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 13px; margin-bottom: 54px; }
+    .contact-link { display: flex; align-items: center; gap: 10px; padding: 14px 22px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface); font-size: 14px; color: var(--text-2); transition: all 0.3s; }
+    .contact-link .ic { font-size: 16px; color: var(--green); }
+    .contact-link:hover { border-color: var(--green); color: var(--text); transform: translateY(-3px); }
+    .contact-email-big { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: clamp(14px, 2.4vw, 20px); color: var(--green); border-bottom: 1px solid rgba(34,197,94,0.4); padding-bottom: 5px; transition: border-color 0.3s, text-shadow 0.3s; }
+    .contact-email-big:hover { border-color: var(--green); text-shadow: 0 0 16px rgba(34,197,94,0.5); }
 
     /* ===== FOOTER ===== */
-    footer {
-      background: var(--bg); border-top: 1px solid var(--line);
-      padding: 30px 5%; display: flex; align-items: center; justify-content: space-between;
-      flex-wrap: wrap; gap: 16px;
-    }
+    footer { background: var(--bg); border-top: 1px solid var(--line); padding: 28px 5%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
     .footer-left { font-family: var(--font-mono); font-size: 12px; color: var(--text-2); }
-    .footer-left span { color: var(--text); }
-    .footer-right { display: flex; gap: 24px; }
-    .footer-right a { font-family: var(--font-mono); font-size: 11px; color: var(--text-2); letter-spacing: 0.5px; transition: color 0.3s; }
-    .footer-right a:hover { color: var(--text); }
+    .footer-left .g { color: var(--green); }
+    .footer-right { display: flex; gap: 22px; }
+    .footer-right a { font-family: var(--font-mono); font-size: 11px; color: var(--text-2); transition: color 0.3s; }
+    .footer-right a:hover { color: var(--green-bright); }
 
     /* ===== BACK TO TOP ===== */
-    #btt {
-      position: fixed; bottom: 28px; right: 28px;
-      width: 46px; height: 46px; background: var(--text); color: var(--bg);
-      border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      font-size: 18px; opacity: 0; transform: translateY(16px);
-      transition: opacity 0.3s, transform 0.3s, box-shadow 0.3s; z-index: 50;
-    }
+    #btt { position: fixed; bottom: 26px; right: 26px; width: 46px; height: 46px; background: var(--green); color: var(--bg); border-radius: 9px; display: flex; align-items: center; justify-content: center; font-size: 17px; opacity: 0; transform: translateY(16px); transition: opacity 0.3s, transform 0.3s, box-shadow 0.3s; z-index: 50; }
     #btt.show { opacity: 1; transform: translateY(0); }
-    #btt:hover { box-shadow: 0 0 24px rgba(139,123,255,0.5); }
+    #btt:hover { background: var(--green-bright); box-shadow: 0 0 22px var(--green-glow); }
+    #btt .ic { font-size: 18px; }
 
     /* ===== SCROLL PROGRESS ===== */
-    #spb {
-      position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 200;
-      background: var(--grad); transform-origin: left; transform: scaleX(0); transition: transform 0.1s linear;
-    }
+    #spb { position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 200; background: linear-gradient(90deg, var(--green), var(--green-bright)); transform-origin: left; transform: scaleX(0); transition: transform 0.1s linear; }
 
     /* ===== REDUCED MOTION ===== */
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
       .reveal { opacity: 1; transform: none; }
       .spark-line { stroke-dashoffset: 0; }
+      .caret { opacity: 1; }
       html { scroll-behavior: auto; }
     }
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 980px) {
-      .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 44px; }
       .hero-panel { max-width: 520px; }
       .metrics-grid { grid-template-columns: repeat(2, 1fr); }
       .projects-grid { grid-template-columns: repeat(2, 1fr); }
@@ -806,7 +399,7 @@
     }
     @media (max-width: 768px) {
       .nav-links { display: none; }
-      .about-grid { grid-template-columns: 1fr; gap: 56px; }
+      .about-grid { grid-template-columns: 1fr; gap: 54px; }
       .about-left { display: flex; flex-direction: column; align-items: center; }
       .about-photo-frame { width: 260px; height: 316px; }
       .exp-item { grid-template-columns: 1fr; }
@@ -815,10 +408,9 @@
       .stack-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 480px) {
-      section { padding: 90px 5%; }
+      section { padding: 84px 5%; }
       .metrics-grid { grid-template-columns: 1fr; }
       .stack-grid { grid-template-columns: 1fr; }
-      .panel-stats { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
@@ -827,123 +419,99 @@
 <div id="spb"></div>
 <div id="cur-dot"></div>
 <div id="cur-ring"></div>
-<button id="btt" aria-label="Back to top">↑</button>
+<button id="btt" aria-label="Back to top"><span class="ic" data-icon="arrow-up"></span></button>
 
 <!-- NAV -->
 <nav id="nav">
-  <div class="nav-logo"><span class="logo-dot"></span>Rakshith C.</div>
+  <div class="nav-logo">rakshith<span class="br">.</span>ch<span class="br">()</span></div>
   <div class="nav-links">
-    <a href="#about">About</a>
-    <a href="#stack">Stack</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Work</a>
-    <a href="#contact">Contact</a>
+    <a href="#about">about</a>
+    <a href="#stack">stack</a>
+    <a href="#experience">experience</a>
+    <a href="#projects">work</a>
+    <a href="#contact">contact</a>
   </div>
-  <a href="resume.html" class="nav-cta magnetic" target="_blank">Resume ↗</a>
+  <a href="resume.html" class="nav-cta magnetic" target="_blank"><span class="ic" data-icon="file-text"></span> resume</a>
 </nav>
 
 <!-- HERO -->
 <section id="hero">
-  <div class="aurora">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
-  </div>
+  <div class="glow-orb glow-1"></div>
+  <div class="glow-orb glow-2"></div>
 
   <div class="hero-inner">
     <div class="hero-left">
-      <div class="hero-status r1"><span class="status-dot"></span> Available for new roles · Jersey City, NJ</div>
-      <div class="hero-eyebrow r1" data-scramble>Data Analyst &amp; ML Engineer</div>
+      <div class="prompt r1">
+        <span class="usr">rakshith</span><span class="pmt">@</span><span class="pth">portfolio</span><span class="pmt">:~$</span>
+        <span class="cmd" data-type="whoami"></span><span class="caret"></span>
+      </div>
 
-      <h1 class="hero-name r2">
-        <span class="ln1">Rakshith</span><br/>
-        <span class="ln2 grad-text">Chandupatla</span>
-      </h1>
+      <h1 class="hero-name r2">Rakshith<br/>Chandupatla<span class="g">_</span></h1>
 
-      <div class="hero-title r3">
-        <span>SQL &amp; Python</span>
-        <span class="sep">/</span>
-        <span>Power BI &amp; Tableau</span>
-        <span class="sep">/</span>
-        <span>ML &amp; Risk</span>
+      <div class="hero-role r3">
+        <span class="cmt">//</span>
+        <span>Data Analyst &amp; ML Engineer</span>
+        <span class="sep">·</span>
+        <span>SQL · Python · Power BI</span>
       </div>
 
       <p class="hero-desc r4">
         I turn large-scale data into
         <strong>decision-ready dashboards, SQL/Python analysis, and ML-powered risk insights</strong>.
         3+ years across predictive analytics, fraud detection, process automation, and operational intelligence.
+        Based in <strong>Jersey City, NJ</strong>.
       </p>
 
       <div class="hero-ctas r5">
-        <a href="#projects" class="btn-primary magnetic">View Work →</a>
-        <a href="resume.html" class="btn-outline magnetic" target="_blank">Resume ↗</a>
-        <a href="#contact" class="btn-outline magnetic">Get In Touch</a>
+        <a href="#projects" class="btn-primary magnetic">View Work <span class="ic" data-icon="arrow-right"></span></a>
+        <a href="resume.html" class="btn-outline magnetic" target="_blank"><span class="ic" data-icon="file-text"></span> Resume</a>
+        <a href="#contact" class="btn-outline magnetic"><span class="ic" data-icon="mail"></span> Contact</a>
       </div>
     </div>
 
-    <!-- DATA PANEL -->
+    <!-- IDE PANEL -->
     <div class="hero-panel r6" aria-hidden="true">
-      <div class="panel-head">
-        <div class="panel-title">impact_over_time.csv</div>
+      <div class="panel-bar">
         <div class="panel-dots"><i></i><i></i><i></i></div>
+        <div class="panel-name">impact_over_time.py</div>
       </div>
-      <div class="chart-wrap">
-        <svg viewBox="0 0 320 150" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0" stop-color="#8b7bff"/>
-              <stop offset="1" stop-color="#41e3c5"/>
-            </linearGradient>
-            <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#8b7bff" stop-opacity="0.32"/>
-              <stop offset="1" stop-color="#8b7bff" stop-opacity="0"/>
-            </linearGradient>
-          </defs>
-          <!-- gridlines -->
-          <g stroke="rgba(255,255,255,0.06)" stroke-width="1">
-            <line x1="0" y1="38" x2="320" y2="38"/>
-            <line x1="0" y1="75" x2="320" y2="75"/>
-            <line x1="0" y1="112" x2="320" y2="112"/>
-          </g>
-          <path class="spark-area" d="M5,120 L52,104 L100,108 L150,72 L200,80 L255,40 L315,22 L315,150 L5,150 Z" fill="url(#areaGrad)"/>
-          <path class="spark-line" d="M5,120 L52,104 L100,108 L150,72 L200,80 L255,40 L315,22" stroke="url(#lineGrad)"/>
-          <g fill="#41e3c5">
-            <circle class="spark-dot" data-delay="900" cx="5" cy="120" r="3.5"/>
-            <circle class="spark-dot" data-delay="1100" cx="52" cy="104" r="3.5"/>
-            <circle class="spark-dot" data-delay="1300" cx="100" cy="108" r="3.5"/>
-            <circle class="spark-dot" data-delay="1500" cx="150" cy="72" r="3.5"/>
-            <circle class="spark-dot" data-delay="1700" cx="200" cy="80" r="3.5"/>
-            <circle class="spark-dot" data-delay="1900" cx="255" cy="40" r="3.5"/>
-            <circle class="spark-dot" data-delay="2100" cx="315" cy="22" r="4.5" fill="#8b7bff"/>
-          </g>
-        </svg>
-        <div class="chart-caption">career impact trend</div>
-      </div>
-      <div class="panel-stats">
-        <div class="pstat">
-          <div class="pstat-num grad-text" data-target="3" data-suffix="+">0</div>
-          <div class="pstat-label">Years Experience</div>
+      <div class="panel-body">
+        <div class="chart-wrap">
+          <svg class="spark" viewBox="0 0 320 150" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#22c55e" stop-opacity="0.34"/>
+                <stop offset="1" stop-color="#22c55e" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <g stroke="rgba(148,163,184,0.08)" stroke-width="1">
+              <line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="75" x2="320" y2="75"/><line x1="0" y1="112" x2="320" y2="112"/>
+            </g>
+            <path class="spark-area" d="M5,120 L52,104 L100,108 L150,72 L200,80 L255,40 L315,22 L315,150 L5,150 Z" fill="url(#areaGrad)"/>
+            <path class="spark-line" d="M5,120 L52,104 L100,108 L150,72 L200,80 L255,40 L315,22" stroke="#22c55e"/>
+            <g fill="#4ade80">
+              <circle class="spark-dot" data-delay="900" cx="5" cy="120" r="3.5"/>
+              <circle class="spark-dot" data-delay="1100" cx="52" cy="104" r="3.5"/>
+              <circle class="spark-dot" data-delay="1300" cx="100" cy="108" r="3.5"/>
+              <circle class="spark-dot" data-delay="1500" cx="150" cy="72" r="3.5"/>
+              <circle class="spark-dot" data-delay="1700" cx="200" cy="80" r="3.5"/>
+              <circle class="spark-dot" data-delay="1900" cx="255" cy="40" r="3.5"/>
+              <circle class="spark-dot" data-delay="2100" cx="315" cy="22" r="4.5" fill="#22c55e"/>
+            </g>
+          </svg>
+          <div class="chart-cap">career impact trend ↗</div>
         </div>
-        <div class="pstat">
-          <div class="pstat-num grad-text" data-target="5" data-suffix="M+">0</div>
-          <div class="pstat-label">Records Processed</div>
-        </div>
-        <div class="pstat">
-          <div class="pstat-num grad-text" data-target="3" data-suffix=".90">0</div>
-          <div class="pstat-label">Graduate GPA</div>
-        </div>
-        <div class="pstat">
-          <div class="pstat-num grad-text" data-target="12" data-suffix="+">0</div>
-          <div class="pstat-label">Projects Shipped</div>
+        <div class="panel-stats">
+          <div class="pstat"><div class="pstat-num" data-target="3" data-suffix="+">0</div><div class="pstat-label">Years Exp</div></div>
+          <div class="pstat"><div class="pstat-num" data-target="5" data-suffix="M+">0</div><div class="pstat-label">Records</div></div>
+          <div class="pstat"><div class="pstat-num" data-target="3" data-suffix=".90">0</div><div class="pstat-label">Grad GPA</div></div>
+          <div class="pstat"><div class="pstat-num" data-target="13" data-suffix="+">0</div><div class="pstat-label">Projects</div></div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="hero-scroll">
-    <div class="scroll-line"></div>
-    Scroll
-  </div>
+  <div class="hero-scroll"><div class="scroll-line"></div>scroll</div>
 </section>
 
 <!-- MARQUEE -->
@@ -965,28 +533,28 @@
 <!-- METRICS -->
 <section id="metrics" aria-label="Business impact highlights">
   <div class="container">
-    <div class="section-tag reveal">By the numbers</div>
+    <div class="section-tag"><span class="n">01.</span> by the numbers</div>
     <div class="metrics-grid reveal reveal-delay-1">
       <div class="metric">
-        <div class="metric-num grad-text">15%</div>
+        <div class="metric-num">15%</div>
         <div class="metric-bar"><i data-w="62"></i></div>
         <div class="metric-label">Discrepancy Reduction</div>
         <div class="metric-copy">Anomaly detection models on large-scale transaction datasets.</div>
       </div>
       <div class="metric">
-        <div class="metric-num grad-text">$2M</div>
+        <div class="metric-num">$2M</div>
         <div class="metric-bar"><i data-w="85"></i></div>
         <div class="metric-label">Financial Leakage Found</div>
         <div class="metric-copy">SQL/Python analysis identifying operational losses and risk exposure.</div>
       </div>
       <div class="metric">
-        <div class="metric-num grad-text">25%</div>
+        <div class="metric-num">25%</div>
         <div class="metric-bar"><i data-w="72"></i></div>
         <div class="metric-label">ETL Efficiency Gain</div>
         <div class="metric-copy">Automated ETL and data integrity pipelines in Python.</div>
       </div>
       <div class="metric">
-        <div class="metric-num grad-text">20%</div>
+        <div class="metric-num">20%</div>
         <div class="metric-bar"><i data-w="68"></i></div>
         <div class="metric-label">Accuracy Improvement</div>
         <div class="metric-copy">Gradient Boosting models identifying operational bottlenecks.</div>
@@ -998,34 +566,33 @@
 <!-- ABOUT -->
 <section id="about">
   <div class="container">
-    <div class="section-tag">About</div>
+    <div class="section-tag"><span class="n">02.</span> about</div>
     <div class="about-grid">
       <div class="about-left reveal">
         <div class="about-glow"></div>
         <div class="about-photo-frame">
           <div class="about-photo">
-            <img src="assets/profile.jpg" alt="Rakshith Chandupatla"
-              onerror="this.onerror=null; this.src='assets/profile.svg';" />
+            <img src="assets/profile.jpg" alt="Rakshith Chandupatla" onerror="this.onerror=null; this.src='assets/profile.svg';" />
           </div>
-          <div class="about-tag">Jersey City, NJ</div>
+          <div class="about-tag"><span class="ic" data-icon="map-pin"></span> Jersey City, NJ</div>
         </div>
       </div>
       <div class="about-right">
-        <h2 class="section-title reveal">Turning data<br/><em>signals</em> into decisions.</h2>
+        <h2 class="section-title reveal">Turning data <span class="g">signals</span><br/>into decisions.</h2>
         <p class="about-bio reveal reveal-delay-1">
           I'm a <strong>Data Analyst &amp; ML Engineer</strong> with 3+ years translating large-scale data into trusted dashboards, KPI narratives, and predictive insights across banking, insurance, and tech. Currently at <strong>Change Healthcare</strong>, previously <strong>Get Hire Technologies</strong>. My edge is analyst storytelling backed by SQL, Python, risk modeling, and ML/data-engineering depth.
         </p>
         <div class="about-facts reveal reveal-delay-2">
-          <div class="fact"><span class="fact-icon">◆</span><span>Open to relocation anywhere in the US</span></div>
-          <div class="fact"><span class="fact-icon">◆</span><span>OPT/STEM OPT authorized</span></div>
-          <div class="fact"><span class="fact-icon">◆</span><span>AWS Cloud Practitioner Certified</span></div>
-          <div class="fact"><span class="fact-icon">◆</span><span>rakshith.ch04@gmail.com</span></div>
+          <div class="fact"><span class="ic" data-icon="globe"></span><span>Open to relocation anywhere in the US</span></div>
+          <div class="fact"><span class="ic" data-icon="shield-check"></span><span>OPT/STEM OPT authorized</span></div>
+          <div class="fact"><span class="ic" data-icon="award"></span><span>AWS Cloud Practitioner Certified</span></div>
+          <div class="fact"><span class="ic" data-icon="mail"></span><span>rakshith.ch04@gmail.com</span></div>
         </div>
         <div class="edu-badge reveal reveal-delay-3">
-          <span class="edu-badge-icon">🎓</span>
+          <span class="ic" data-icon="graduation"></span>
           <div class="edu-badge-text">
-            <span class="edu-badge-title">M.S. Computer Science — Pace University</span>
-            <span class="edu-badge-sub">GPA 3.90 · May 2025 · New York</span>
+            <div class="edu-badge-title">M.S. Computer Science — Pace University</div>
+            <div class="edu-badge-sub">GPA 3.90 · May 2025 · New York</div>
           </div>
         </div>
       </div>
@@ -1036,81 +603,21 @@
 <!-- STACK -->
 <section id="stack">
   <div class="container">
-    <div class="section-tag">Toolkit</div>
-    <h2 class="section-title reveal">Tools I <em>work with</em></h2>
+    <div class="section-tag"><span class="n">03.</span> stack</div>
+    <h2 class="section-title reveal">Tools I <span class="g">work with</span></h2>
     <div class="stack-grid reveal reveal-delay-1">
-      <div class="stack-cell">
-        <div class="stack-icon">🗄️</div>
-        <div class="stack-name">SQL</div>
-        <div class="stack-desc">CTEs · Window functions · Query tuning</div>
-        <div class="stack-level"><div class="stack-level-fill" data-w="92"></div></div>
-      </div>
-      <div class="stack-cell">
-        <div class="stack-icon">📊</div>
-        <div class="stack-name">Power BI</div>
-        <div class="stack-desc">DAX · KPI dashboards · Executive reporting</div>
-        <div class="stack-level"><div class="stack-level-fill" data-w="86"></div></div>
-      </div>
-      <div class="stack-cell">
-        <div class="stack-icon">📈</div>
-        <div class="stack-name">Tableau</div>
-        <div class="stack-desc">Trend analysis · KPI dashboards · Executive reporting</div>
-        <div class="stack-level"><div class="stack-level-fill" data-w="85"></div></div>
-      </div>
-      <div class="stack-cell">
-        <div class="stack-icon">🐍</div>
-        <div class="stack-name">Python</div>
-        <div class="stack-desc">Pandas · NumPy · EDA · Automation</div>
-        <div class="stack-level"><div class="stack-level-fill" data-w="95"></div></div>
-      </div>
-      <div class="stack-cell">
-        <div class="stack-icon">🎯</div>
-        <div class="stack-name">Risk Analytics</div>
-        <div class="stack-desc">Fraud detection · Anomaly models · Risk mitigation</div>
-        <div class="stack-level"><div class="stack-level-fill" data-w="90"></div></div>
-      </div>
-      <div class="stack-cell">
-        <div class="stack-icon">🤖</div>
-        <div class="stack-name">ML / AI</div>
-        <div class="stack-desc">Scikit-learn · RAG · Gradient Boosting · NLP</div>
-        <div class="stack-level"><div class="stack-level-fill" data-w="85"></div></div>
-      </div>
-      <div class="stack-cell">
-        <div class="stack-icon">❄️</div>
-        <div class="stack-name">Snowflake</div>
-        <div class="stack-desc">Cloud DWH · Star schema · Analytical views</div>
-        <div class="stack-level"><div class="stack-level-fill" data-w="82"></div></div>
-      </div>
-      <div class="stack-cell">
-        <div class="stack-icon">🔧</div>
-        <div class="stack-name">dbt</div>
-        <div class="stack-desc">Staging/marts layers · Schema tests · Docs</div>
-        <div class="stack-level"><div class="stack-level-fill" data-w="78"></div></div>
-      </div>
-      <div class="stack-cell">
-        <div class="stack-icon">⚡</div>
-        <div class="stack-name">PySpark</div>
-        <div class="stack-desc">Spark SQL · Provider rankings · Batch analytics</div>
-        <div class="stack-level"><div class="stack-level-fill" data-w="78"></div></div>
-      </div>
-      <div class="stack-cell">
-        <div class="stack-icon">🔷</div>
-        <div class="stack-name">Databricks</div>
-        <div class="stack-desc">Delta Lake · Notebooks · Analytics workloads</div>
-        <div class="stack-level"><div class="stack-level-fill" data-w="75"></div></div>
-      </div>
-      <div class="stack-cell">
-        <div class="stack-icon">☁️</div>
-        <div class="stack-name">AWS</div>
-        <div class="stack-desc">S3 · Glue · Redshift · Lambda · Certified</div>
-        <div class="stack-level"><div class="stack-level-fill" data-w="80"></div></div>
-      </div>
-      <div class="stack-cell">
-        <div class="stack-icon">🐳</div>
-        <div class="stack-name">Docker / CI</div>
-        <div class="stack-desc">Reproducible apps · GitHub Actions · Delivery</div>
-        <div class="stack-level"><div class="stack-level-fill" data-w="80"></div></div>
-      </div>
+      <div class="stack-cell"><span class="stack-ic ic" data-icon="database"></span><div class="stack-name">SQL</div><div class="stack-desc">CTEs · Window functions · Query tuning</div><div class="stack-level"><div class="stack-level-fill" data-w="92"></div></div></div>
+      <div class="stack-cell"><span class="stack-ic ic" data-icon="bar-chart"></span><div class="stack-name">Power BI</div><div class="stack-desc">DAX · KPI dashboards · Executive reporting</div><div class="stack-level"><div class="stack-level-fill" data-w="86"></div></div></div>
+      <div class="stack-cell"><span class="stack-ic ic" data-icon="trending-up"></span><div class="stack-name">Tableau</div><div class="stack-desc">Trend analysis · KPI dashboards · Reporting</div><div class="stack-level"><div class="stack-level-fill" data-w="85"></div></div></div>
+      <div class="stack-cell"><span class="stack-ic ic" data-icon="terminal"></span><div class="stack-name">Python</div><div class="stack-desc">Pandas · NumPy · EDA · Automation</div><div class="stack-level"><div class="stack-level-fill" data-w="95"></div></div></div>
+      <div class="stack-cell"><span class="stack-ic ic" data-icon="target"></span><div class="stack-name">Risk Analytics</div><div class="stack-desc">Fraud detection · Anomaly models · Mitigation</div><div class="stack-level"><div class="stack-level-fill" data-w="90"></div></div></div>
+      <div class="stack-cell"><span class="stack-ic ic" data-icon="cpu"></span><div class="stack-name">ML / AI</div><div class="stack-desc">Scikit-learn · RAG · Gradient Boosting · NLP</div><div class="stack-level"><div class="stack-level-fill" data-w="85"></div></div></div>
+      <div class="stack-cell"><span class="stack-ic ic" data-icon="snowflake"></span><div class="stack-name">Snowflake</div><div class="stack-desc">Cloud DWH · Star schema · Analytical views</div><div class="stack-level"><div class="stack-level-fill" data-w="82"></div></div></div>
+      <div class="stack-cell"><span class="stack-ic ic" data-icon="layers"></span><div class="stack-name">dbt</div><div class="stack-desc">Staging/marts layers · Schema tests · Docs</div><div class="stack-level"><div class="stack-level-fill" data-w="78"></div></div></div>
+      <div class="stack-cell"><span class="stack-ic ic" data-icon="zap"></span><div class="stack-name">PySpark</div><div class="stack-desc">Spark SQL · Provider rankings · Batch analytics</div><div class="stack-level"><div class="stack-level-fill" data-w="78"></div></div></div>
+      <div class="stack-cell"><span class="stack-ic ic" data-icon="grid"></span><div class="stack-name">Databricks</div><div class="stack-desc">Delta Lake · Notebooks · Analytics workloads</div><div class="stack-level"><div class="stack-level-fill" data-w="75"></div></div></div>
+      <div class="stack-cell"><span class="stack-ic ic" data-icon="cloud"></span><div class="stack-name">AWS</div><div class="stack-desc">S3 · Glue · Redshift · Lambda · Certified</div><div class="stack-level"><div class="stack-level-fill" data-w="80"></div></div></div>
+      <div class="stack-cell"><span class="stack-ic ic" data-icon="package"></span><div class="stack-name">Docker / CI</div><div class="stack-desc">Reproducible apps · GitHub Actions · Delivery</div><div class="stack-level"><div class="stack-level-fill" data-w="80"></div></div></div>
     </div>
   </div>
 </section>
@@ -1118,8 +625,8 @@
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="container">
-    <div class="section-tag">Experience</div>
-    <h2 class="section-title reveal">Where I've <em>made impact</em></h2>
+    <div class="section-tag"><span class="n">04.</span> experience</div>
+    <h2 class="section-title reveal">Where I've <span class="g">made impact</span></h2>
     <div class="exp-list">
 
       <div class="exp-item reveal">
@@ -1188,8 +695,8 @@
 <!-- PROJECTS -->
 <section id="projects">
   <div class="container">
-    <div class="section-tag">Selected Work</div>
-    <h2 class="section-title reveal">Things I've <em>built</em></h2>
+    <div class="section-tag"><span class="n">05.</span> selected work</div>
+    <h2 class="section-title reveal">Things I've <span class="g">built</span></h2>
 
     <div class="projects-filter reveal">
       <button class="filter-pill active" data-f="all">All</button>
@@ -1203,7 +710,7 @@
 
       <div class="project-card featured-card reveal" data-cat="dataeng ml live">
         <div class="project-badge badge-live">Live</div>
-        <div class="project-icon-wrap">💸</div>
+        <div class="project-ic ic" data-icon="activity"></div>
         <div class="project-name">Claims Denial Analysis &amp; Prediction</div>
         <div class="project-desc">End-to-end revenue-cycle analytics: 50k synthetic 837/835-style claims → Snowflake/dbt star schema → EDA → XGBoost denial-risk model with SHAP → 4-page interactive Streamlit dashboard.</div>
         <div class="project-proof">
@@ -1211,31 +718,27 @@
           <div class="proof-row"><span class="proof-label">Tools</span><span>Snowflake, dbt, XGBoost, SHAP, Streamlit, Plotly.</span></div>
           <div class="proof-row"><span class="proof-label">Impact</span><span>AUC 0.83 risk scorer; surfaces prior-auth as the #1 controllable denial driver (~84% vs ~27%).</span></div>
         </div>
-        <div class="project-tech">
-          <span>Snowflake</span><span>dbt</span><span>XGBoost</span><span>SHAP</span><span>Streamlit</span>
-        </div>
+        <div class="project-tech"><span>Snowflake</span><span>dbt</span><span>XGBoost</span><span>SHAP</span><span>Streamlit</span></div>
         <div class="project-links">
-          <a href="https://healthcare-claims-denial-analysis-e8xeaunfeof8p7tdqi4fdb.streamlit.app/" target="_blank" class="project-btn project-btn-primary">Live Demo ↗</a>
-          <a href="https://github.com/Rakshithch/healthcare-claims-denial-analysis" target="_blank" class="project-btn project-btn-ghost">GitHub</a>
+          <a href="https://healthcare-claims-denial-analysis-e8xeaunfeof8p7tdqi4fdb.streamlit.app/" target="_blank" class="project-btn project-btn-primary"><span class="ic" data-icon="external"></span> Live Demo</a>
+          <a href="https://github.com/Rakshithch/healthcare-claims-denial-analysis" target="_blank" class="project-btn project-btn-ghost"><span class="ic" data-icon="github"></span> GitHub</a>
         </div>
       </div>
 
       <div class="project-card reveal reveal-delay-1" data-cat="live ml">
         <div class="project-badge badge-live">Live</div>
-        <div class="project-icon-wrap">🧑‍💼</div>
+        <div class="project-ic ic" data-icon="users"></div>
         <div class="project-name">HireFlow AI — Hiring Platform</div>
         <div class="project-desc">Full-stack AI-powered hiring platform with candidate scoring and re-scoring, bulk actions, realtime updates, team invites, and production monitoring — built with Next.js, TypeScript, Supabase, and Prisma, deployed on Vercel.</div>
-        <div class="project-tech">
-          <span>Next.js</span><span>TypeScript</span><span>Supabase</span><span>Prisma</span><span>Sentry</span>
-        </div>
+        <div class="project-tech"><span>Next.js</span><span>TypeScript</span><span>Supabase</span><span>Prisma</span><span>Sentry</span></div>
         <div class="project-links">
-          <a href="https://hireflow-ai-rust.vercel.app" target="_blank" class="project-btn project-btn-primary">Live App ↗</a>
+          <a href="https://hireflow-ai-rust.vercel.app" target="_blank" class="project-btn project-btn-primary"><span class="ic" data-icon="external"></span> Live App</a>
         </div>
       </div>
 
       <div class="project-card featured-card reveal reveal-delay-2" data-cat="live ml">
         <div class="project-badge badge-live">Live</div>
-        <div class="project-icon-wrap">🏥</div>
+        <div class="project-ic ic" data-icon="layout-dashboard"></div>
         <div class="project-name">Claims Analytics Dashboard</div>
         <div class="project-desc">Interactive claims analytics experience for denial risk, revenue-cycle KPIs, payer/provider trends, and executive-ready operational views.</div>
         <div class="project-proof">
@@ -1243,18 +746,16 @@
           <div class="proof-row"><span class="proof-label">Tools</span><span>Python, Streamlit, Plotly, Scikit-learn, Random Forest.</span></div>
           <div class="proof-row"><span class="proof-label">Impact</span><span>Shows analyst judgment across KPIs, filters, model outputs, and business-facing visuals.</span></div>
         </div>
-        <div class="project-tech">
-          <span>Python</span><span>Streamlit</span><span>Plotly</span><span>Scikit-learn</span>
-        </div>
+        <div class="project-tech"><span>Python</span><span>Streamlit</span><span>Plotly</span><span>Scikit-learn</span></div>
         <div class="project-links">
-          <a href="https://healthcare-claims-dashboard-bhxjqyzktp7ki52i4upfol.streamlit.app/" target="_blank" class="project-btn project-btn-primary">Live Demo ↗</a>
-          <a href="https://github.com/Rakshithch/healthcare-claims-dashboard" target="_blank" class="project-btn project-btn-ghost">GitHub</a>
+          <a href="https://healthcare-claims-dashboard-bhxjqyzktp7ki52i4upfol.streamlit.app/" target="_blank" class="project-btn project-btn-primary"><span class="ic" data-icon="external"></span> Live Demo</a>
+          <a href="https://github.com/Rakshithch/healthcare-claims-dashboard" target="_blank" class="project-btn project-btn-ghost"><span class="ic" data-icon="github"></span> GitHub</a>
         </div>
       </div>
 
       <div class="project-card featured-card reveal reveal-delay-1" data-cat="dataeng">
         <div class="project-badge badge-new">New</div>
-        <div class="project-icon-wrap">❄️</div>
+        <div class="project-ic ic" data-icon="snowflake"></div>
         <div class="project-name">Claims Data Warehouse — Snowflake &amp; dbt</div>
         <div class="project-desc">Kimball-style Snowflake analytics model with dbt staging/marts, quality tests, and business views for claims trends.</div>
         <div class="project-proof">
@@ -1262,17 +763,15 @@
           <div class="proof-row"><span class="proof-label">Tools</span><span>Snowflake, dbt, SQL, star schema, automated tests.</span></div>
           <div class="proof-row"><span class="proof-label">Impact</span><span>Creates reliable denial-rate, diagnosis-cost, and monthly-trend analysis layers.</span></div>
         </div>
-        <div class="project-tech">
-          <span>Snowflake</span><span>dbt</span><span>SQL</span><span>Star Schema</span>
-        </div>
+        <div class="project-tech"><span>Snowflake</span><span>dbt</span><span>SQL</span><span>Star Schema</span></div>
         <div class="project-links">
-          <a href="https://github.com/Rakshithch/snowflake-healthcare-claims" target="_blank" class="project-btn project-btn-ghost">GitHub ↗</a>
+          <a href="https://github.com/Rakshithch/snowflake-healthcare-claims" target="_blank" class="project-btn project-btn-ghost"><span class="ic" data-icon="github"></span> GitHub</a>
         </div>
       </div>
 
       <div class="project-card featured-card reveal reveal-delay-2" data-cat="dataeng">
         <div class="project-badge badge-new">New</div>
-        <div class="project-icon-wrap">⚡</div>
+        <div class="project-ic ic" data-icon="zap"></div>
         <div class="project-name">Large-Scale Analytics — PySpark &amp; Databricks</div>
         <div class="project-desc">Databricks/PySpark analysis for payer denial rates, provider rankings, revenue recovery, and large-scale claims exploration.</div>
         <div class="project-proof">
@@ -1280,17 +779,15 @@
           <div class="proof-row"><span class="proof-label">Tools</span><span>PySpark, Databricks, Delta Lake, Spark SQL, Python.</span></div>
           <div class="proof-row"><span class="proof-label">Impact</span><span>Surfaces payer denial mix and $6,400 revenue recovery opportunity in sample analysis.</span></div>
         </div>
-        <div class="project-tech">
-          <span>PySpark</span><span>Databricks</span><span>Delta Lake</span><span>Spark SQL</span><span>Python</span>
-        </div>
+        <div class="project-tech"><span>PySpark</span><span>Databricks</span><span>Delta Lake</span><span>Spark SQL</span><span>Python</span></div>
         <div class="project-links">
-          <a href="https://github.com/Rakshithch/healthcare-claims-pyspark" target="_blank" class="project-btn project-btn-ghost">GitHub ↗</a>
+          <a href="https://github.com/Rakshithch/healthcare-claims-pyspark" target="_blank" class="project-btn project-btn-ghost"><span class="ic" data-icon="github"></span> GitHub</a>
         </div>
       </div>
 
       <div class="project-card reveal" data-cat="live ml">
         <div class="project-badge badge-live">Live</div>
-        <div class="project-icon-wrap">🤖</div>
+        <div class="project-ic ic" data-icon="search"></div>
         <div class="project-name">RAG Q&amp;A App</div>
         <div class="project-desc">RAG app for asking questions across large document corpora — policy, compliance, and reference material — with source citations and semantic search.</div>
         <div class="project-proof">
@@ -1298,96 +795,80 @@
           <div class="proof-row"><span class="proof-label">Tools</span><span>LangChain, FAISS, HuggingFace embeddings, Streamlit.</span></div>
           <div class="proof-row"><span class="proof-label">Impact</span><span>Demonstrates analyst research workflow, citations, semantic search, and explainable answers.</span></div>
         </div>
-        <div class="project-tech">
-          <span>LangChain</span><span>FAISS</span><span>HuggingFace</span><span>Streamlit</span>
-        </div>
+        <div class="project-tech"><span>LangChain</span><span>FAISS</span><span>HuggingFace</span><span>Streamlit</span></div>
         <div class="project-links">
-          <a href="https://healthcare-rag-cxha667k82f6yanv8cwd3r.streamlit.app/" target="_blank" class="project-btn project-btn-primary">Live Demo ↗</a>
-          <a href="https://github.com/Rakshithch/healthcare-rag" target="_blank" class="project-btn project-btn-ghost">GitHub</a>
+          <a href="https://healthcare-rag-cxha667k82f6yanv8cwd3r.streamlit.app/" target="_blank" class="project-btn project-btn-primary"><span class="ic" data-icon="external"></span> Live Demo</a>
+          <a href="https://github.com/Rakshithch/healthcare-rag" target="_blank" class="project-btn project-btn-ghost"><span class="ic" data-icon="github"></span> GitHub</a>
         </div>
       </div>
 
       <div class="project-card reveal reveal-delay-1" data-cat="dataeng">
-        <div class="project-icon-wrap">🏗️</div>
+        <div class="project-ic ic" data-icon="git-branch"></div>
         <div class="project-name">Claims ETL Pipeline</div>
         <div class="project-desc">7-phase production ETL pipeline processing X12 EDI 837/835 claims with validation metrics, 95%+ pass rate across 500K+ synthetic records, AWS S3 integration.</div>
-        <div class="project-tech">
-          <span>Python</span><span>PostgreSQL</span><span>AWS S3</span><span>Docker</span>
-        </div>
+        <div class="project-tech"><span>Python</span><span>PostgreSQL</span><span>AWS S3</span><span>Docker</span></div>
         <div class="project-links">
-          <a href="https://github.com/Rakshithch/healthcare-claims-pipeline" target="_blank" class="project-btn project-btn-ghost">GitHub ↗</a>
+          <a href="https://github.com/Rakshithch/healthcare-claims-pipeline" target="_blank" class="project-btn project-btn-ghost"><span class="ic" data-icon="github"></span> GitHub</a>
         </div>
       </div>
 
       <div class="project-card reveal reveal-delay-2" data-cat="ml">
-        <div class="project-icon-wrap">🧠</div>
+        <div class="project-ic ic" data-icon="heart-pulse"></div>
         <div class="project-name">MindWell AI Mental Health Analytics</div>
         <div class="project-desc">NLP-powered mental health analytics platform for sentiment analysis and well-being trend detection. Capstone project combining ML with behavioral health data.</div>
-        <div class="project-tech">
-          <span>NLP</span><span>Python</span><span>JavaScript</span><span>Sentiment Analysis</span>
-        </div>
+        <div class="project-tech"><span>NLP</span><span>Python</span><span>JavaScript</span><span>Sentiment Analysis</span></div>
         <div class="project-links">
-          <a href="https://github.com/Rakshithch/Mindwell-Capstone" target="_blank" class="project-btn project-btn-ghost">GitHub ↗</a>
+          <a href="https://github.com/Rakshithch/Mindwell-Capstone" target="_blank" class="project-btn project-btn-ghost"><span class="ic" data-icon="github"></span> GitHub</a>
         </div>
       </div>
 
       <div class="project-card reveal" data-cat="dataeng">
-        <div class="project-icon-wrap">⚙️</div>
+        <div class="project-ic ic" data-icon="wind"></div>
         <div class="project-name">U.S. Renewable Energy Dashboard</div>
         <div class="project-desc">Full-stack analytics dashboard integrating live EIA, NREL, and FRED APIs, delivering real-time energy investment insights across all 50 U.S. states with Vercel deployment.</div>
-        <div class="project-tech">
-          <span>Next.js</span><span>TypeScript</span><span>Recharts</span><span>Vercel</span>
-        </div>
+        <div class="project-tech"><span>Next.js</span><span>TypeScript</span><span>Recharts</span><span>Vercel</span></div>
         <div class="project-links">
-          <a href="https://github.com/Rakshithch" target="_blank" class="project-btn project-btn-ghost">GitHub ↗</a>
+          <a href="https://github.com/Rakshithch" target="_blank" class="project-btn project-btn-ghost"><span class="ic" data-icon="github"></span> GitHub</a>
         </div>
       </div>
 
       <div class="project-card reveal reveal-delay-1" data-cat="ml">
-        <div class="project-icon-wrap">👁️</div>
+        <div class="project-ic ic" data-icon="scan-face"></div>
         <div class="project-name">Face Detection — WIDER FACE</div>
         <div class="project-desc">Multi-scale face detection on WIDER FACE dataset using Faster R-CNN with ResNet-50 backbone. Handles challenging occlusion and scale variation scenarios.</div>
-        <div class="project-tech">
-          <span>PyTorch</span><span>Faster R-CNN</span><span>ResNet-50</span><span>CV</span>
-        </div>
+        <div class="project-tech"><span>PyTorch</span><span>Faster R-CNN</span><span>ResNet-50</span><span>CV</span></div>
         <div class="project-links">
-          <a href="https://github.com/Rakshithch/face-detection-wider-face" target="_blank" class="project-btn project-btn-ghost">GitHub ↗</a>
+          <a href="https://github.com/Rakshithch/face-detection-wider-face" target="_blank" class="project-btn project-btn-ghost"><span class="ic" data-icon="github"></span> GitHub</a>
         </div>
       </div>
 
       <div class="project-card reveal reveal-delay-2" data-cat="ml">
-        <div class="project-icon-wrap">🛣️</div>
+        <div class="project-ic ic" data-icon="route"></div>
         <div class="project-name">Pothole Segmentation — UNet &amp; SegNet</div>
         <div class="project-desc">Semantic segmentation of road potholes comparing UNet and SegNet architectures for civil infrastructure monitoring and autonomous driving applications.</div>
-        <div class="project-tech">
-          <span>PyTorch</span><span>UNet</span><span>SegNet</span><span>Segmentation</span>
-        </div>
+        <div class="project-tech"><span>PyTorch</span><span>UNet</span><span>SegNet</span><span>Segmentation</span></div>
         <div class="project-links">
-          <a href="https://github.com/Rakshithch/pothole-segmentation" target="_blank" class="project-btn project-btn-ghost">GitHub ↗</a>
+          <a href="https://github.com/Rakshithch/pothole-segmentation" target="_blank" class="project-btn project-btn-ghost"><span class="ic" data-icon="github"></span> GitHub</a>
         </div>
       </div>
 
       <div class="project-card reveal" data-cat="analytics">
-        <div class="project-icon-wrap">📡</div>
+        <div class="project-ic ic" data-icon="radio"></div>
         <div class="project-name">Telco Customer Churn Analysis</div>
         <div class="project-desc">Churn analysis across 7,043 customers — Python cleaning and feature engineering, 10 SQL queries with CTEs and window functions, and an HTML dashboard. Month-to-month customers churn at 42.7% with ~$139K monthly revenue at risk.</div>
-        <div class="project-tech">
-          <span>Python</span><span>SQL</span><span>SQLite</span><span>Pandas</span><span>Seaborn</span>
-        </div>
+        <div class="project-tech"><span>Python</span><span>SQL</span><span>SQLite</span><span>Pandas</span><span>Seaborn</span></div>
         <div class="project-links">
-          <a href="https://github.com/Rakshithch/telco-customer-churn-analysis" target="_blank" class="project-btn project-btn-ghost">GitHub ↗</a>
+          <a href="https://github.com/Rakshithch/telco-customer-churn-analysis" target="_blank" class="project-btn project-btn-ghost"><span class="ic" data-icon="github"></span> GitHub</a>
         </div>
       </div>
 
       <div class="project-card reveal reveal-delay-1" data-cat="analytics">
-        <div class="project-icon-wrap">🛒</div>
+        <div class="project-ic ic" data-icon="shopping-cart"></div>
         <div class="project-name">Superstore Sales Dashboard</div>
         <div class="project-desc">Profitability analysis of 9,994 retail orders — discount-tier impact analysis (31%+ discounts average −91.5% margin), category and regional breakdowns, SQL with window functions and CTEs, and an HTML dashboard.</div>
-        <div class="project-tech">
-          <span>Python</span><span>SQL</span><span>SQLite</span><span>Pandas</span><span>Matplotlib</span>
-        </div>
+        <div class="project-tech"><span>Python</span><span>SQL</span><span>SQLite</span><span>Pandas</span><span>Matplotlib</span></div>
         <div class="project-links">
-          <a href="https://github.com/Rakshithch/superstore-sales-dashboard" target="_blank" class="project-btn project-btn-ghost">GitHub ↗</a>
+          <a href="https://github.com/Rakshithch/superstore-sales-dashboard" target="_blank" class="project-btn project-btn-ghost"><span class="ic" data-icon="github"></span> GitHub</a>
         </div>
       </div>
 
@@ -1397,39 +878,29 @@
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="blob-c"></div>
+  <div class="glow-c"></div>
   <div class="container">
     <div class="contact-inner">
-      <div class="section-tag" style="justify-content:center">Contact</div>
-      <h2 class="contact-big reveal">Let's build <em>something</em></h2>
+      <div class="section-tag" style="justify-content:center"><span class="n">06.</span> contact</div>
+      <h2 class="contact-big reveal">Let's build <span class="g">something</span></h2>
       <p class="contact-sub reveal reveal-delay-1">
         Open to Data Analyst, Analytics Engineer, ML Engineer, and Data Science roles.<br/>
         Available immediately. Open to relocation anywhere in the US.
       </p>
       <div class="contact-links reveal reveal-delay-2">
-        <a href="https://linkedin.com/in/rakshith-ch" target="_blank" class="contact-link">
-          <span>💼</span> linkedin.com/in/rakshith-ch
-        </a>
-        <a href="https://github.com/Rakshithch" target="_blank" class="contact-link">
-          <span>⌥</span> github.com/Rakshithch
-        </a>
-        <a href="tel:8622156222" class="contact-link">
-          <span>📞</span> 862-215-6222
-        </a>
-        <a href="resume.html" target="_blank" class="contact-link">
-          <span>📄</span> Resume
-        </a>
+        <a href="https://linkedin.com/in/rakshith-ch" target="_blank" class="contact-link"><span class="ic" data-icon="linkedin"></span> linkedin.com/in/rakshith-ch</a>
+        <a href="https://github.com/Rakshithch" target="_blank" class="contact-link"><span class="ic" data-icon="github"></span> github.com/Rakshithch</a>
+        <a href="tel:8622156222" class="contact-link"><span class="ic" data-icon="phone"></span> 862-215-6222</a>
+        <a href="resume.html" target="_blank" class="contact-link"><span class="ic" data-icon="file-text"></span> Resume</a>
       </div>
-      <a href="mailto:rakshith.ch04@gmail.com" class="contact-email-big reveal reveal-delay-3">
-        rakshith.ch04@gmail.com
-      </a>
+      <a href="mailto:rakshith.ch04@gmail.com" class="contact-email-big reveal reveal-delay-3"><span class="ic" data-icon="mail"></span> rakshith.ch04@gmail.com</a>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-left">Designed &amp; built by <span>Rakshith Chandupatla</span> · 2025</div>
+  <div class="footer-left">Designed &amp; built by <span class="g">Rakshith Chandupatla</span> · 2025</div>
   <div class="footer-right">
     <a href="https://github.com/Rakshithch" target="_blank">GitHub</a>
     <a href="https://linkedin.com/in/rakshith-ch" target="_blank">LinkedIn</a>
@@ -1440,6 +911,53 @@
 
 <script>
 'use strict';
+
+/* ---- SVG icon library (Lucide-style, stroke=currentColor) ---- */
+const ICONS = {
+  'arrow-up': '<line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/>',
+  'arrow-right': '<line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>',
+  'external': '<path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>',
+  'github': '<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>',
+  'linkedin': '<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>',
+  'mail': '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>',
+  'phone': '<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/>',
+  'file-text': '<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v5h5"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/>',
+  'map-pin': '<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>',
+  'globe': '<circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>',
+  'shield-check': '<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/>',
+  'award': '<circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>',
+  'graduation': '<path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>',
+  'database': '<ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/>',
+  'bar-chart': '<line x1="3" y1="21" x2="21" y2="21"/><line x1="3" y1="21" x2="3" y2="3"/><rect x="6" y="12" width="3" height="6"/><rect x="11" y="8" width="3" height="10"/><rect x="16" y="5" width="3" height="13"/>',
+  'trending-up': '<polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>',
+  'terminal': '<polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/>',
+  'target': '<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>',
+  'cpu': '<rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/>',
+  'snowflake': '<line x1="2" y1="12" x2="22" y2="12"/><line x1="12" y1="2" x2="12" y2="22"/><path d="m20 16-4-4 4-4"/><path d="m4 8 4 4-4 4"/><path d="m16 4-4 4-4-4"/><path d="m8 20 4-4 4 4"/>',
+  'layers': '<polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/>',
+  'zap': '<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>',
+  'grid': '<rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>',
+  'cloud': '<path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>',
+  'package': '<path d="M16.5 9.4 7.55 4.24"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/>',
+  'activity': '<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>',
+  'users': '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+  'layout-dashboard': '<rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/>',
+  'search': '<circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>',
+  'git-branch': '<line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/>',
+  'heart-pulse': '<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h4.78"/>',
+  'wind': '<path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/>',
+  'scan-face': '<path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>',
+  'route': '<circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/>',
+  'radio': '<path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/><path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"/>',
+  'shopping-cart': '<circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>'
+};
+function injectIcons() {
+  document.querySelectorAll('[data-icon]').forEach(el => {
+    const p = ICONS[el.dataset.icon];
+    if (p) el.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true">' + p + '</svg>';
+  });
+}
+injectIcons();
 
 // Cursor
 const dot = document.getElementById('cur-dot');
@@ -1459,7 +977,7 @@ document.querySelectorAll('a,button,.project-card,.stack-cell,.exp-item,.fact,.c
   el.addEventListener('mouseleave', () => ring.classList.remove('hovering'));
 });
 
-// Nav solid + scroll progress + back to top
+// Nav + progress + back to top
 const nav = document.getElementById('nav');
 const btt = document.getElementById('btt');
 const spb = document.getElementById('spb');
@@ -1467,58 +985,39 @@ window.addEventListener('scroll', () => {
   const sy = window.scrollY;
   nav.classList.toggle('solid', sy > 50);
   btt.classList.toggle('show', sy > 400);
-  const pct = sy / (document.body.scrollHeight - window.innerHeight);
-  spb.style.transform = `scaleX(${pct})`;
+  spb.style.transform = `scaleX(${sy / (document.body.scrollHeight - window.innerHeight)})`;
 }, { passive: true });
 btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-// Reveal on scroll
+// Reveal
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
-// Stack level bars
+// Stack bars
 const stackObs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.querySelectorAll('.stack-level-fill').forEach(bar => {
-        setTimeout(() => { bar.style.width = bar.dataset.w + '%'; }, 200);
-      });
-      stackObs.unobserve(e.target);
-    }
-  });
+  entries.forEach(e => { if (e.isIntersecting) { e.target.querySelectorAll('.stack-level-fill').forEach(b => setTimeout(() => b.style.width = b.dataset.w + '%', 200)); stackObs.unobserve(e.target); } });
 }, { threshold: 0.2 });
 document.querySelectorAll('.stack-grid').forEach(el => stackObs.observe(el));
 
 // Metric bars
 const metricObs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.querySelectorAll('.metric-bar i').forEach(bar => {
-        setTimeout(() => { bar.style.width = bar.dataset.w + '%'; }, 200);
-      });
-      metricObs.unobserve(e.target);
-    }
-  });
+  entries.forEach(e => { if (e.isIntersecting) { e.target.querySelectorAll('.metric-bar i').forEach(b => setTimeout(() => b.style.width = b.dataset.w + '%', 200)); metricObs.unobserve(e.target); } });
 }, { threshold: 0.3 });
 document.querySelectorAll('.metrics-grid').forEach(el => metricObs.observe(el));
 
-// Stats counter (hero panel)
+// Stats counter
 const statObs = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) {
       e.target.querySelectorAll('.pstat-num').forEach(el => {
-        const target = parseFloat(el.dataset.target);
-        const suffix = el.dataset.suffix || '+';
-        const dur = 1600, start = performance.now();
-        function update(now) {
-          const p = Math.min((now - start) / dur, 1);
-          const ease = 1 - Math.pow(1 - p, 3);
+        const target = parseFloat(el.dataset.target), suffix = el.dataset.suffix || '+', dur = 1600, start = performance.now();
+        (function up(now) {
+          const p = Math.min((now - start) / dur, 1), ease = 1 - Math.pow(1 - p, 3);
           el.textContent = Math.round(target * ease) + suffix;
-          if (p < 1) requestAnimationFrame(update);
-        }
-        requestAnimationFrame(update);
+          if (p < 1) requestAnimationFrame(up);
+        })(start);
       });
       statObs.unobserve(e.target);
     }
@@ -1527,38 +1026,17 @@ const statObs = new IntersectionObserver(entries => {
 const panel = document.querySelector('.hero-panel');
 if (panel) statObs.observe(panel);
 
-// Animate chart dots on load
-document.querySelectorAll('.spark-dot').forEach(d => {
-  setTimeout(() => d.classList.add('show'), parseInt(d.dataset.delay || '0', 10));
-});
+// Chart dots
+document.querySelectorAll('.spark-dot').forEach(d => setTimeout(() => d.classList.add('show'), parseInt(d.dataset.delay || '0', 10)));
 
-// Text scramble on the eyebrow
-(function scramble() {
-  const el = document.querySelector('[data-scramble]');
+// Typed command in the prompt
+(function typeCmd() {
+  const el = document.querySelector('[data-type]');
   if (!el) return;
-  const final = el.textContent;
-  const chars = '!<>-_\\/[]{}—=+*^?#________';
-  let frame = 0;
-  const queue = [];
-  for (let i = 0; i < final.length; i++) {
-    const start = Math.floor(Math.random() * 18);
-    const end = start + Math.floor(Math.random() * 18) + 8;
-    queue.push({ to: final[i], start, end, char: '' });
-  }
-  function run() {
-    let out = '', done = 0;
-    for (const q of queue) {
-      if (frame >= q.end) { done++; out += q.to; }
-      else if (frame >= q.start) {
-        if (!q.char || Math.random() < 0.28) q.char = chars[Math.floor(Math.random() * chars.length)];
-        out += `<span style="color:var(--violet)">${q.char}</span>`;
-      } else { out += ''; }
-    }
-    el.innerHTML = out;
-    if (done < queue.length) { frame++; requestAnimationFrame(run); }
-    else { el.textContent = final; }
-  }
-  setTimeout(run, 350);
+  const text = el.dataset.type; let i = 0;
+  (function step() {
+    if (i <= text.length) { el.textContent = text.slice(0, i); i++; setTimeout(step, 110); }
+  })();
 })();
 
 // Project filter
@@ -1569,33 +1047,27 @@ pills.forEach(pill => {
     pills.forEach(p => p.classList.remove('active'));
     pill.classList.add('active');
     const f = pill.dataset.f;
-    cards.forEach(c => {
-      const cats = (c.dataset.cat || '').split(' ');
-      c.classList.toggle('hidden-card', f !== 'all' && !cats.includes(f));
-    });
+    cards.forEach(c => c.classList.toggle('hidden-card', f !== 'all' && !(c.dataset.cat || '').split(' ').includes(f)));
   });
 });
 
-// Project card spotlight + subtle tilt
+// Card spotlight + tilt
 document.querySelectorAll('.project-card').forEach(card => {
   card.addEventListener('mousemove', e => {
     const r = card.getBoundingClientRect();
-    const px = (e.clientX - r.left) / r.width;
-    const py = (e.clientY - r.top) / r.height;
+    const px = (e.clientX - r.left) / r.width, py = (e.clientY - r.top) / r.height;
     card.style.setProperty('--mx', (px * 100) + '%');
     card.style.setProperty('--my', (py * 100) + '%');
-    card.style.transform = `translateY(-6px) rotateX(${-(py - 0.5) * 5}deg) rotateY(${(px - 0.5) * 5}deg)`;
+    card.style.transform = `translateY(-6px) rotateX(${-(py - 0.5) * 4}deg) rotateY(${(px - 0.5) * 4}deg)`;
   });
   card.addEventListener('mouseleave', () => { card.style.transform = ''; });
 });
 
-// Magnetic buttons
+// Magnetic
 document.querySelectorAll('.magnetic').forEach(el => {
   el.addEventListener('mousemove', e => {
     const r = el.getBoundingClientRect();
-    const x = e.clientX - r.left - r.width / 2;
-    const y = e.clientY - r.top - r.height / 2;
-    el.style.transform = `translate(${x * 0.3}px, ${y * 0.4}px)`;
+    el.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * 0.3}px, ${(e.clientY - r.top - r.height / 2) * 0.4}px)`;
   });
   el.addEventListener('mouseleave', () => { el.style.transform = ''; });
 });
