@@ -1,45 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 640" role="img" aria-labelledby="title desc">
   <title id="title">Rakshith Chandupatla profile illustration</title>
-  <desc id="desc">A Knicks-themed portfolio profile illustration with initials RC.</desc>
+  <desc id="desc">A portfolio profile illustration with initials RC.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0c1a3a"/>
-      <stop offset="1" stop-color="#04091a"/>
+      <stop offset="0" stop-color="#14141d"/>
+      <stop offset="1" stop-color="#0a0a0f"/>
     </linearGradient>
     <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#F58426"/>
-      <stop offset="1" stop-color="#006BB6"/>
+      <stop offset="0" stop-color="#8b7bff"/>
+      <stop offset="1" stop-color="#41e3c5"/>
     </linearGradient>
     <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
       <feGaussianBlur stdDeviation="18" result="blur"/>
-      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.96  0 0 0 0 0.52  0 0 0 0 0.15  0 0 0 .45 0"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.55  0 0 0 0 0.48  0 0 0 0 1  0 0 0 .45 0"/>
       <feBlend in="SourceGraphic"/>
     </filter>
   </defs>
   <rect width="560" height="640" rx="18" fill="url(#bg)"/>
-  <path d="M0 520 C120 460 190 560 320 505 C430 460 455 360 560 390 L560 640 L0 640 Z" fill="#081226"/>
-  <!-- court lines -->
-  <g opacity=".25" fill="none" stroke="#4da6ff" stroke-width="1.5">
-    <circle cx="280" cy="640" r="180"/>
-    <circle cx="280" cy="640" r="70"/>
-    <path d="M0 560 H560"/>
+  <path d="M0 520 C120 460 190 560 320 505 C430 460 455 360 560 390 L560 640 L0 640 Z" fill="#101019"/>
+  <!-- plotting grid + trend line -->
+  <g opacity=".18" stroke="#8b7bff" stroke-width="1">
+    <path d="M40 120 H520"/><path d="M40 240 H520"/><path d="M40 360 H520"/>
+    <path d="M150 60 V560"/><path d="M280 60 V560"/><path d="M410 60 V560"/>
   </g>
-  <!-- basketball -->
-  <g opacity=".9">
-    <circle cx="470" cy="96" r="38" fill="#F58426" stroke="#7a3c0d" stroke-width="2"/>
-    <g fill="none" stroke="#7a3c0d" stroke-width="2">
-      <path d="M432 96h76"/>
-      <path d="M470 58v76"/>
-      <path d="M444 69c14 13 14 41 0 54"/>
-      <path d="M496 69c-14 13-14 41 0 54"/>
-    </g>
-  </g>
-  <circle cx="280" cy="230" r="116" fill="#0c1a3a" stroke="#F58426" stroke-opacity=".5" stroke-width="2"/>
+  <path d="M60 470 L150 430 L240 445 L330 360 L420 385 L500 300" fill="none" stroke="url(#accent)" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+  <circle cx="280" cy="230" r="116" fill="#14141d" stroke="#8b7bff" stroke-opacity=".5" stroke-width="2"/>
   <circle cx="280" cy="205" r="52" fill="url(#accent)" opacity=".95"/>
   <path d="M174 352 C194 288 236 260 280 260 C324 260 366 288 386 352 C352 382 316 396 280 396 C244 396 208 382 174 352 Z" fill="url(#accent)" opacity=".9"/>
   <g filter="url(#glow)">
-    <rect x="98" y="460" width="364" height="92" rx="8" fill="#060e22" stroke="#F58426" stroke-opacity=".55"/>
-    <text x="280" y="520" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700" fill="#eef4fb" letter-spacing="8">RC</text>
+    <rect x="98" y="460" width="364" height="92" rx="12" fill="#0c0c14" stroke="#8b7bff" stroke-opacity=".5"/>
+    <text x="280" y="522" text-anchor="middle" font-family="Georgia, serif" font-size="48" font-weight="500" font-style="italic" fill="#f3f1ee" letter-spacing="6">RC</text>
   </g>
-  <text x="280" y="582" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#93a7c4">Data Analyst &amp; ML Engineer</text>
+  <text x="280" y="582" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#a4a1b8">Data Analyst &amp; ML Engineer</text>
 </svg>

@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="RC">
-  <rect width="64" height="64" rx="12" fill="#04091a"/>
-  <circle cx="32" cy="32" r="25" fill="#F58426" stroke="#7a3c0d" stroke-width="1.5"/>
-  <g fill="none" stroke="#7a3c0d" stroke-width="1.8">
-    <path d="M7 32h50"/>
-    <path d="M32 7v50"/>
-    <path d="M14 14c10 9 10 27 0 36"/>
-    <path d="M50 14c-10 9-10 27 0 36"/>
-  </g>
-  <text x="32" y="39" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="17" font-weight="900" fill="#04091a">RC</text>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8b7bff"/>
+      <stop offset="1" stop-color="#41e3c5"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#0a0a0f"/>
+  <rect x="5" y="5" width="54" height="54" rx="11" fill="none" stroke="url(#g)" stroke-opacity=".5" stroke-width="1.5"/>
+  <text x="32" y="42" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="500" font-style="italic" fill="url(#g)">RC</text>
 </svg>
