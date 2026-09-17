@@ -738,7 +738,6 @@
         <button class="filter" data-filter="dataeng" aria-pressed="false">Data engineering</button>
         <button class="filter" data-filter="live" aria-pressed="false">Live apps</button>
         <button class="filter" data-filter="ml" aria-pressed="false">ML / AI</button>
-        <button class="filter" data-filter="analytics" aria-pressed="false">SQL analytics</button>
       </div>
 
       <div class="projects-grid" id="projectGrid">
@@ -758,36 +757,6 @@
           <div class="project-links">
             <a href="https://healthcare-claims-denial-analysis-e8xeaunfeof8p7tdqi4fdb.streamlit.app/" target="_blank" rel="noopener">Live demo</a>
             <a href="https://github.com/Rakshithch/healthcare-claims-denial-analysis" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </article>
-
-        <article class="project" data-cat="live ml">
-          <div class="project-head">
-            <h3 class="project-name">HireFlow AI — Hiring Platform</h3>
-            <span class="badge badge-live">Live</span>
-          </div>
-          <p class="project-desc">Full-stack AI-powered hiring platform with candidate scoring and re-scoring, bulk actions, realtime updates, team invites, and production monitoring — built with Next.js, TypeScript, Supabase, and Prisma, deployed on Vercel.</p>
-          <div class="tags"><span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Supabase</span><span class="tag">Prisma</span><span class="tag">Sentry</span></div>
-          <div class="project-links">
-            <a href="https://hireflow-ai-rust.vercel.app" target="_blank" rel="noopener">Live app</a>
-          </div>
-        </article>
-
-        <article class="project" data-cat="live ml">
-          <div class="project-head">
-            <h3 class="project-name">Claims Analytics Dashboard</h3>
-            <span class="badge badge-live">Live</span>
-          </div>
-          <p class="project-desc">Interactive claims analytics experience for denial risk, revenue-cycle KPIs, payer/provider trends, and executive-ready operational views.</p>
-          <div class="proof">
-            <div class="proof-row"><span class="proof-label">Problem</span><span>Operations teams need fast visibility into denial drivers and payment anomalies.</span></div>
-            <div class="proof-row"><span class="proof-label">Tools</span><span>Python, Streamlit, Plotly, Scikit-learn, Random Forest.</span></div>
-            <div class="proof-row"><span class="proof-label">Impact</span><span>Shows analyst judgment across KPIs, filters, model outputs, and business-facing visuals.</span></div>
-          </div>
-          <div class="tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">Plotly</span><span class="tag">Scikit-learn</span></div>
-          <div class="project-links">
-            <a href="https://healthcare-claims-dashboard-bhxjqyzktp7ki52i4upfol.streamlit.app/" target="_blank" rel="noopener">Live demo</a>
-            <a href="https://github.com/Rakshithch/healthcare-claims-dashboard" target="_blank" rel="noopener">GitHub</a>
           </div>
         </article>
 
@@ -827,6 +796,35 @@
 
         <article class="project" data-cat="live ml">
           <div class="project-head">
+            <h3 class="project-name">Claims Analytics Dashboard</h3>
+            <span class="badge badge-live">Live</span>
+          </div>
+          <p class="project-desc">Interactive claims analytics experience for denial risk, revenue-cycle KPIs, payer/provider trends, and executive-ready operational views.</p>
+          <div class="proof">
+            <div class="proof-row"><span class="proof-label">Problem</span><span>Operations teams need fast visibility into denial drivers and payment anomalies.</span></div>
+            <div class="proof-row"><span class="proof-label">Tools</span><span>Python, Streamlit, Plotly, Scikit-learn, Random Forest.</span></div>
+            <div class="proof-row"><span class="proof-label">Impact</span><span>Shows analyst judgment across KPIs, filters, model outputs, and business-facing visuals.</span></div>
+          </div>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">Plotly</span><span class="tag">Scikit-learn</span></div>
+          <div class="project-links">
+            <a href="https://healthcare-claims-dashboard-bhxjqyzktp7ki52i4upfol.streamlit.app/" target="_blank" rel="noopener">Live demo</a>
+            <a href="https://github.com/Rakshithch/healthcare-claims-dashboard" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
+
+        <article class="project" data-cat="dataeng">
+          <div class="project-head">
+            <h3 class="project-name">Claims ETL Pipeline</h3>
+          </div>
+          <p class="project-desc">7-phase production ETL pipeline processing X12 EDI 837/835 claims with validation metrics, 95%+ pass rate across 500K+ synthetic records, AWS S3 integration.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">PostgreSQL</span><span class="tag">AWS S3</span><span class="tag">Docker</span></div>
+          <div class="project-links">
+            <a href="https://github.com/Rakshithch/healthcare-claims-pipeline" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
+
+        <article class="project" data-cat="live ml">
+          <div class="project-head">
             <h3 class="project-name">RAG Q&amp;A App</h3>
             <span class="badge badge-live">Live</span>
           </div>
@@ -843,84 +841,28 @@
           </div>
         </article>
 
-        <article class="project" data-cat="dataeng">
-          <div class="project-head">
-            <h3 class="project-name">Claims ETL Pipeline</h3>
-          </div>
-          <p class="project-desc">7-phase production ETL pipeline processing X12 EDI 837/835 claims with validation metrics, 95%+ pass rate across 500K+ synthetic records, AWS S3 integration.</p>
-          <div class="tags"><span class="tag">Python</span><span class="tag">PostgreSQL</span><span class="tag">AWS S3</span><span class="tag">Docker</span></div>
-          <div class="project-links">
-            <a href="https://github.com/Rakshithch/healthcare-claims-pipeline" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </article>
-
         <article class="project" data-cat="ml">
           <div class="project-head">
-            <h3 class="project-name">MindWell AI Mental Health Analytics</h3>
+            <h3 class="project-name">ICD-10-CM Coding Model</h3>
+            <span class="badge">New</span>
           </div>
-          <p class="project-desc">NLP-powered mental health analytics platform for sentiment analysis and well-being trend detection. Capstone project combining ML with behavioral health data.</p>
-          <div class="tags"><span class="tag">NLP</span><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">Sentiment Analysis</span></div>
+          <p class="project-desc">Fine-tuned Qwen2.5-0.5B language model that assigns ICD-10-CM diagnosis codes to clinical text.</p>
+          <div class="proof">
+            <div class="proof-row"><span class="proof-label">Problem</span><span>Assigning ICD-10-CM diagnosis codes to clinical text is manual and repetitive.</span></div>
+            <div class="proof-row"><span class="proof-label">Tools</span><span>Qwen2.5-0.5B, Hugging Face Transformers, Python, LLM fine-tuning.</span></div>
+            <!-- TODO: add the accuracy / evaluation figure for this model once confirmed, as an
+                 Impact row, e.g.
+                 <div class="proof-row"><span class="proof-label">Impact</span><span>NN% accuracy on held-out clinical text.</span></div> -->
+          </div>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Hugging Face</span><span class="tag">Transformers</span><span class="tag">LLM fine-tuning</span></div>
           <div class="project-links">
-            <a href="https://github.com/Rakshithch/Mindwell-Capstone" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </article>
-
-        <article class="project" data-cat="dataeng">
-          <div class="project-head">
-            <h3 class="project-name">U.S. Renewable Energy Dashboard</h3>
-          </div>
-          <p class="project-desc">Full-stack analytics dashboard integrating live EIA, NREL, and FRED APIs, delivering real-time energy investment insights across all 50 U.S. states with Vercel deployment.</p>
-          <div class="tags"><span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Recharts</span><span class="tag">Vercel</span></div>
-          <div class="project-links">
-            <a href="https://github.com/Rakshithch" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </article>
-
-        <article class="project" data-cat="ml">
-          <div class="project-head">
-            <h3 class="project-name">Face Detection — WIDER FACE</h3>
-          </div>
-          <p class="project-desc">Multi-scale face detection on WIDER FACE dataset using Faster R-CNN with ResNet-50 backbone. Handles challenging occlusion and scale variation scenarios.</p>
-          <div class="tags"><span class="tag">PyTorch</span><span class="tag">Faster R-CNN</span><span class="tag">ResNet-50</span><span class="tag">CV</span></div>
-          <div class="project-links">
-            <a href="https://github.com/Rakshithch/face-detection-wider-face" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </article>
-
-        <article class="project" data-cat="ml">
-          <div class="project-head">
-            <h3 class="project-name">Pothole Segmentation — UNet &amp; SegNet</h3>
-          </div>
-          <p class="project-desc">Semantic segmentation of road potholes comparing UNet and SegNet architectures for civil infrastructure monitoring and autonomous driving applications.</p>
-          <div class="tags"><span class="tag">PyTorch</span><span class="tag">UNet</span><span class="tag">SegNet</span><span class="tag">Segmentation</span></div>
-          <div class="project-links">
-            <a href="https://github.com/Rakshithch/pothole-segmentation" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </article>
-
-        <article class="project" data-cat="analytics">
-          <div class="project-head">
-            <h3 class="project-name">Telco Customer Churn Analysis</h3>
-          </div>
-          <p class="project-desc">Churn analysis across 7,043 customers — Python cleaning and feature engineering, 10 SQL queries with CTEs and window functions, and an HTML dashboard. Month-to-month customers churn at 42.7% with ~$139K monthly revenue at risk.</p>
-          <div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">SQLite</span><span class="tag">Pandas</span><span class="tag">Seaborn</span></div>
-          <div class="project-links">
-            <a href="https://github.com/Rakshithch/telco-customer-churn-analysis" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </article>
-
-        <article class="project" data-cat="analytics">
-          <div class="project-head">
-            <h3 class="project-name">Superstore Sales Dashboard</h3>
-          </div>
-          <p class="project-desc">Profitability analysis of 9,994 retail orders — discount-tier impact analysis (31%+ discounts average −91.5% margin), category and regional breakdowns, SQL with window functions and CTEs, and an HTML dashboard.</p>
-          <div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">SQLite</span><span class="tag">Pandas</span><span class="tag">Matplotlib</span></div>
-          <div class="project-links">
-            <a href="https://github.com/Rakshithch/superstore-sales-dashboard" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://huggingface.co/Rakshithch/qwen2.5-0.5b-icd10cm-coder" target="_blank" rel="noopener">Hugging Face</a>
           </div>
         </article>
 
       </div>
+
+      <p class="more-link"><a href="https://github.com/Rakshithch" target="_blank" rel="noopener">More projects on GitHub →</a></p>
     </div>
   </section>
 
