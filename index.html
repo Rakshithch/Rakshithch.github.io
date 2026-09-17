@@ -1,34 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rakshith Chandupatla — Data Analyst & ML Engineer</title>
-  <meta name="description" content="Data Analyst & ML Engineer working in healthcare payer and revenue-cycle data: claims (X12 EDI 837/835), HEDIS quality measures, CMS risk adjustment, and denial analytics. Based in Cincinnati / Northern Kentucky, open to relocation across the US." />
-  <meta name="keywords" content="Data Analyst, Data Engineer, Analytics Engineer, ML Engineer, Healthcare Payer Analytics, Revenue Cycle, Claims Analytics, X12 EDI 837, X12 EDI 835, HEDIS, CMS Risk Adjustment, Denial Analytics, SQL, Python, Snowflake, dbt, PySpark, Databricks, Power BI, Tableau, AWS, Rakshith Chandupatla" />
-  <meta name="theme-color" content="#0f766e" />
+  <title>Rakshith Chandupatla — Data Engineer &amp; Healthcare Data Specialist</title>
+  <meta name="description" content="Data Engineer and Analytics Engineer working in healthcare payer and revenue-cycle data: claims (X12 EDI 837/835), HEDIS quality measures, CMS risk adjustment, and denial analytics. Based in Cincinnati / Northern Kentucky, open to relocation across the US." />
+  <meta name="keywords" content="Data Engineer, Analytics Engineer, Data Analyst, ML Engineer, Healthcare Payer Analytics, Revenue Cycle, Claims Analytics, X12 EDI 837, X12 EDI 835, HEDIS, CMS Risk Adjustment, Denial Analytics, SQL, Python, Snowflake, dbt, PySpark, Databricks, Power BI, Tableau, AWS, Rakshith Chandupatla" />
+  <meta name="theme-color" content="#a78bfa" />
   <link rel="canonical" href="https://rakshithch.github.io/" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <meta property="og:type" content="profile" />
-  <meta property="og:title" content="Rakshith Chandupatla — Data Analyst & ML Engineer" />
+  <meta property="og:title" content="Rakshith Chandupatla — Data Engineer &amp; Healthcare Data Specialist" />
   <meta property="og:description" content="Healthcare payer and revenue-cycle data: denial prevention and anomaly detection on claims (X12 EDI 837/835), HEDIS quality reporting, CMS risk adjustment, and Power BI/Tableau reporting." />
   <meta property="og:url" content="https://rakshithch.github.io/" />
-  <!-- PNG, not SVG: X/Twitter, LinkedIn and Facebook do not render SVG link previews. -->
   <meta property="og:image" content="https://rakshithch.github.io/assets/social-card.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Rakshith Chandupatla — Data Analyst and ML Engineer, healthcare payer and revenue-cycle data" />
+  <meta property="og:image:alt" content="Rakshith Chandupatla — healthcare payer and revenue-cycle data" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Rakshith Chandupatla — Data Analyst & ML Engineer" />
+  <meta name="twitter:title" content="Rakshith Chandupatla — Data Engineer &amp; Healthcare Data Specialist" />
   <meta name="twitter:description" content="Healthcare payer and revenue-cycle analytics: claims (837/835), denial prediction, HEDIS quality measures, CMS risk adjustment. SQL, Python, Snowflake, dbt, PySpark, Power BI, Tableau." />
   <meta name="twitter:image" content="https://rakshithch.github.io/assets/social-card.png" />
-  <meta name="twitter:image:alt" content="Rakshith Chandupatla — Data Analyst and ML Engineer, healthcare payer and revenue-cycle data" />
+  <meta name="twitter:image:alt" content="Rakshith Chandupatla — healthcare payer and revenue-cycle data" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Rakshith Chandupatla",
-    "jobTitle": "Data Analyst & ML Engineer",
+    "jobTitle": "Data Engineer & Healthcare Data Specialist",
     "url": "https://rakshithch.github.io/",
     "email": "mailto:rakshithchandupatla1@gmail.com",
     "telephone": "+1-862-215-6222",
@@ -44,470 +43,680 @@
     "knowsAbout": ["Healthcare claims analytics", "X12 EDI 837/835", "HEDIS quality measures", "CMS risk adjustment", "Denial analytics", "SQL", "Python", "Snowflake", "dbt", "PySpark", "Databricks", "Power BI", "Tableau", "AWS", "Machine learning"]
   }
   </script>
+  <!-- Theme resolved before first paint so there is no flash of the wrong theme. -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t !== 'light' && t !== 'dark') {
+          t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) { /* keep the dark default */ }
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
   <style>
     /* ==========================================================
-       Design tokens
-       Quiet editorial palette: light neutral ground, near-black
-       text, a single deep-teal accent. Dark mode is a neutral
-       dark, never pure black.
+       TOKENS — dark is the default, [data-theme="light"] overrides.
+       One vivid accent (violet), a deep blue-cast neutral base,
+       and a muted secondary for borders and labels.
        ========================================================== */
     :root {
-      --bg:            #fbfbfa;
-      --bg-subtle:     #f4f4f2;
-      --surface:       #ffffff;
-      --border:        #e3e3e0;
-      --border-strong: #cfcfca;
+      --bg:        #0b0d12;
+      --bg-2:      #0f1219;
+      --surface:   #141926;
+      --surface-2: #1a2030;
+      --border:    rgba(148, 163, 184, 0.13);
+      --border-2:  rgba(148, 163, 184, 0.26);
 
-      --text:          #17181c;
-      --text-2:        #55585f;
-      --text-3:        #7c818a;
+      --text:   #e8ecf4;
+      --text-2: #98a2b8;
+      --text-3: #8792a8; /* AA on bg, bg-2 and surface (>= 5.6:1) */
 
-      --accent:        #0f766e;
-      --accent-strong: #115e59;
-      --accent-soft:   rgba(15, 118, 110, 0.08);
+      --accent:      #a78bfa;
+      --accent-soft: rgba(167, 139, 250, 0.14);
+      --accent-glow: rgba(167, 139, 250, 0.30);
+      --on-accent:   #14101f;
 
-      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --grid-line: rgba(148, 163, 184, 0.05);
+      --grain-opacity: 0.030;
+
+      --font-display: 'Space Grotesk', 'Segoe UI', Helvetica, Arial, sans-serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
-      /* type scale */
-      --t-xs:  0.75rem;    /* 12px */
-      --t-sm:  0.8125rem;  /* 13px */
-      --t-base: 1rem;      /* 16px */
-      --t-md:  1.0625rem;  /* 17px */
-      --t-lg:  1.25rem;    /* 20px */
-      --t-xl:  1.5rem;     /* 24px */
-      --t-2xl: 2rem;       /* 32px */
+      --measure: 1100px;
+      --radius: 12px;
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
 
-      --measure: 1060px;
-      --radius: 6px;
+      /* type scale */
+      --t-xs:   0.75rem;
+      --t-sm:   0.8125rem;
+      --t-base: 1rem;
+      --t-md:   1.0625rem;
+      --t-lg:   clamp(1.125rem, 0.4vw + 1rem, 1.25rem);
+      --t-xl:   clamp(1.5rem, 1.2vw + 1.1rem, 2rem);
+      --t-2xl:  clamp(2rem, 2.4vw + 1.2rem, 3rem);
+      --t-hero: clamp(2.5rem, 6vw + 0.5rem, 5rem);
     }
 
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg:            #14161a;
-        --bg-subtle:     #1a1d22;
-        --surface:       #1a1d22;
-        --border:        #2b2f36;
-        --border-strong: #3a3f48;
+    [data-theme="light"] {
+      --bg:        #fafafa;
+      --bg-2:      #f3f4f7;
+      --surface:   #ffffff;
+      --surface-2: #f7f8fa;
+      --border:    rgba(15, 23, 42, 0.10);
+      --border-2:  rgba(15, 23, 42, 0.20);
 
-        --text:          #eceef1;
-        --text-2:        #a8aeb8;
-        --text-3:        #848b96;
+      --text:   #15171e;
+      --text-2: #4d5467;
+      --text-3: #666d7e; /* AA on bg, bg-2 and surface (>= 4.7:1) */
 
-        --accent:        #2dd4bf;
-        --accent-strong: #5eead4;
-        --accent-soft:   rgba(45, 212, 191, 0.12);
-      }
+      --accent:      #6d28d9;
+      --accent-soft: rgba(109, 40, 217, 0.08);
+      --accent-glow: rgba(109, 40, 217, 0.22);
+      --on-accent:   #ffffff;
+
+      --grid-line: rgba(15, 23, 42, 0.04);
+      --grain-opacity: 0.018;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html { font-size: 16px; -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
 
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: var(--font-sans);
+      font-family: var(--font-body);
       font-size: var(--t-base);
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
+      position: relative;
+    }
+
+    /* 300ms theme cross-fade, applied only while toggling */
+    body.theming,
+    body.theming *,
+    body.theming *::before,
+    body.theming *::after {
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, fill 0.3s ease !important;
+    }
+
+    /* faint grain, sits above the background and below content */
+    body::after {
+      content: '';
+      position: fixed; inset: 0; z-index: 1;
+      pointer-events: none;
+      opacity: var(--grain-opacity);
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
     }
 
     a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; text-underline-offset: 3px; }
     ul { list-style: none; }
     img { max-width: 100%; display: block; }
+    button { font: inherit; color: inherit; background: none; border: none; cursor: pointer; }
 
-    /* Visible focus on every interactive element */
-    a:focus-visible,
-    button:focus-visible {
+    ::selection { background: var(--accent-soft); color: var(--text); }
+
+    :focus-visible {
       outline: 2px solid var(--accent);
       outline-offset: 3px;
-      border-radius: 3px;
+      border-radius: 4px;
     }
-
-    ::selection { background: var(--accent-soft); }
 
     .skip-link {
-      position: absolute; left: 12px; top: -60px;
-      background: var(--accent); color: #fff;
-      padding: 10px 16px; border-radius: var(--radius);
-      font-size: var(--t-sm); font-weight: 500; z-index: 200;
-      transition: top 0.15s ease;
+      position: absolute; left: 14px; top: -70px; z-index: 300;
+      background: var(--accent); color: var(--on-accent);
+      padding: 10px 18px; border-radius: 8px;
+      font-size: var(--t-sm); font-weight: 600;
+      transition: top 0.2s var(--ease);
     }
-    .skip-link:focus { top: 12px; text-decoration: none; }
+    .skip-link:focus { top: 14px; }
 
-    .wrap { max-width: var(--measure); margin: 0 auto; padding: 0 24px; }
+    .wrap { max-width: var(--measure); margin: 0 auto; padding: 0 28px; }
 
-    /* Small uppercase label used above each section */
+    section { padding: clamp(72px, 9vw, 128px) 0; position: relative; z-index: 2; scroll-margin-top: 90px; }
+
     .eyebrow {
       font-family: var(--font-mono);
       font-size: var(--t-xs);
-      letter-spacing: 0.08em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--text-3);
-      margin-bottom: 10px;
+      color: var(--accent);
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 14px;
+    }
+    .eyebrow::before {
+      content: ''; width: 22px; height: 1px; background: var(--accent); opacity: 0.6;
     }
 
     .section-title {
-      font-size: var(--t-xl);
+      font-family: var(--font-display);
+      font-size: var(--t-2xl);
       font-weight: 600;
-      letter-spacing: -0.015em;
-      margin-bottom: 28px;
-      color: var(--text);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 44px;
     }
 
-    section { padding: 72px 0; border-top: 1px solid var(--border); }
-    section:first-of-type { border-top: none; }
+    /* ===== Scroll progress ===== */
+    #progress {
+      position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 250;
+      background: var(--accent);
+      transform: scaleX(0); transform-origin: 0 50%;
+      will-change: transform;
+    }
 
     /* ===== Header ===== */
     .site-header {
-      position: sticky; top: 0; z-index: 100;
-      background: var(--bg); /* fallback for browsers without color-mix */
-      background: color-mix(in srgb, var(--bg) 92%, transparent);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--border);
+      position: sticky; top: 0; z-index: 200;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s ease, background-color 0.3s ease, backdrop-filter 0.3s ease;
+    }
+    .site-header.is-compact {
+      background: color-mix(in srgb, var(--bg) 78%, transparent);
+      backdrop-filter: blur(14px) saturate(160%);
+      border-bottom-color: var(--border);
     }
     .header-inner {
-      max-width: var(--measure); margin: 0 auto; padding: 14px 24px;
-      display: flex; align-items: center; justify-content: space-between; gap: 20px;
+      max-width: var(--measure); margin: 0 auto;
+      padding: 18px 28px;
+      display: flex; align-items: center; justify-content: space-between; gap: 18px;
+      transition: padding 0.3s var(--ease);
     }
+    .site-header.is-compact .header-inner { padding: 11px 28px; }
+
     .brand {
-      font-family: var(--font-mono);
-      font-size: var(--t-sm);
-      font-weight: 500;
-      letter-spacing: 0.06em;
+      font-family: var(--font-display);
+      font-size: 1.05rem; font-weight: 700; letter-spacing: 0.04em;
       color: var(--text);
+      display: inline-flex; align-items: center; gap: 8px;
     }
-    .brand:hover { text-decoration: none; color: var(--accent); }
-    .nav-links { display: flex; gap: 22px; }
+    .brand .dot {
+      width: 7px; height: 7px; border-radius: 50%; background: var(--accent);
+      box-shadow: 0 0 10px var(--accent-glow);
+    }
+
+    .nav-links { display: flex; gap: 6px; }
     .nav-links a {
+      position: relative;
       font-size: var(--t-sm);
       color: var(--text-2);
-      transition: color 0.15s ease;
+      padding: 7px 12px; border-radius: 7px;
+      transition: color 0.2s ease, background-color 0.2s ease;
     }
-    .nav-links a:hover { color: var(--accent); text-decoration: none; }
-    .header-cta {
-      font-size: var(--t-sm);
-      font-weight: 500;
-      color: var(--text);
-      border: 1px solid var(--border-strong);
-      padding: 7px 14px;
-      border-radius: var(--radius);
-      transition: border-color 0.15s ease, color 0.15s ease;
+    .nav-links a:hover { color: var(--text); background: var(--surface); }
+    .nav-links a.is-active { color: var(--accent); }
+    .nav-links a.is-active::after {
+      content: ''; position: absolute; left: 12px; right: 12px; bottom: 2px;
+      height: 1.5px; background: var(--accent); border-radius: 1px;
     }
-    .header-cta:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
 
-    /* ===== Hero ===== */
-    #hero { padding: 84px 0 64px; }
-    .hero-role {
-      font-family: var(--font-mono);
-      font-size: var(--t-sm);
-      color: var(--accent);
-      letter-spacing: 0.04em;
-      margin-bottom: 14px;
+    .header-tools { display: flex; align-items: center; gap: 10px; }
+
+    .icon-btn {
+      width: 36px; height: 36px; border-radius: 9px;
+      border: 1px solid var(--border);
+      display: inline-flex; align-items: center; justify-content: center;
+      color: var(--text-2);
+      transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s var(--ease);
     }
+    .icon-btn:hover { color: var(--accent); border-color: var(--border-2); transform: translateY(-1px); }
+    .icon-btn svg { width: 17px; height: 17px; }
+    .icon-sun { display: none; }
+    [data-theme="light"] .icon-sun { display: block; }
+    [data-theme="light"] .icon-moon { display: none; }
+
+    .header-cta {
+      font-size: var(--t-sm); font-weight: 600;
+      color: var(--on-accent); background: var(--accent);
+      padding: 9px 18px; border-radius: 9px;
+      transition: transform 0.2s var(--ease), box-shadow 0.25s ease;
+    }
+    .header-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 26px var(--accent-glow); }
+
+    /* ===== Hero — asymmetric ===== */
+    #hero {
+      padding: clamp(56px, 8vw, 104px) 0 clamp(60px, 7vw, 96px);
+      position: relative;
+      overflow: hidden;
+    }
+    /* soft radial wash + low-contrast grid */
+    #hero::before {
+      content: ''; position: absolute; inset: -10% -20% 20% -20%; z-index: 0;
+      background:
+        radial-gradient(52% 58% at 22% 28%, var(--accent-soft) 0%, transparent 70%),
+        linear-gradient(var(--grid-line) 1px, transparent 1px) 0 0 / 64px 64px,
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px) 0 0 / 64px 64px;
+      mask-image: radial-gradient(ellipse 75% 65% at 40% 40%, #000 35%, transparent 100%);
+      pointer-events: none;
+    }
+    #heroCanvas {
+      position: absolute; inset: 0; z-index: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+    }
+    .hero-grid {
+      position: relative; z-index: 2;
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+      gap: clamp(32px, 5vw, 72px);
+      align-items: center;
+    }
+
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 9px;
+      font-family: var(--font-mono); font-size: var(--t-xs);
+      letter-spacing: 0.08em;
+      color: var(--text-2);
+      border: 1px solid var(--border);
+      background: var(--surface);
+      padding: 6px 13px; border-radius: 100px;
+      margin-bottom: 22px;
+    }
+    .hero-tag .pulse {
+      width: 7px; height: 7px; border-radius: 50%; background: var(--accent);
+      box-shadow: 0 0 0 0 var(--accent-glow);
+      animation: pulse 2.4s ease-out infinite;
+    }
+    @keyframes pulse {
+      0%   { box-shadow: 0 0 0 0 var(--accent-glow); }
+      70%  { box-shadow: 0 0 0 9px rgba(0,0,0,0); }
+      100% { box-shadow: 0 0 0 0 rgba(0,0,0,0); }
+    }
+
     h1 {
-      font-size: clamp(2.125rem, 5.2vw, 3.25rem);
-      line-height: 1.1;
+      font-family: var(--font-display);
+      font-size: var(--t-hero);
       font-weight: 700;
-      letter-spacing: -0.03em;
+      line-height: 1.02;
+      letter-spacing: -0.035em;
       margin-bottom: 18px;
     }
+    /* word-by-word reveal: pure CSS so it never waits on JavaScript */
+    h1 .w { display: inline-block; overflow: hidden; vertical-align: bottom; }
+    h1 .w > span {
+      display: inline-block;
+      animation: wordUp 0.5s var(--ease) both;
+      animation-delay: calc(var(--i, 0) * 40ms);
+    }
+    @keyframes wordUp {
+      from { opacity: 0; transform: translateY(0.9em); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .role-line {
+      font-family: var(--font-mono);
+      font-size: var(--t-lg);
+      color: var(--text-2);
+      margin-bottom: 22px;
+      display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+      min-height: 1.8em;
+    }
+    .role-line .caret { color: var(--accent); }
+    .role-rotator { display: inline-block; position: relative; color: var(--text); }
+    .role-rotator.flip { animation: flipRole 0.42s var(--ease); }
+    @keyframes flipRole {
+      0%   { opacity: 0; transform: translateY(0.55em) rotateX(-45deg); }
+      100% { opacity: 1; transform: translateY(0) rotateX(0); }
+    }
+
     .hero-lede {
       font-size: var(--t-md);
       color: var(--text-2);
-      max-width: 62ch;
-      margin-bottom: 14px;
+      max-width: 60ch;
+      margin-bottom: 16px;
     }
     .hero-meta {
+      font-family: var(--font-mono);
       font-size: var(--t-sm);
       color: var(--text-3);
-      margin-bottom: 28px;
+      margin-bottom: 30px;
     }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; }
-    .btn {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-size: var(--t-sm); font-weight: 500;
-      padding: 10px 18px; border-radius: var(--radius);
-      border: 1px solid transparent;
-      cursor: pointer;
-      transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
-    }
-    .btn-solid { background: var(--accent); color: #fff; }
-    .btn-solid:hover { background: var(--accent-strong); text-decoration: none; color: #fff; }
-    .btn-quiet { border-color: var(--border-strong); color: var(--text); background: transparent; }
-    .btn-quiet:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
-    .btn svg { width: 15px; height: 15px; flex-shrink: 0; }
 
-    /* ===== Stat row (animated counters) ===== */
-    .stats-label { margin-top: 44px; margin-bottom: 0; }
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1px;
-      background: var(--border);
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 9px;
+      font-size: var(--t-sm); font-weight: 600;
+      padding: 12px 22px; border-radius: 10px;
+      border: 1px solid transparent;
+      transition: transform 0.2s var(--ease), box-shadow 0.25s ease, border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+    }
+    .btn svg { width: 15px; height: 15px; }
+    .btn-solid { background: var(--accent); color: var(--on-accent); }
+    .btn-solid:hover { transform: translateY(-2px); box-shadow: 0 10px 30px var(--accent-glow); }
+    .btn-quiet { border-color: var(--border-2); color: var(--text); }
+    .btn-quiet:hover { transform: translateY(-2px); border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
+
+    /* hero side panel */
+    .hero-panel {
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      overflow: hidden;
-      margin-top: 44px;
+      background: color-mix(in srgb, var(--surface) 82%, transparent);
+      backdrop-filter: blur(6px);
+      padding: 20px;
     }
-    .stat { background: var(--bg); padding: 18px 20px; }
-    .stat-num {
-      font-family: var(--font-mono);
-      font-size: var(--t-xl);
-      font-weight: 500;
-      color: var(--text);
-      line-height: 1.1;
+    .panel-label {
+      font-family: var(--font-mono); font-size: var(--t-xs);
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--text-3); margin-bottom: 14px;
+    }
+    .panel-stats { display: grid; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+    .pstat { background: var(--surface); padding: 14px 16px; }
+    .pstat-num {
+      font-family: var(--font-mono); font-size: 1.6rem; font-weight: 500;
+      color: var(--text); line-height: 1.1; font-variant-numeric: tabular-nums;
+    }
+    .pstat-label { font-size: var(--t-xs); color: var(--text-3); margin-top: 3px; letter-spacing: 0.02em; }
+
+    .scroll-cue {
+      position: absolute; left: 28px; bottom: 22px; z-index: 2;
+      display: flex; align-items: center; gap: 11px;
+      font-family: var(--font-mono); font-size: var(--t-xs);
+      letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-3);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+    .scroll-cue.gone { opacity: 0; transform: translateY(8px); }
+    .scroll-cue i {
+      display: block; width: 30px; height: 1px; background: var(--text-3);
+      animation: cue 2s ease-in-out infinite;
+    }
+    @keyframes cue {
+      0%, 100% { transform: scaleX(0.6); opacity: 0.4; transform-origin: left; }
+      50%      { transform: scaleX(1); opacity: 1; transform-origin: left; }
+    }
+
+    /* ===== Marquee ===== */
+    .marquee {
+      position: relative; z-index: 2;
+      overflow: hidden;
+      border-block: 1px solid var(--border);
+      background: var(--bg-2);
+      padding: 15px 0;
+    }
+    .marquee::before, .marquee::after {
+      content: ''; position: absolute; top: 0; bottom: 0; width: 110px; z-index: 2; pointer-events: none;
+    }
+    .marquee::before { left: 0;  background: linear-gradient(90deg, var(--bg-2), transparent); }
+    .marquee::after  { right: 0; background: linear-gradient(-90deg, var(--bg-2), transparent); }
+    .marquee-track { display: flex; width: max-content; animation: marquee 42s linear infinite; }
+    .marquee:hover .marquee-track, .marquee:focus-within .marquee-track { animation-play-state: paused; }
+    @keyframes marquee { to { transform: translateX(-50%); } }
+    .marquee-set { display: flex; align-items: center; }
+    .marquee-set span {
+      font-family: var(--font-mono); font-size: var(--t-sm);
+      color: var(--text-3); white-space: nowrap;
+      padding: 0 20px;
+      display: flex; align-items: center; gap: 20px;
+    }
+    .marquee-set span::after { content: '/'; color: var(--accent); opacity: 0.5; }
+
+    /* ===== Reveal ===== */
+    .reveal { opacity: 0; transform: translateY(24px); }
+    .reveal.in {
+      opacity: 1; transform: none;
+      transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+      transition-delay: calc(var(--d, 0) * 60ms);
+    }
+
+    /* ===== Results ===== */
+    #results { background: var(--bg-2); border-block: 1px solid var(--border); }
+    .results { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+    .result {
+      border: 1px solid var(--border); border-radius: var(--radius);
+      background: var(--surface); padding: 22px 20px;
+      transition: border-color 0.25s ease, transform 0.25s var(--ease);
+    }
+    .result:hover { border-color: var(--border-2); transform: translateY(-3px); }
+    .result-metric {
+      font-family: var(--font-mono); font-size: 1.5rem; font-weight: 500;
+      color: var(--accent); line-height: 1.15; margin-bottom: 9px;
       font-variant-numeric: tabular-nums;
     }
-    .stat-label {
-      font-size: var(--t-xs);
-      color: var(--text-3);
-      letter-spacing: 0.03em;
-      margin-top: 4px;
-    }
-
-    /* ===== Results band ===== */
-    .results {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 1px;
-      background: var(--border);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
-    }
-    .result { background: var(--surface); padding: 22px 20px; }
-    .result-metric {
-      font-family: var(--font-mono);
-      font-size: var(--t-lg);
-      font-weight: 500;
-      color: var(--accent);
-      line-height: 1.15;
-      margin-bottom: 8px;
-    }
-    .result-label {
-      font-size: var(--t-sm);
-      font-weight: 600;
-      color: var(--text);
-      margin-bottom: 4px;
-    }
+    .result-label { font-size: var(--t-sm); font-weight: 600; margin-bottom: 5px; }
     .result-copy { font-size: var(--t-sm); color: var(--text-2); line-height: 1.55; }
 
     /* ===== About ===== */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 240px 1fr;
-      gap: 44px;
-      align-items: start;
-    }
+    .about-grid { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: clamp(28px, 4vw, 56px); align-items: start; }
     .about-photo {
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
-      background: var(--bg-subtle);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      overflow: hidden; background: var(--surface-2);
+      position: relative;
     }
-    .about-photo img { width: 100%; height: 290px; object-fit: cover; }
-    .about-body p { color: var(--text-2); margin-bottom: 20px; max-width: 68ch; }
+    .about-photo::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 55%, var(--accent-soft));
+      pointer-events: none;
+    }
+    .about-photo img { width: 100%; height: 310px; object-fit: cover; }
+    .about-body p { color: var(--text-2); margin-bottom: 18px; max-width: 66ch; }
     .about-body strong { color: var(--text); font-weight: 600; }
 
-    .facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-bottom: 24px; }
+    .facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 26px 0; }
     .fact {
-      display: flex; align-items: flex-start; gap: 9px;
+      display: flex; align-items: center; gap: 10px;
       font-size: var(--t-sm); color: var(--text-2);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 11px 14px;
-      background: var(--surface);
+      border: 1px solid var(--border); border-radius: 10px;
+      padding: 12px 14px; background: var(--surface);
+      transition: border-color 0.25s ease, transform 0.25s var(--ease);
     }
-    .fact svg { width: 15px; height: 15px; color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+    .fact:hover { border-color: var(--border-2); transform: translateY(-2px); }
+    .fact svg { width: 16px; height: 16px; color: var(--accent); flex-shrink: 0; }
 
-    .edu { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); padding: 16px 18px; }
-    .edu-row { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
-    .edu-row + .edu-row { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); }
-    .edu-degree { font-size: var(--t-sm); font-weight: 600; color: var(--text); }
+    .edu { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); padding: 6px 18px; }
+    .edu-row { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding: 14px 0; }
+    .edu-row + .edu-row { border-top: 1px solid var(--border); }
+    .edu-degree { font-size: var(--t-sm); font-weight: 600; }
     .edu-school { font-size: var(--t-sm); color: var(--text-2); }
     .edu-when { font-family: var(--font-mono); font-size: var(--t-xs); color: var(--text-3); white-space: nowrap; }
 
-    /* ===== Tech stack ===== */
-    .stack-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 1px;
-      background: var(--border);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
+    /* ===== Stack ===== */
+    #stack { background: var(--bg-2); border-block: 1px solid var(--border); }
+    .stack-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+    .stack-cell {
+      border: 1px solid var(--border); border-radius: 10px;
+      background: var(--surface); padding: 16px 18px;
+      transition: border-color 0.25s ease, transform 0.25s var(--ease);
     }
-    .stack-cell { background: var(--surface); padding: 18px 20px; }
-    .stack-name { font-size: var(--t-sm); font-weight: 600; color: var(--text); margin-bottom: 4px; }
-    .stack-desc { font-size: var(--t-xs); color: var(--text-3); line-height: 1.5; }
+    .stack-cell:hover { border-color: var(--accent); transform: translateY(-3px); }
+    .stack-name { font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; margin-bottom: 4px; }
+    .stack-desc { font-family: var(--font-mono); font-size: var(--t-xs); color: var(--text-3); line-height: 1.5; }
 
-    /* ===== Experience ===== */
-    .exp { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); padding: 24px; }
-    .exp + .exp { margin-top: 14px; }
-    .exp-head {
-      display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between;
-      gap: 8px 16px; margin-bottom: 14px;
+    /* ===== Experience timeline ===== */
+    .timeline { position: relative; padding-left: 30px; }
+    .timeline::before {
+      content: ''; position: absolute; left: 5px; top: 6px; bottom: 6px; width: 2px;
+      background: linear-gradient(180deg, var(--accent), var(--border-2));
+      border-radius: 2px;
+      transform: scaleY(0); transform-origin: top;
+      transition: transform 1.1s var(--ease);
     }
-    .exp-role { font-size: var(--t-base); font-weight: 600; color: var(--text); }
+    .timeline.in::before { transform: scaleY(1); }
+
+    .exp { position: relative; padding-bottom: 34px; }
+    .exp:last-child { padding-bottom: 0; }
+    .exp::before {
+      content: ''; position: absolute; left: -30px; top: 7px;
+      width: 12px; height: 12px; border-radius: 50%;
+      background: var(--bg); border: 2px solid var(--accent);
+      box-shadow: 0 0 0 4px var(--bg);
+    }
+    .exp-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 18px; margin-bottom: 12px; }
+    .exp-role { font-family: var(--font-display); font-size: var(--t-lg); font-weight: 600; }
     .exp-org { font-size: var(--t-sm); color: var(--accent); }
     .exp-when { font-family: var(--font-mono); font-size: var(--t-xs); color: var(--text-3); white-space: nowrap; }
-    .exp-bullets { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
-    .exp-bullets li {
-      font-size: var(--t-sm); color: var(--text-2); line-height: 1.6;
-      padding-left: 18px; position: relative;
-    }
+    .exp-bullets { display: flex; flex-direction: column; gap: 9px; margin-bottom: 16px; }
+    .exp-bullets li { font-size: var(--t-sm); color: var(--text-2); line-height: 1.6; padding-left: 17px; position: relative; }
     .exp-bullets li::before {
-      content: ''; position: absolute; left: 2px; top: 9px;
-      width: 5px; height: 5px; border-radius: 50%; background: var(--border-strong);
+      content: ''; position: absolute; left: 0; top: 9px;
+      width: 5px; height: 5px; border-radius: 50%; background: var(--border-2);
     }
     .tags { display: flex; flex-wrap: wrap; gap: 6px; }
     .tag {
-      font-family: var(--font-mono);
-      font-size: var(--t-xs);
-      color: var(--text-2);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 2px 8px;
-      background: var(--bg-subtle);
+      font-family: var(--font-mono); font-size: var(--t-xs);
+      color: var(--text-2); background: var(--surface);
+      border: 1px solid var(--border); border-radius: 6px; padding: 3px 9px;
     }
 
     /* ===== Projects ===== */
-    .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+    #projects { background: var(--bg-2); border-block: 1px solid var(--border); }
+    .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 26px; }
     .filter {
-      font-size: var(--t-sm);
-      color: var(--text-2);
-      border: 1px solid var(--border-strong);
-      background: transparent;
-      border-radius: var(--radius);
-      padding: 6px 14px;
-      font-family: var(--font-sans);
-      cursor: pointer;
-      transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease;
+      font-size: var(--t-sm); color: var(--text-2);
+      border: 1px solid var(--border-2); border-radius: 9px;
+      padding: 8px 16px;
+      transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, transform 0.2s var(--ease);
     }
-    .filter:hover { border-color: var(--accent); color: var(--accent); }
-    .filter[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .filter:hover { color: var(--accent); border-color: var(--accent); transform: translateY(-1px); }
+    .filter[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
 
-    .projects-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .projects-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
     .project {
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: var(--surface);
-      padding: 22px;
-      display: flex; flex-direction: column; gap: 12px;
-      transition: border-color 0.15s ease;
+      position: relative;
+      border: 1px solid var(--border); border-radius: var(--radius);
+      background: var(--surface); padding: 24px;
+      display: flex; flex-direction: column; gap: 13px;
+      transform-style: preserve-3d;
+      transition: opacity 0.28s var(--ease), transform 0.28s var(--ease), border-color 0.25s ease, box-shadow 0.3s ease;
+      will-change: transform;
     }
-    .project:hover { border-color: var(--border-strong); }
+    /* pointer-following highlight */
+    .project::before {
+      content: ''; position: absolute; inset: 0; border-radius: inherit;
+      background: radial-gradient(340px circle at var(--mx, 50%) var(--my, 0%), var(--accent-soft), transparent 62%);
+      opacity: 0; transition: opacity 0.3s ease; pointer-events: none;
+    }
+    .project:hover::before { opacity: 1; }
+    .project:hover { border-color: var(--accent); box-shadow: 0 16px 44px rgba(0,0,0,0.22), 0 0 0 1px var(--accent-glow); }
+    .project > * { position: relative; }
+    .project.is-out { opacity: 0; transform: scale(0.97); pointer-events: none; }
     .project.is-hidden { display: none; }
+
     .project-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
-    .project-name { font-size: var(--t-base); font-weight: 600; color: var(--text); line-height: 1.35; }
+    .project-name { font-family: var(--font-display); font-size: var(--t-lg); font-weight: 600; line-height: 1.3; }
     .badge {
-      font-family: var(--font-mono);
-      font-size: 0.6875rem;
-      letter-spacing: 0.04em;
-      padding: 2px 8px;
-      border-radius: 4px;
-      white-space: nowrap;
-      border: 1px solid var(--border-strong);
-      color: var(--text-2);
-      background: var(--bg-subtle);
+      font-family: var(--font-mono); font-size: 0.6875rem;
+      border: 1px solid var(--border-2); border-radius: 100px;
+      padding: 2px 9px; color: var(--text-3); white-space: nowrap;
     }
     .badge-live { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
     .project-desc { font-size: var(--t-sm); color: var(--text-2); line-height: 1.6; }
-    .proof { display: grid; gap: 6px; border-left: 2px solid var(--border); padding-left: 14px; }
-    .proof-row { display: grid; grid-template-columns: 62px 1fr; gap: 10px; font-size: var(--t-sm); line-height: 1.5; }
-    .proof-label {
-      font-family: var(--font-mono);
-      font-size: var(--t-xs);
-      color: var(--text-3);
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
+    .proof { display: grid; gap: 7px; border-left: 2px solid var(--border-2); padding-left: 14px; }
+    .proof-row { display: grid; grid-template-columns: 62px minmax(0, 1fr); gap: 10px; font-size: var(--t-sm); line-height: 1.5; }
+    .proof-label { font-family: var(--font-mono); font-size: var(--t-xs); color: var(--accent); text-transform: uppercase; letter-spacing: 0.06em; }
     .proof-row span:last-child { color: var(--text-2); }
-    .project-links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: auto; padding-top: 4px; }
-    .project-links a { font-size: var(--t-sm); font-weight: 500; display: inline-flex; align-items: center; gap: 6px; }
-    .project-links svg { width: 14px; height: 14px; }
-    .more-link { margin-top: 20px; font-size: var(--t-sm); }
+    .project-links { display: flex; flex-wrap: wrap; gap: 16px; margin-top: auto; padding-top: 4px; }
+
+    /* underline wipe, shared by project + contact links */
+    .wipe { position: relative; font-size: var(--t-sm); font-weight: 600; display: inline-flex; align-items: center; gap: 6px; }
+    .wipe::after {
+      content: ''; position: absolute; left: 0; right: 0; bottom: -3px; height: 1.5px;
+      background: currentColor; border-radius: 1px;
+      transform: scaleX(0); transform-origin: left;
+      transition: transform 0.3s var(--ease);
+    }
+    .wipe:hover::after, .wipe:focus-visible::after { transform: scaleX(1); }
+    .wipe svg { width: 13px; height: 13px; }
+
+    .more-link { margin-top: 22px; font-size: var(--t-sm); }
 
     /* ===== Contact ===== */
-    .contact-lede { font-size: var(--t-md); color: var(--text-2); max-width: 62ch; margin-bottom: 26px; }
-    .contact-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; max-width: 640px; }
+    .contact-lede { font-size: var(--t-md); color: var(--text-2); max-width: 60ch; margin-bottom: 28px; }
+    .contact-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; max-width: 700px; }
     .contact-item {
-      display: flex; align-items: center; gap: 10px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: var(--surface);
-      padding: 12px 15px;
-      font-size: var(--t-sm);
-      color: var(--text);
-      transition: border-color 0.15s ease;
+      display: flex; align-items: center; gap: 12px;
+      border: 1px solid var(--border); border-radius: 10px;
+      background: var(--surface); padding: 14px 16px;
+      color: var(--text); font-size: var(--t-sm);
+      transition: border-color 0.25s ease, transform 0.25s var(--ease);
     }
-    .contact-item:hover { border-color: var(--accent); text-decoration: none; }
-    .contact-item svg { width: 16px; height: 16px; color: var(--accent); flex-shrink: 0; }
+    .contact-item:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .contact-item svg { width: 17px; height: 17px; color: var(--accent); flex-shrink: 0; }
 
     /* ===== Footer ===== */
-    footer { border-top: 1px solid var(--border); padding: 28px 0; }
+    footer { border-top: 1px solid var(--border); padding: 30px 0; position: relative; z-index: 2; }
     .footer-inner {
-      max-width: var(--measure); margin: 0 auto; padding: 0 24px;
+      max-width: var(--measure); margin: 0 auto; padding: 0 28px;
       display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px;
       font-size: var(--t-sm); color: var(--text-3);
     }
-    .footer-links { display: flex; gap: 18px; }
+    .footer-links { display: flex; gap: 20px; }
     .footer-links a { color: var(--text-2); }
 
-    /* ===== Motion ===== */
+    /* ==========================================================
+       REDUCED MOTION — every effect above is switched off here.
+       ========================================================== */
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       *, *::before, *::after {
-        animation-duration: 0.01ms !important;
+        animation-duration: 0.001ms !important;
         animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
+        transition-duration: 0.001ms !important;
+        transition-delay: 0ms !important;
       }
+      .reveal { opacity: 1 !important; transform: none !important; }
+      h1 .w > span { opacity: 1 !important; transform: none !important; }
+      .timeline::before { transform: scaleY(1) !important; }
+      .marquee-track { animation: none !important; }
+      #heroCanvas { display: none; }
+      .scroll-cue i { animation: none !important; }
+      .hero-tag .pulse { animation: none !important; }
     }
 
     /* ===== Responsive ===== */
-    @media (max-width: 860px) {
-      .about-grid { grid-template-columns: 1fr; gap: 28px; }
-      .about-photo { max-width: 240px; }
-      .stack-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    @media (max-width: 960px) {
+      .hero-grid { grid-template-columns: minmax(0, 1fr); }
+      .hero-panel { max-width: 460px; }
       .results { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .projects-grid { grid-template-columns: 1fr; }
+      .stack-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .about-grid { grid-template-columns: minmax(0, 1fr); }
+      .about-photo { max-width: 260px; }
+      .projects-grid { grid-template-columns: minmax(0, 1fr); }
       .nav-links { display: none; }
     }
     @media (max-width: 560px) {
-      section { padding: 56px 0; }
-      #hero { padding: 56px 0 48px; }
       .wrap, .header-inner, .footer-inner { padding-left: 18px; padding-right: 18px; }
-      .facts { grid-template-columns: 1fr; }
-      .stats { grid-template-columns: 1fr; }
-      .results { grid-template-columns: 1fr; }
-      .contact-list { grid-template-columns: 1fr; }
-      .stack-grid { grid-template-columns: 1fr; }
+      .scroll-cue { left: 18px; }
+      .results { grid-template-columns: minmax(0, 1fr); }
+      .stack-grid { grid-template-columns: minmax(0, 1fr); }
+      .facts { grid-template-columns: minmax(0, 1fr); }
+      .contact-list { grid-template-columns: minmax(0, 1fr); }
       .exp-head { flex-direction: column; }
+      .header-cta { display: none; }
     }
   </style>
 </head>
 <body>
 
 <a class="skip-link" href="#main">Skip to content</a>
+<div id="progress" aria-hidden="true"></div>
 
-<header class="site-header">
+<header class="site-header" id="header">
   <div class="header-inner">
-    <a href="#hero" class="brand">RC</a>
-    <nav class="nav-links" aria-label="Sections">
+    <a href="#hero" class="brand"><span class="dot" aria-hidden="true"></span>RC</a>
+    <nav class="nav-links" id="navLinks" aria-label="Sections">
       <a href="#about">About</a>
       <a href="#stack">Stack</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a href="resume.html" class="header-cta" target="_blank" rel="noopener">Resume</a>
+    <div class="header-tools">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch between dark and light theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+      <a href="resume.html" class="header-cta" target="_blank" rel="noopener">Resume</a>
+    </div>
   </div>
 </header>
 
@@ -515,63 +724,103 @@
 
   <!-- HERO -->
   <section id="hero">
+    <canvas id="heroCanvas" aria-hidden="true"></canvas>
     <div class="wrap">
-      <p class="hero-role">Data Analyst &amp; ML Engineer</p>
-      <h1>Rakshith Chandupatla</h1>
-      <p class="hero-lede">
-        I work on healthcare payer and revenue-cycle data — claims (X12 EDI 837/835), HEDIS quality
-        measures, CMS risk adjustment, and denial analytics — turning it into production models,
-        pipelines, and reporting that operations teams use. Open to Data Analyst, Data Engineer,
-        Analytics Engineer, and ML Engineer roles.
-      </p>
-      <p class="hero-meta">Cincinnati / Northern Kentucky · open to relocation across the US</p>
+      <div class="hero-grid">
+        <div class="hero-left">
+          <p class="hero-tag"><span class="pulse" aria-hidden="true"></span> Open to new roles</p>
 
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-solid">View projects</a>
-        <a href="resume.html" class="btn btn-quiet" target="_blank" rel="noopener">Resume</a>
-        <a href="#contact" class="btn btn-quiet">Get in touch</a>
-      </div>
+          <h1 id="heroTitle">Rakshith Chandupatla</h1>
 
-      <h2 class="eyebrow stats-label">At a glance</h2>
-      <div class="stats">
-        <div class="stat">
-          <div class="stat-num" data-target="3">0</div>
-          <div class="stat-label">Years in data roles</div>
+          <p class="role-line">
+            <span class="caret" aria-hidden="true">&gt;</span>
+            <span class="role-rotator" id="roleRotator">Data Engineer</span>
+          </p>
+
+          <p class="hero-lede">
+            I work on healthcare payer and revenue-cycle data — claims (X12 EDI 837/835), HEDIS quality
+            measures, CMS risk adjustment, and denial analytics — turning it into production models,
+            pipelines, and reporting that operations teams use.
+          </p>
+          <p class="hero-meta">Cincinnati / Northern Kentucky · open to relocation across the US</p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-solid">
+              View projects
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="resume.html" class="btn btn-quiet" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v5h5"/></svg>
+              Resume
+            </a>
+            <a href="#contact" class="btn btn-quiet">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              Get in touch
+            </a>
+          </div>
         </div>
-        <div class="stat">
-          <div class="stat-num" data-target="3.90" data-decimals="2">0</div>
-          <div class="stat-label">Graduate GPA</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num" data-target="7">0</div>
-          <div class="stat-label">Featured projects</div>
-        </div>
+
+        <aside class="hero-panel reveal">
+          <h2 class="panel-label">At a glance</h2>
+          <div class="panel-stats">
+            <div class="pstat">
+              <div class="pstat-num" data-count="3">3</div>
+              <div class="pstat-label">Years in data roles</div>
+            </div>
+            <div class="pstat">
+              <div class="pstat-num" data-count="3.90" data-dec="2">3.90</div>
+              <div class="pstat-label">Graduate GPA</div>
+            </div>
+            <div class="pstat">
+              <div class="pstat-num" data-count="7">7</div>
+              <div class="pstat-label">Featured projects</div>
+            </div>
+          </div>
+        </aside>
       </div>
     </div>
+
+    <div class="scroll-cue" id="scrollCue" aria-hidden="true"><i></i>Scroll</div>
   </section>
+
+  <!-- TECH MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <div class="marquee-set">
+        <span>SQL</span><span>Python</span><span>Snowflake</span><span>dbt</span><span>PySpark</span>
+        <span>Databricks</span><span>Power BI</span><span>Tableau</span><span>AWS</span>
+        <span>XGBoost</span><span>Scikit-learn</span><span>Docker</span>
+      </div>
+      <div class="marquee-set">
+        <span>SQL</span><span>Python</span><span>Snowflake</span><span>dbt</span><span>PySpark</span>
+        <span>Databricks</span><span>Power BI</span><span>Tableau</span><span>AWS</span>
+        <span>XGBoost</span><span>Scikit-learn</span><span>Docker</span>
+      </div>
+    </div>
+  </div>
 
   <!-- SELECTED RESULTS -->
   <section id="results">
     <div class="wrap">
-      <p class="eyebrow">Selected results</p>
-      <h2 class="section-title">Measured outcomes</h2>
+      <p class="eyebrow reveal">Selected results</p>
+      <h2 class="section-title reveal" style="--d:1">Measured outcomes</h2>
       <div class="results">
-        <div class="result">
-          <div class="result-metric">18%</div>
+        <div class="result reveal" style="--d:0">
+          <div class="result-metric" data-count="18" data-suffix="%">18%</div>
           <div class="result-label">Denial reduction</div>
           <p class="result-copy">Denial-prevention and anomaly-detection models embedded into adjudication and payment-integrity workflows.</p>
         </div>
-        <div class="result">
+        <div class="result reveal" style="--d:1">
           <div class="result-metric">0.80–0.90</div>
           <div class="result-label">Model ROC-AUC</div>
           <p class="result-copy">Readmission risk and member stratification models supporting care management and value-based programs.</p>
         </div>
-        <div class="result">
+        <div class="result reveal" style="--d:2">
           <div class="result-metric">837/835</div>
           <div class="result-label">Claims data engineered</div>
           <p class="result-copy">Claim and remittance features built from ASC X12 EDI transactions, with ongoing validation and monitoring.</p>
         </div>
-        <div class="result">
+        <div class="result reveal" style="--d:3">
           <div class="result-metric">HEDIS + CMS</div>
           <div class="result-label">Quality and risk alignment</div>
           <p class="result-copy">Model and reporting outputs aligned with HEDIS quality reporting and CMS risk adjustment.</p>
@@ -583,15 +832,15 @@
   <!-- ABOUT -->
   <section id="about">
     <div class="wrap">
-      <p class="eyebrow">About</p>
-      <h2 class="section-title">Background</h2>
+      <p class="eyebrow reveal">About</p>
+      <h2 class="section-title reveal" style="--d:1">Background</h2>
       <div class="about-grid">
-        <div class="about-photo">
-          <img src="assets/profile.jpg" alt="Portrait of Rakshith Chandupatla" width="240" height="290"
+        <div class="about-photo reveal">
+          <img src="assets/profile.jpg" alt="Portrait of Rakshith Chandupatla" width="260" height="310"
             onerror="this.onerror=null; this.src='assets/profile.svg';" />
         </div>
         <div class="about-body">
-          <p>
+          <p class="reveal" style="--d:1">
             I work on <strong>healthcare payer and revenue-cycle data</strong> — claims (X12 EDI 837/835),
             HEDIS quality measures, CMS risk adjustment, and denial analytics. I'm currently a Data Analyst
             at <strong>Change Healthcare</strong>, where I productionize denial-prevention and
@@ -599,31 +848,31 @@
             <strong>UnitedHealth Group / Optum</strong>, building claims pipelines and predictive models for
             readmission risk and member stratification.
           </p>
-          <p>
+          <p class="reveal" style="--d:2">
             Day to day I work in SQL, Python, Snowflake, dbt, PySpark and Databricks, Power BI, Tableau,
             and AWS — under PHI/HIPAA constraints, with production data and models that have to stay stable.
           </p>
 
           <div class="facts">
-            <div class="fact">
+            <div class="fact reveal" style="--d:0">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
               <span>Open to relocation across the US</span>
             </div>
-            <div class="fact">
+            <div class="fact reveal" style="--d:1">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
               <span>F-1 STEM OPT work authorization</span>
             </div>
-            <div class="fact">
+            <div class="fact reveal" style="--d:2">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
               <span>AWS Certified Cloud Practitioner</span>
             </div>
-            <div class="fact">
+            <div class="fact reveal" style="--d:3">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
               <span>rakshithchandupatla1@gmail.com</span>
             </div>
           </div>
 
-          <div class="edu">
+          <div class="edu reveal">
             <div class="edu-row">
               <div>
                 <div class="edu-degree">M.S. Computer Science</div>
@@ -638,6 +887,12 @@
               </div>
               <div class="edu-when">June 2023</div>
             </div>
+            <div class="edu-row">
+              <div>
+                <div class="edu-degree">AWS Certified Cloud Practitioner</div>
+                <div class="edu-school">Amazon Web Services</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -647,21 +902,21 @@
   <!-- TECH STACK -->
   <section id="stack">
     <div class="wrap">
-      <p class="eyebrow">Tech stack</p>
-      <h2 class="section-title">Tools I work with</h2>
+      <p class="eyebrow reveal">Tech stack</p>
+      <h2 class="section-title reveal" style="--d:1">Tools I work with</h2>
       <div class="stack-grid">
-        <div class="stack-cell"><div class="stack-name">SQL</div><div class="stack-desc">CTEs · Window functions · Query tuning</div></div>
-        <div class="stack-cell"><div class="stack-name">Power BI</div><div class="stack-desc">DAX · KPI dashboards · Executive reporting</div></div>
-        <div class="stack-cell"><div class="stack-name">Tableau</div><div class="stack-desc">Trend analysis · KPI dashboards · Reporting</div></div>
-        <div class="stack-cell"><div class="stack-name">Python</div><div class="stack-desc">Pandas · NumPy · EDA · Automation</div></div>
-        <div class="stack-cell"><div class="stack-name">Risk Analytics</div><div class="stack-desc">Fraud detection · Anomaly models · Risk mitigation</div></div>
-        <div class="stack-cell"><div class="stack-name">ML / AI</div><div class="stack-desc">Scikit-learn · RAG · Gradient Boosting · NLP</div></div>
-        <div class="stack-cell"><div class="stack-name">Snowflake</div><div class="stack-desc">Cloud DWH · Star schema · Analytical views</div></div>
-        <div class="stack-cell"><div class="stack-name">dbt</div><div class="stack-desc">Staging/marts layers · Schema tests · Docs</div></div>
-        <div class="stack-cell"><div class="stack-name">PySpark</div><div class="stack-desc">Spark SQL · Provider rankings · Batch analytics</div></div>
-        <div class="stack-cell"><div class="stack-name">Databricks</div><div class="stack-desc">Delta Lake · Notebooks · Analytics workloads</div></div>
-        <div class="stack-cell"><div class="stack-name">AWS</div><div class="stack-desc">S3 · Glue · Redshift · Lambda · Certified</div></div>
-        <div class="stack-cell"><div class="stack-name">Docker / CI</div><div class="stack-desc">Reproducible apps · GitHub Actions · Delivery</div></div>
+        <div class="stack-cell reveal" style="--d:0"><div class="stack-name">SQL</div><div class="stack-desc">CTEs · Window functions · Query tuning</div></div>
+        <div class="stack-cell reveal" style="--d:1"><div class="stack-name">Python</div><div class="stack-desc">Pandas · NumPy · EDA · Automation</div></div>
+        <div class="stack-cell reveal" style="--d:2"><div class="stack-name">Snowflake</div><div class="stack-desc">Cloud DWH · Star schema · Analytical views</div></div>
+        <div class="stack-cell reveal" style="--d:3"><div class="stack-name">dbt</div><div class="stack-desc">Staging/marts layers · Schema tests · Docs</div></div>
+        <div class="stack-cell reveal" style="--d:0"><div class="stack-name">PySpark</div><div class="stack-desc">Spark SQL · Provider rankings · Batch analytics</div></div>
+        <div class="stack-cell reveal" style="--d:1"><div class="stack-name">Databricks</div><div class="stack-desc">Delta Lake · Notebooks · Analytics workloads</div></div>
+        <div class="stack-cell reveal" style="--d:2"><div class="stack-name">Power BI</div><div class="stack-desc">DAX · KPI dashboards · Executive reporting</div></div>
+        <div class="stack-cell reveal" style="--d:3"><div class="stack-name">Tableau</div><div class="stack-desc">Trend analysis · KPI dashboards · Reporting</div></div>
+        <div class="stack-cell reveal" style="--d:0"><div class="stack-name">ML / AI</div><div class="stack-desc">Scikit-learn · XGBoost · RAG · NLP</div></div>
+        <div class="stack-cell reveal" style="--d:1"><div class="stack-name">Risk Analytics</div><div class="stack-desc">Denial models · Anomaly detection · Risk adjustment</div></div>
+        <div class="stack-cell reveal" style="--d:2"><div class="stack-name">AWS</div><div class="stack-desc">S3 · Glue · Redshift · Lambda · Certified</div></div>
+        <div class="stack-cell reveal" style="--d:3"><div class="stack-name">Docker / CI</div><div class="stack-desc">Reproducible apps · GitHub Actions · Delivery</div></div>
       </div>
     </div>
   </section>
@@ -669,74 +924,76 @@
   <!-- EXPERIENCE -->
   <section id="experience">
     <div class="wrap">
-      <p class="eyebrow">Experience</p>
-      <h2 class="section-title">Where I've worked</h2>
+      <p class="eyebrow reveal">Experience</p>
+      <h2 class="section-title reveal" style="--d:1">Where I've worked</h2>
 
-      <article class="exp">
-        <div class="exp-head">
-          <div>
-            <h3 class="exp-role">Data Analyst</h3>
-            <div class="exp-org">Change Healthcare</div>
+      <div class="timeline" id="timeline">
+        <article class="exp reveal" style="--d:0">
+          <div class="exp-head">
+            <div>
+              <h3 class="exp-role">Data Analyst</h3>
+              <div class="exp-org">Change Healthcare</div>
+            </div>
+            <div class="exp-when">Jun 2025 – Present</div>
           </div>
-          <div class="exp-when">Jun 2025 – Present</div>
-        </div>
-        <ul class="exp-bullets">
-          <li>Productionized denial-prevention and anomaly-detection machine learning on large-scale claims and revenue-cycle data, embedding outputs into adjudication and payment-integrity workflows and reducing denials by 18%.</li>
-          <li>Engineered claim and remittance features from ASC X12 EDI 837/835 transactions, with ongoing validation and performance monitoring to keep production data and models stable.</li>
-          <li>Partnered with product, actuarial, and clinical stakeholders to translate business rules into scalable scoring logic and decision thresholds under PHI/HIPAA constraints.</li>
-          <li>Delivered Power BI and Tableau dashboards that surfaced denial drivers, payment anomalies, and integrity signals for operations teams.</li>
-        </ul>
-        <div class="tags">
-          <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Snowflake</span><span class="tag">XGBoost</span><span class="tag">Power BI</span><span class="tag">Tableau</span>
-        </div>
-      </article>
+          <ul class="exp-bullets">
+            <li>Productionized denial-prevention and anomaly-detection machine learning on large-scale claims and revenue-cycle data, embedding outputs into adjudication and payment-integrity workflows and reducing denials by 18%.</li>
+            <li>Engineered claim and remittance features from ASC X12 EDI 837/835 transactions, with ongoing validation and performance monitoring to keep production data and models stable.</li>
+            <li>Partnered with product, actuarial, and clinical stakeholders to translate business rules into scalable scoring logic and decision thresholds under PHI/HIPAA constraints.</li>
+            <li>Delivered Power BI and Tableau dashboards that surfaced denial drivers, payment anomalies, and integrity signals for operations teams.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Snowflake</span><span class="tag">XGBoost</span><span class="tag">Power BI</span><span class="tag">Tableau</span>
+          </div>
+        </article>
 
-      <article class="exp">
-        <div class="exp-head">
-          <div>
-            <h3 class="exp-role">Data Analyst</h3>
-            <div class="exp-org">UnitedHealth Group / Optum</div>
+        <article class="exp reveal" style="--d:1">
+          <div class="exp-head">
+            <div>
+              <h3 class="exp-role">Data Analyst</h3>
+              <div class="exp-org">UnitedHealth Group / Optum</div>
+            </div>
+            <div class="exp-when">Aug 2024 – May 2025</div>
           </div>
-          <div class="exp-when">Aug 2024 – May 2025</div>
-        </div>
-        <ul class="exp-bullets">
-          <li>Developed high-throughput SQL and Python data pipelines that transformed medical and eligibility claims into reusable, model-ready cohorts and feature sets.</li>
-          <li>Built predictive models for readmission risk and member stratification (ROC-AUC 0.80–0.90), supporting care management and value-based programs.</li>
-          <li>Applied statistical testing and feature selection to improve model stability, aligning outputs with HEDIS quality reporting and CMS risk adjustment.</li>
-          <li>Automated reporting on utilization trends, care gaps, and cost drivers for clinical and operational partners.</li>
-        </ul>
-        <div class="tags">
-          <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">HEDIS</span><span class="tag">Risk Adjustment</span><span class="tag">Power BI</span>
-        </div>
-      </article>
+          <ul class="exp-bullets">
+            <li>Developed high-throughput SQL and Python data pipelines that transformed medical and eligibility claims into reusable, model-ready cohorts and feature sets.</li>
+            <li>Built predictive models for readmission risk and member stratification (ROC-AUC 0.80–0.90), supporting care management and value-based programs.</li>
+            <li>Applied statistical testing and feature selection to improve model stability, aligning outputs with HEDIS quality reporting and CMS risk adjustment.</li>
+            <li>Automated reporting on utilization trends, care gaps, and cost drivers for clinical and operational partners.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">HEDIS</span><span class="tag">Risk Adjustment</span><span class="tag">Power BI</span>
+          </div>
+        </article>
 
-      <article class="exp">
-        <div class="exp-head">
-          <div>
-            <h3 class="exp-role">Software Engineer</h3>
-            <div class="exp-org">Phoenix Global</div>
+        <article class="exp reveal" style="--d:2">
+          <div class="exp-head">
+            <div>
+              <h3 class="exp-role">Software Engineer</h3>
+              <div class="exp-org">Phoenix Global</div>
+            </div>
+            <div class="exp-when">May 2022 – Nov 2022</div>
           </div>
-          <div class="exp-when">May 2022 – Nov 2022</div>
-        </div>
-        <ul class="exp-bullets">
-          <li>Integrated and standardized multi-source data from Hadoop-based platforms into analysis-ready datasets, speeding up reporting cycles.</li>
-          <li>Automated data preparation and exploratory analysis workflows, reducing manual data handling for downstream analytics.</li>
-          <li>Built Power BI executive dashboards that turned raw operational data into KPIs for leadership.</li>
-        </ul>
-        <div class="tags">
-          <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Hadoop</span><span class="tag">Tableau</span><span class="tag">Power BI</span>
-        </div>
-      </article>
+          <ul class="exp-bullets">
+            <li>Integrated and standardized multi-source data from Hadoop-based platforms into analysis-ready datasets, speeding up reporting cycles.</li>
+            <li>Automated data preparation and exploratory analysis workflows, reducing manual data handling for downstream analytics.</li>
+            <li>Built Power BI executive dashboards that turned raw operational data into KPIs for leadership.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Hadoop</span><span class="tag">Tableau</span><span class="tag">Power BI</span>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
   <!-- PROJECTS -->
   <section id="projects">
     <div class="wrap">
-      <p class="eyebrow">Projects</p>
-      <h2 class="section-title">Selected work</h2>
+      <p class="eyebrow reveal">Projects</p>
+      <h2 class="section-title reveal" style="--d:1">Selected work</h2>
 
-      <div class="filters" role="group" aria-label="Filter projects by category">
+      <div class="filters reveal" role="group" aria-label="Filter projects by category">
         <button class="filter" data-filter="all" aria-pressed="true">All</button>
         <button class="filter" data-filter="dataeng" aria-pressed="false">Data engineering</button>
         <button class="filter" data-filter="live" aria-pressed="false">Live apps</button>
@@ -745,7 +1002,7 @@
 
       <div class="projects-grid" id="projectGrid">
 
-        <article class="project" data-cat="dataeng ml live">
+        <article class="project reveal" data-cat="dataeng ml live" style="--d:0">
           <div class="project-head">
             <h3 class="project-name">Claims Denial Analysis &amp; Prediction</h3>
             <span class="badge badge-live">Live</span>
@@ -758,15 +1015,14 @@
           </div>
           <div class="tags"><span class="tag">Snowflake</span><span class="tag">dbt</span><span class="tag">XGBoost</span><span class="tag">SHAP</span><span class="tag">Streamlit</span></div>
           <div class="project-links">
-            <a href="https://healthcare-claims-denial-analysis-e8xeaunfeof8p7tdqi4fdb.streamlit.app/" target="_blank" rel="noopener">Live demo</a>
-            <a href="https://github.com/Rakshithch/healthcare-claims-denial-analysis" target="_blank" rel="noopener">GitHub</a>
+            <a class="wipe" href="https://healthcare-claims-denial-analysis-e8xeaunfeof8p7tdqi4fdb.streamlit.app/" target="_blank" rel="noopener">Live demo</a>
+            <a class="wipe" href="https://github.com/Rakshithch/healthcare-claims-denial-analysis" target="_blank" rel="noopener">GitHub</a>
           </div>
         </article>
 
-        <article class="project" data-cat="dataeng">
+        <article class="project reveal" data-cat="dataeng" style="--d:1">
           <div class="project-head">
             <h3 class="project-name">Claims Data Warehouse — Snowflake &amp; dbt</h3>
-            <span class="badge">New</span>
           </div>
           <p class="project-desc">Kimball-style Snowflake analytics model with dbt staging/marts, quality tests, and business views for claims trends.</p>
           <div class="proof">
@@ -776,14 +1032,13 @@
           </div>
           <div class="tags"><span class="tag">Snowflake</span><span class="tag">dbt</span><span class="tag">SQL</span><span class="tag">Star Schema</span></div>
           <div class="project-links">
-            <a href="https://github.com/Rakshithch/snowflake-healthcare-claims" target="_blank" rel="noopener">GitHub</a>
+            <a class="wipe" href="https://github.com/Rakshithch/snowflake-healthcare-claims" target="_blank" rel="noopener">GitHub</a>
           </div>
         </article>
 
-        <article class="project" data-cat="dataeng">
+        <article class="project reveal" data-cat="dataeng" style="--d:0">
           <div class="project-head">
             <h3 class="project-name">Large-Scale Analytics — PySpark &amp; Databricks</h3>
-            <span class="badge">New</span>
           </div>
           <p class="project-desc">Databricks/PySpark analysis for payer denial rates, provider rankings, revenue recovery, and large-scale claims exploration.</p>
           <div class="proof">
@@ -793,11 +1048,11 @@
           </div>
           <div class="tags"><span class="tag">PySpark</span><span class="tag">Databricks</span><span class="tag">Delta Lake</span><span class="tag">Spark SQL</span><span class="tag">Python</span></div>
           <div class="project-links">
-            <a href="https://github.com/Rakshithch/healthcare-claims-pyspark" target="_blank" rel="noopener">GitHub</a>
+            <a class="wipe" href="https://github.com/Rakshithch/healthcare-claims-pyspark" target="_blank" rel="noopener">GitHub</a>
           </div>
         </article>
 
-        <article class="project" data-cat="live ml">
+        <article class="project reveal" data-cat="live ml" style="--d:1">
           <div class="project-head">
             <h3 class="project-name">Claims Analytics Dashboard</h3>
             <span class="badge badge-live">Live</span>
@@ -810,23 +1065,28 @@
           </div>
           <div class="tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">Plotly</span><span class="tag">Scikit-learn</span></div>
           <div class="project-links">
-            <a href="https://healthcare-claims-dashboard-bhxjqyzktp7ki52i4upfol.streamlit.app/" target="_blank" rel="noopener">Live demo</a>
-            <a href="https://github.com/Rakshithch/healthcare-claims-dashboard" target="_blank" rel="noopener">GitHub</a>
+            <a class="wipe" href="https://healthcare-claims-dashboard-bhxjqyzktp7ki52i4upfol.streamlit.app/" target="_blank" rel="noopener">Live demo</a>
+            <a class="wipe" href="https://github.com/Rakshithch/healthcare-claims-dashboard" target="_blank" rel="noopener">GitHub</a>
           </div>
         </article>
 
-        <article class="project" data-cat="dataeng">
+        <article class="project reveal" data-cat="dataeng" style="--d:0">
           <div class="project-head">
             <h3 class="project-name">Claims ETL Pipeline</h3>
           </div>
           <p class="project-desc">7-phase production ETL pipeline processing X12 EDI 837/835 claims with validation metrics, 95%+ pass rate across 500K+ synthetic records, AWS S3 integration.</p>
+          <div class="proof">
+            <div class="proof-row"><span class="proof-label">Problem</span><span>Raw EDI transactions need validation and structure before any analysis is trustworthy.</span></div>
+            <div class="proof-row"><span class="proof-label">Tools</span><span>Python, PostgreSQL, AWS S3, Docker.</span></div>
+            <div class="proof-row"><span class="proof-label">Impact</span><span>95%+ validation pass rate across 500K+ synthetic records.</span></div>
+          </div>
           <div class="tags"><span class="tag">Python</span><span class="tag">PostgreSQL</span><span class="tag">AWS S3</span><span class="tag">Docker</span></div>
           <div class="project-links">
-            <a href="https://github.com/Rakshithch/healthcare-claims-pipeline" target="_blank" rel="noopener">GitHub</a>
+            <a class="wipe" href="https://github.com/Rakshithch/healthcare-claims-pipeline" target="_blank" rel="noopener">GitHub</a>
           </div>
         </article>
 
-        <article class="project" data-cat="live ml">
+        <article class="project reveal" data-cat="live ml" style="--d:1">
           <div class="project-head">
             <h3 class="project-name">RAG Q&amp;A App</h3>
             <span class="badge badge-live">Live</span>
@@ -839,12 +1099,12 @@
           </div>
           <div class="tags"><span class="tag">LangChain</span><span class="tag">FAISS</span><span class="tag">HuggingFace</span><span class="tag">Streamlit</span></div>
           <div class="project-links">
-            <a href="https://healthcare-rag-cxha667k82f6yanv8cwd3r.streamlit.app/" target="_blank" rel="noopener">Live demo</a>
-            <a href="https://github.com/Rakshithch/healthcare-rag" target="_blank" rel="noopener">GitHub</a>
+            <a class="wipe" href="https://healthcare-rag-cxha667k82f6yanv8cwd3r.streamlit.app/" target="_blank" rel="noopener">Live demo</a>
+            <a class="wipe" href="https://github.com/Rakshithch/healthcare-rag" target="_blank" rel="noopener">GitHub</a>
           </div>
         </article>
 
-        <article class="project" data-cat="ml">
+        <article class="project reveal" data-cat="ml" style="--d:0">
           <div class="project-head">
             <h3 class="project-name">ICD-10-CM Coding Model</h3>
             <span class="badge">New</span>
@@ -853,42 +1113,45 @@
           <div class="proof">
             <div class="proof-row"><span class="proof-label">Problem</span><span>Assigning ICD-10-CM diagnosis codes to clinical text is manual and repetitive.</span></div>
             <div class="proof-row"><span class="proof-label">Tools</span><span>Qwen2.5-0.5B, Hugging Face Transformers, Python, LLM fine-tuning.</span></div>
+            <!-- TODO: add the model's accuracy / evaluation figure as an Impact row once confirmed. -->
           </div>
           <div class="tags"><span class="tag">Python</span><span class="tag">Hugging Face</span><span class="tag">Transformers</span><span class="tag">LLM fine-tuning</span></div>
           <div class="project-links">
-            <a href="https://huggingface.co/Rakshithch/qwen2.5-0.5b-icd10cm-coder" target="_blank" rel="noopener">Hugging Face</a>
+            <a class="wipe" href="https://huggingface.co/Rakshithch/qwen2.5-0.5b-icd10cm-coder" target="_blank" rel="noopener">Hugging Face</a>
           </div>
         </article>
 
       </div>
 
-      <p class="more-link"><a href="https://github.com/Rakshithch" target="_blank" rel="noopener">More projects on GitHub →</a></p>
+      <p class="more-link reveal">
+        <a class="wipe" href="https://github.com/Rakshithch" target="_blank" rel="noopener">More projects on GitHub →</a>
+      </p>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact">
     <div class="wrap">
-      <p class="eyebrow">Contact</p>
-      <h2 class="section-title">Get in touch</h2>
-      <p class="contact-lede">
+      <p class="eyebrow reveal">Contact</p>
+      <h2 class="section-title reveal" style="--d:1">Get in touch</h2>
+      <p class="contact-lede reveal" style="--d:2">
         Open to Data Analyst, Data Engineer, Analytics Engineer, and ML Engineer roles.
         Based in Cincinnati / Northern Kentucky and open to relocation across the US.
       </p>
       <div class="contact-list">
-        <a class="contact-item" href="mailto:rakshithchandupatla1@gmail.com">
+        <a class="contact-item reveal" style="--d:0" href="mailto:rakshithchandupatla1@gmail.com">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
           rakshithchandupatla1@gmail.com
         </a>
-        <a class="contact-item" href="tel:8622156222">
+        <a class="contact-item reveal" style="--d:1" href="tel:8622156222">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.18 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           862-215-6222
         </a>
-        <a class="contact-item" href="https://linkedin.com/in/rakshith0402ch" target="_blank" rel="noopener">
+        <a class="contact-item reveal" style="--d:2" href="https://linkedin.com/in/rakshith0402ch" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
           linkedin.com/in/rakshith0402ch
         </a>
-        <a class="contact-item" href="https://github.com/Rakshithch" target="_blank" rel="noopener">
+        <a class="contact-item reveal" style="--d:3" href="https://github.com/Rakshithch" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
           github.com/Rakshithch
         </a>
@@ -902,68 +1165,257 @@
   <div class="footer-inner">
     <div>Built by Rakshith Chandupatla · 2025</div>
     <div class="footer-links">
-      <a href="https://github.com/Rakshithch" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://linkedin.com/in/rakshith0402ch" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="mailto:rakshithchandupatla1@gmail.com">Email</a>
-      <a href="resume.html" target="_blank" rel="noopener">Resume</a>
+      <a class="wipe" href="https://github.com/Rakshithch" target="_blank" rel="noopener">GitHub</a>
+      <a class="wipe" href="https://linkedin.com/in/rakshith0402ch" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="wipe" href="mailto:rakshithchandupatla1@gmail.com">Email</a>
+      <a class="wipe" href="resume.html" target="_blank" rel="noopener">Resume</a>
     </div>
   </div>
 </footer>
 
 <script>
-'use strict';
+(function () {
+  'use strict';
 
-// Animated counters — subtle, and skipped entirely for reduced motion.
-(function counters() {
-  const nums = document.querySelectorAll('.stat-num');
-  if (!nums.length) return;
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var noMotion = function () { return reduced.matches; };
 
-  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const render = (el, value) => {
-    const decimals = parseInt(el.dataset.decimals || '0', 10);
-    el.textContent = value.toFixed(decimals) + (el.dataset.suffix || '');
-  };
+  /* ---------- Theme ---------- */
+  var root = document.documentElement;
+  var toggle = document.getElementById('themeToggle');
+  toggle.addEventListener('click', function () {
+    var next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    document.body.classList.add('theming');
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    setTimeout(function () { document.body.classList.remove('theming'); }, 320);
+  });
 
-  if (reduced || !('IntersectionObserver' in window)) {
-    nums.forEach(el => render(el, parseFloat(el.dataset.target)));
-    return;
+  /* ---------- Hero headline: split into words for the staggered reveal ---------- */
+  var title = document.getElementById('heroTitle');
+  if (title) {
+    var words = title.textContent.trim().split(/\s+/);
+    title.textContent = '';
+    words.forEach(function (w, i) {
+      var outer = document.createElement('span');
+      outer.className = 'w';
+      var inner = document.createElement('span');
+      inner.textContent = w;
+      inner.style.setProperty('--i', i);
+      outer.appendChild(inner);
+      title.appendChild(outer);
+      if (i < words.length - 1) title.appendChild(document.createTextNode(' '));
+    });
   }
 
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      const el = entry.target;
-      io.unobserve(el);
-      const target = parseFloat(el.dataset.target);
-      const duration = 900;
-      const start = performance.now();
-      (function step(now) {
-        const p = Math.min((now - start) / duration, 1);
-        render(el, target * (1 - Math.pow(1 - p, 3)));
-        if (p < 1) requestAnimationFrame(step);
-      })(start);
+  /* ---------- Rotating role ---------- */
+  var roles = ['Data Engineer', 'Analytics Engineer', 'Healthcare Data Specialist'];
+  var rotator = document.getElementById('roleRotator');
+  if (rotator && !noMotion()) {
+    var ri = 0;
+    setInterval(function () {
+      if (document.hidden) return;
+      ri = (ri + 1) % roles.length;
+      rotator.classList.remove('flip');
+      void rotator.offsetWidth;
+      rotator.textContent = roles[ri];
+      rotator.classList.add('flip');
+    }, 2600);
+  }
+
+  /* ---------- Scroll progress, sticky header, scroll cue ---------- */
+  var progress = document.getElementById('progress');
+  var header = document.getElementById('header');
+  var cue = document.getElementById('scrollCue');
+  var ticking = false;
+
+  function onScroll() {
+    var y = window.scrollY;
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.transform = 'scaleX(' + (max > 0 ? y / max : 0) + ')';
+    header.classList.toggle('is-compact', y > 80);
+    if (cue) cue.classList.toggle('gone', y > 60);
+    ticking = false;
+  }
+  window.addEventListener('scroll', function () {
+    if (!ticking) { ticking = true; requestAnimationFrame(onScroll); }
+  }, { passive: true });
+  onScroll();
+
+  /* ---------- Reveal on scroll (once per element) ---------- */
+  var revealables = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && !noMotion()) {
+    var ro = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); ro.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealables.forEach(function (el) { ro.observe(el); });
+  } else {
+    revealables.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  /* ---------- Timeline draw ---------- */
+  var timeline = document.getElementById('timeline');
+  if (timeline && 'IntersectionObserver' in window) {
+    var to = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); to.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    to.observe(timeline);
+  } else if (timeline) {
+    timeline.classList.add('in');
+  }
+
+  /* ---------- Counters (final value already in the HTML) ---------- */
+  var counters = document.querySelectorAll('[data-count]');
+  function runCount(el) {
+    var target = parseFloat(el.dataset.count);
+    var dec = parseInt(el.dataset.dec || '0', 10);
+    var suffix = el.dataset.suffix || '';
+    var dur = 900, start = performance.now();
+    function step(now) {
+      var p = Math.min((now - start) / dur, 1);
+      el.textContent = (target * (1 - Math.pow(1 - p, 3))).toFixed(dec) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  if (counters.length && 'IntersectionObserver' in window && !noMotion()) {
+    var co = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { runCount(e.target); co.unobserve(e.target); }
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(function (el) { co.observe(el); });
+  }
+
+  /* ---------- Active section in the nav ---------- */
+  var navMap = {};
+  document.querySelectorAll('#navLinks a').forEach(function (a) {
+    navMap[a.getAttribute('href').slice(1)] = a;
+  });
+  var sections = Object.keys(navMap).map(function (id) { return document.getElementById(id); }).filter(Boolean);
+  if (sections.length && 'IntersectionObserver' in window) {
+    var so = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          for (var k in navMap) navMap[k].classList.remove('is-active');
+          var link = navMap[e.target.id];
+          if (link) link.classList.add('is-active');
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    sections.forEach(function (s) { so.observe(s); });
+  }
+
+  /* ---------- Project cards: spotlight + slight tilt ---------- */
+  var cards = document.querySelectorAll('.project');
+  if (!noMotion() && window.matchMedia('(pointer: fine)').matches) {
+    cards.forEach(function (card) {
+      card.addEventListener('mousemove', function (ev) {
+        var r = card.getBoundingClientRect();
+        var px = (ev.clientX - r.left) / r.width;
+        var py = (ev.clientY - r.top) / r.height;
+        card.style.setProperty('--mx', (px * 100) + '%');
+        card.style.setProperty('--my', (py * 100) + '%');
+        card.style.transform = 'translateY(-4px) rotateX(' + (-(py - 0.5) * 5).toFixed(2) +
+                               'deg) rotateY(' + ((px - 0.5) * 5).toFixed(2) + 'deg)';
+      });
+      card.addEventListener('mouseleave', function () { card.style.transform = ''; });
     });
-  }, { threshold: 0.4 });
+  }
 
-  nums.forEach(el => io.observe(el));
-})();
-
-// Project category filter
-(function projectFilter() {
-  const buttons = document.querySelectorAll('.filter');
-  const projects = document.querySelectorAll('.project');
-  if (!buttons.length) return;
-
-  buttons.forEach(button => {
-    button.addEventListener('click', () => {
-      buttons.forEach(b => b.setAttribute('aria-pressed', String(b === button)));
-      const filter = button.dataset.filter;
-      projects.forEach(project => {
-        const cats = (project.dataset.cat || '').split(' ');
-        project.classList.toggle('is-hidden', filter !== 'all' && !cats.includes(filter));
+  /* ---------- Project filter (fade + scale between states) ---------- */
+  var filters = document.querySelectorAll('.filter');
+  filters.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      filters.forEach(function (b) { b.setAttribute('aria-pressed', String(b === btn)); });
+      var want = btn.dataset.filter;
+      cards.forEach(function (card) {
+        var match = want === 'all' || (card.dataset.cat || '').split(' ').indexOf(want) !== -1;
+        if (match) {
+          card.classList.remove('is-hidden');
+          requestAnimationFrame(function () { card.classList.remove('is-out'); });
+        } else {
+          card.classList.add('is-out');
+          if (noMotion()) card.classList.add('is-hidden');
+          else setTimeout(function () {
+            if (card.classList.contains('is-out')) card.classList.add('is-hidden');
+          }, 280);
+        }
       });
     });
   });
+
+  /* ---------- Hero particle field ---------- */
+  var canvas = document.getElementById('heroCanvas');
+  if (canvas && !noMotion()) {
+    var ctx = canvas.getContext('2d');
+    var dots = [], raf = null, visible = true, w = 0, h = 0, dpr = 1;
+
+    function size() {
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      var r = canvas.getBoundingClientRect();
+      w = r.width; h = r.height;
+      canvas.width = w * dpr; canvas.height = h * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    function seed() {
+      var n = w < 640 ? 18 : 34;
+      dots = [];
+      for (var i = 0; i < n; i++) {
+        dots.push({
+          x: Math.random() * w, y: Math.random() * h,
+          vx: (Math.random() - 0.5) * 0.18, vy: (Math.random() - 0.5) * 0.18
+        });
+      }
+    }
+    function accent() {
+      return getComputedStyle(root).getPropertyValue('--accent').trim() || '#a78bfa';
+    }
+    function frame() {
+      ctx.clearRect(0, 0, w, h);
+      var col = accent();
+      for (var i = 0; i < dots.length; i++) {
+        var d = dots[i];
+        d.x += d.vx; d.y += d.vy;
+        if (d.x < 0 || d.x > w) d.vx *= -1;
+        if (d.y < 0 || d.y > h) d.vy *= -1;
+        ctx.globalAlpha = 0.5;
+        ctx.fillStyle = col;
+        ctx.beginPath(); ctx.arc(d.x, d.y, 1.4, 0, 6.283); ctx.fill();
+        for (var j = i + 1; j < dots.length; j++) {
+          var o = dots[j], dx = d.x - o.x, dy = d.y - o.y, dist = dx * dx + dy * dy;
+          if (dist < 15000) {
+            ctx.globalAlpha = 0.14 * (1 - dist / 15000);
+            ctx.strokeStyle = col; ctx.lineWidth = 1;
+            ctx.beginPath(); ctx.moveTo(d.x, d.y); ctx.lineTo(o.x, o.y); ctx.stroke();
+          }
+        }
+      }
+      ctx.globalAlpha = 1;
+      raf = requestAnimationFrame(frame);
+    }
+    function play() { if (!raf && visible && !document.hidden) frame(); }
+    function stop() { if (raf) { cancelAnimationFrame(raf); raf = null; } }
+
+    size(); seed(); play();
+
+    var resizeTimer;
+    window.addEventListener('resize', function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function () { size(); seed(); }, 180);
+    });
+    document.addEventListener('visibilitychange', function () { document.hidden ? stop() : play(); });
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (e) {
+        visible = e[0].isIntersecting;
+        visible ? play() : stop();
+      }, { threshold: 0 }).observe(canvas);
+    }
+  }
 })();
 </script>
 </body>
