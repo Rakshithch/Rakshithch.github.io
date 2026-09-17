@@ -2,20 +2,20 @@
   <title id="profileTitle">Rakshith Chandupatla</title>
   <desc id="profileDesc">Monogram placeholder used when the photograph is unavailable.</desc>
 
-  <rect width="560" height="640" rx="14" fill="#f4f4f2"/>
-  <rect x="0.5" y="0.5" width="559" height="639" rx="14" fill="none" stroke="#e3e3e0" stroke-width="1"/>
+  <rect width="560" height="640" rx="14" fill="#141926"/>
+  <rect x="0.5" y="0.5" width="559" height="639" rx="14" fill="none" stroke="#a78bfa" stroke-opacity="0.22"/>
 
-  <circle cx="280" cy="266" r="92" fill="#ffffff" stroke="#e3e3e0" stroke-width="1"/>
+  <circle cx="280" cy="266" r="92" fill="#1a2030" stroke="#a78bfa" stroke-opacity="0.35"/>
   <text x="280" y="296" text-anchor="middle"
-        font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif"
-        font-size="68" font-weight="700" letter-spacing="-1" fill="#0f766e">RC</text>
+        font-family="'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="68" font-weight="700" letter-spacing="-1" fill="#a78bfa">RC</text>
 
   <text x="280" y="434" text-anchor="middle"
-        font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif"
-        font-size="25" font-weight="600" fill="#17181c">Rakshith Chandupatla</text>
+        font-family="'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="25" font-weight="600" fill="#e8ecf4">Rakshith Chandupatla</text>
   <text x="280" y="470" text-anchor="middle"
         font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif"
-        font-size="19" fill="#55585f">Data Analyst &amp; ML Engineer</text>
+        font-size="19" fill="#98a2b8">Data Engineer</text>
 
-  <rect x="244" y="502" width="72" height="3" rx="1.5" fill="#0f766e"/>
+  <rect x="244" y="502" width="72" height="3" rx="1.5" fill="#a78bfa"/>
 </svg>

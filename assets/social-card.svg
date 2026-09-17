@@ -1,38 +1,49 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="cardTitle cardDesc">
-  <title id="cardTitle">Rakshith Chandupatla — Data Analyst &amp; ML Engineer</title>
+  <title id="cardTitle">Rakshith Chandupatla — Data Engineer &amp; Healthcare Data Specialist</title>
   <desc id="cardDesc">Social preview card: healthcare payer and revenue-cycle data, claims analytics, HEDIS and CMS risk adjustment.</desc>
 
-  <rect width="1200" height="630" fill="#fbfbfa"/>
-  <rect x="48" y="48" width="1104" height="534" rx="14" fill="#ffffff" stroke="#e3e3e0" stroke-width="1"/>
+  <defs>
+    <radialGradient id="wash" cx="24%" cy="28%" r="62%">
+      <stop offset="0" stop-color="#a78bfa" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
 
-  <!-- accent rule -->
-  <rect x="96" y="118" width="56" height="4" rx="2" fill="#0f766e"/>
+  <rect width="1200" height="630" fill="#0b0d12"/>
+  <g opacity="0.055" stroke="#94a3b8" stroke-width="1">
+    <path d="M0 150H1200M0 278H1200M0 406H1200M0 534H1200"/>
+    <path d="M150 0V630M342 0V630M534 0V630M726 0V630M918 0V630M1110 0V630"/>
+  </g>
+  <rect width="1200" height="630" fill="url(#wash)"/>
+  <rect x="48" y="48" width="1104" height="534" rx="16" fill="#141926" stroke="#a78bfa" stroke-opacity="0.26"/>
 
-  <text x="96" y="174"
+  <rect x="96" y="116" width="52" height="4" rx="2" fill="#a78bfa"/>
+
+  <text x="96" y="172"
         font-family="'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace"
-        font-size="21" letter-spacing="2.2" fill="#0f766e">DATA ANALYST &amp; ML ENGINEER</text>
+        font-size="21" letter-spacing="2.4" fill="#a78bfa">DATA ENGINEER · ANALYTICS ENGINEER</text>
 
   <text x="96" y="268"
-        font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif"
-        font-size="74" font-weight="700" letter-spacing="-1.6" fill="#17181c">Rakshith Chandupatla</text>
+        font-family="'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="76" font-weight="700" letter-spacing="-2" fill="#e8ecf4">Rakshith Chandupatla</text>
 
   <text x="96" y="330"
         font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif"
-        font-size="27" fill="#55585f">Healthcare payer &amp; revenue-cycle data — claims (X12 EDI 837/835),</text>
+        font-size="27" fill="#98a2b8">Healthcare payer &amp; revenue-cycle data — claims (X12 EDI 837/835),</text>
   <text x="96" y="370"
         font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif"
-        font-size="27" fill="#55585f">HEDIS quality measures, CMS risk adjustment, denial analytics.</text>
+        font-size="27" fill="#98a2b8">HEDIS quality measures, CMS risk adjustment, denial analytics.</text>
 
   <text x="96" y="444"
         font-family="'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace"
-        font-size="21" fill="#7c818a">SQL · Python · Snowflake · dbt · PySpark · Power BI · Tableau · AWS</text>
+        font-size="20" fill="#8792a8">SQL · Python · Snowflake · dbt · PySpark · Databricks · Power BI · AWS</text>
 
-  <rect x="96" y="494" width="1008" height="1" fill="#e3e3e0"/>
+  <rect x="96" y="494" width="1008" height="1" fill="#94a3b8" fill-opacity="0.18"/>
 
   <text x="96" y="538"
         font-family="'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace"
-        font-size="21" fill="#7c818a">rakshithch.github.io</text>
+        font-size="21" fill="#8792a8">rakshithch.github.io</text>
   <text x="1104" y="538" text-anchor="end"
         font-family="'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace"
-        font-size="21" fill="#0f766e">Cincinnati / Northern Kentucky</text>
+        font-size="21" fill="#a78bfa">Cincinnati Metropolitan Area</text>
 </svg>
