@@ -1,41 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
-  <title id="title">Rakshith Chandupatla portfolio social card</title>
-  <desc id="desc">Social preview card for Rakshith Chandupatla, Data Analyst and ML Engineer.</desc>
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#04091a"/>
-      <stop offset=".55" stop-color="#0a1630"/>
-      <stop offset="1" stop-color="#04091a"/>
-    </linearGradient>
-    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#F58426"/>
-      <stop offset="1" stop-color="#006BB6"/>
-    </linearGradient>
-  </defs>
-  <rect width="1200" height="630" fill="url(#bg)"/>
-  <!-- court lines -->
-  <g opacity=".18" fill="none" stroke="#4da6ff" stroke-width="2">
-    <circle cx="600" cy="630" r="300"/>
-    <circle cx="600" cy="630" r="110"/>
-    <path d="M0 560 H1200"/>
-    <circle cx="1200" cy="0" r="260"/>
-  </g>
-  <rect x="78" y="92" width="1044" height="446" rx="18" fill="#070f24" stroke="#F58426" stroke-opacity=".4"/>
-  <!-- basketball badge -->
-  <g>
-    <circle cx="173" cy="187" r="55" fill="#F58426" stroke="#7a3c0d" stroke-width="2.5"/>
-    <g fill="none" stroke="#7a3c0d" stroke-width="2.5">
-      <path d="M118 187h110"/>
-      <path d="M173 132v110"/>
-      <path d="M135 148c20 19 20 59 0 78"/>
-      <path d="M211 148c-20 19-20 59 0 78"/>
-    </g>
-    <text x="173" y="200" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="36" font-weight="900" fill="#04091a">RC</text>
-  </g>
-  <text x="268" y="206" font-family="Arial, Helvetica, sans-serif" font-size="60" font-weight="800" fill="#eef4fb">Rakshith Chandupatla</text>
-  <text x="268" y="266" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700" fill="#F58426">Data Analyst &amp; ML Engineer</text>
-  <text x="118" y="366" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#9fb8c8">SQL • Python • Power BI/Tableau • Predictive Analytics • Risk Modeling</text>
-  <text x="118" y="420" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#4da6ff">New York Metro 🏀 New York Forever</text>
-  <rect x="118" y="472" width="510" height="6" rx="3" fill="url(#line)"/>
-  <text x="118" y="518" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#93a7c4">rakshithch.github.io</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="cardTitle cardDesc">
+  <title id="cardTitle">Rakshith Chandupatla — Data Analyst &amp; ML Engineer</title>
+  <desc id="cardDesc">Social preview card: healthcare payer and revenue-cycle data, claims analytics, HEDIS and CMS risk adjustment.</desc>
+
+  <rect width="1200" height="630" fill="#fbfbfa"/>
+  <rect x="48" y="48" width="1104" height="534" rx="14" fill="#ffffff" stroke="#e3e3e0" stroke-width="1"/>
+
+  <!-- accent rule -->
+  <rect x="96" y="118" width="56" height="4" rx="2" fill="#0f766e"/>
+
+  <text x="96" y="174"
+        font-family="'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace"
+        font-size="21" letter-spacing="2.2" fill="#0f766e">DATA ANALYST &amp; ML ENGINEER</text>
+
+  <text x="96" y="268"
+        font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="74" font-weight="700" letter-spacing="-1.6" fill="#17181c">Rakshith Chandupatla</text>
+
+  <text x="96" y="330"
+        font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="27" fill="#55585f">Healthcare payer &amp; revenue-cycle data — claims (X12 EDI 837/835),</text>
+  <text x="96" y="370"
+        font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="27" fill="#55585f">HEDIS quality measures, CMS risk adjustment, denial analytics.</text>
+
+  <text x="96" y="444"
+        font-family="'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace"
+        font-size="21" fill="#7c818a">SQL · Python · Snowflake · dbt · PySpark · Power BI · Tableau · AWS</text>
+
+  <rect x="96" y="494" width="1008" height="1" fill="#e3e3e0"/>
+
+  <text x="96" y="538"
+        font-family="'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace"
+        font-size="21" fill="#7c818a">rakshithch.github.io</text>
+  <text x="1104" y="538" text-anchor="end"
+        font-family="'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace"
+        font-size="21" fill="#0f766e">Cincinnati / Northern Kentucky</text>
 </svg>
