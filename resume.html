@@ -4,219 +4,239 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rakshith Chandupatla — Resume</title>
+  <meta name="description" content="Resume of Rakshith Chandupatla — Data Analyst & ML Engineer working in healthcare payer and revenue-cycle data: claims (X12 EDI 837/835), HEDIS quality measures, CMS risk adjustment, and denial analytics." />
+  <meta name="theme-color" content="#0f766e" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
+    /* Same tokens as index.html. Light only: this page is a print document. */
     :root {
-      --accent:  #006BB6; /* Knicks blue */
-      --accent2: #F58426; /* Knicks orange */
-      --text:    #1a1f2e;
-      --muted:   #4a5568;
-      --border:  #e2e8f0;
-      --bg:      #f8fafc;
+      --accent: #0f766e;
+      --accent-strong: #115e59;
+      --text:   #17181c;
+      --muted:  #55585f;
+      --faint:  #7c818a;
+      --border: #e3e3e0;
+      --bg:     #fbfbfa;
+
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: var(--font-sans);
       font-size: 13.5px;
       color: var(--text);
       background: var(--bg);
       line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
     }
 
     a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; text-underline-offset: 2px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
 
     .page-wrapper {
       max-width: 820px;
       margin: 32px auto;
       background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 40px rgba(0,0,0,0.1);
+      border: 1px solid var(--border);
+      border-radius: 10px;
       overflow: hidden;
     }
 
     .print-bar {
-      background: var(--text);
+      background: #fff;
+      border-bottom: 1px solid var(--border);
       padding: 12px 40px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 16px;
     }
 
-    .print-bar span { color: #8b949e; font-size: 13px; }
-    .print-bar span strong { color: #F58426; }
+    .print-bar span { color: var(--faint); font-size: 12.5px; }
 
     .btn-print {
-      background: var(--accent2);
+      display: inline-flex; align-items: center; gap: 7px;
+      background: var(--accent);
       color: #fff;
       border: none;
-      font-family: 'Inter', sans-serif;
-      font-size: 13px;
-      font-weight: 700;
-      padding: 8px 22px;
-      border-radius: 8px;
+      font-family: var(--font-sans);
+      font-size: 12.5px;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 6px;
       cursor: pointer;
-      transition: background 0.2s;
+      white-space: nowrap;
+      transition: background 0.15s ease;
     }
+    .btn-print:hover { background: var(--accent-strong); }
+    .btn-print svg { width: 14px; height: 14px; }
 
-    .btn-print:hover { background: #ff9a3d; }
-
-    .resume { padding: 40px 48px 48px; }
+    .resume { padding: 38px 48px 46px; }
 
     .r-header {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      padding-bottom: 20px;
-      border-bottom: 2px solid var(--accent2);
-      margin-bottom: 24px;
+      padding-bottom: 18px;
+      border-bottom: 2px solid var(--accent);
+      margin-bottom: 22px;
       gap: 20px;
     }
 
-    .r-name { font-size: 28px; font-weight: 700; color: var(--text); letter-spacing: -0.5px; line-height: 1.1; }
-    .r-title { font-size: 14px; font-weight: 500; color: var(--accent); margin-top: 4px; letter-spacing: 0.3px; }
+    .r-name { font-size: 27px; font-weight: 700; color: var(--text); letter-spacing: -0.5px; line-height: 1.1; }
+    .r-title { font-size: 13.5px; font-weight: 500; color: var(--accent); margin-top: 4px; }
 
     .r-contact {
       text-align: right;
-      font-size: 12.5px;
+      font-size: 12px;
       color: var(--muted);
-      line-height: 1.8;
+      line-height: 1.75;
       flex-shrink: 0;
     }
-
     .r-contact a { color: var(--muted); }
     .r-contact a:hover { color: var(--accent); }
 
-    .r-section { margin-bottom: 22px; }
+    .r-section { margin-bottom: 20px; }
 
     .r-section-title {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 2px;
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      font-weight: 500;
+      letter-spacing: 1.6px;
       text-transform: uppercase;
       color: var(--accent);
       border-bottom: 1px solid var(--border);
       padding-bottom: 5px;
-      margin-bottom: 13px;
+      margin-bottom: 12px;
     }
 
-    .r-summary { font-size: 13px; color: var(--muted); line-height: 1.65; }
+    .r-summary { font-size: 12.5px; color: var(--muted); line-height: 1.65; }
+    .r-summary strong { color: var(--text); font-weight: 600; }
 
-    .r-entry { margin-bottom: 16px; }
+    .r-entry { margin-bottom: 15px; }
+    .r-entry:last-child { margin-bottom: 0; }
 
     .r-entry-header {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
       gap: 12px;
-      margin-bottom: 3px;
+      margin-bottom: 2px;
     }
 
-    .r-entry-role { font-size: 14px; font-weight: 700; color: var(--text); }
+    .r-entry-role { font-size: 13.5px; font-weight: 700; color: var(--text); }
 
     .r-entry-date {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
-      color: var(--muted);
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      color: var(--faint);
       white-space: nowrap;
       flex-shrink: 0;
-      padding-top: 2px;
+      padding-top: 3px;
     }
 
     .r-entry-company { font-size: 12.5px; font-weight: 600; color: var(--accent); margin-bottom: 6px; }
 
-    .r-entry ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-    }
+    .r-entry ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 4px; }
 
     .r-entry li {
       font-size: 12.5px;
       color: var(--muted);
-      padding-left: 14px;
+      padding-left: 15px;
       position: relative;
       line-height: 1.5;
     }
-
     .r-entry li::before {
-      content: '▸';
-      color: var(--accent2);
-      position: absolute;
-      left: 0;
-      font-size: 10px;
-      top: 2px;
+      content: '';
+      position: absolute; left: 2px; top: 8px;
+      width: 4px; height: 4px; border-radius: 50%;
+      background: var(--accent);
     }
-
     .r-entry li strong { color: var(--text); font-weight: 600; }
 
     .r-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 7px; }
-
     .r-tag {
-      font-size: 10.5px;
-      font-weight: 500;
+      font-family: var(--font-mono);
+      font-size: 10px;
       padding: 2px 8px;
-      border-radius: 12px;
-      background: #eaf3fa;
-      border: 1px solid #b9d8ec;
-      color: #006BB6;
+      border-radius: 4px;
+      background: #f4f4f2;
+      border: 1px solid var(--border);
+      color: var(--muted);
     }
 
     .edu-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
-    .edu-degree { font-size: 14px; font-weight: 700; color: var(--text); }
+    .edu-row + .edu-row { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
+    .edu-degree { font-size: 13px; font-weight: 700; color: var(--text); }
     .edu-school { font-size: 12.5px; color: var(--accent); font-weight: 600; margin-top: 2px; }
-    .edu-detail { font-size: 12px; color: var(--muted); margin-top: 2px; }
-    .edu-date { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); white-space: nowrap; flex-shrink: 0; }
+    .edu-detail { font-size: 11.5px; color: var(--muted); margin-top: 2px; }
+    .edu-date { font-family: var(--font-mono); font-size: 10.5px; color: var(--faint); white-space: nowrap; flex-shrink: 0; }
 
-    .skills-table { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px 32px; }
-    .skill-row { display: flex; flex-direction: column; gap: 3px; }
+    .skills-table { display: grid; grid-template-columns: repeat(2, 1fr); gap: 9px 32px; }
+    .skill-row { display: flex; flex-direction: column; gap: 2px; }
     .skill-label { font-size: 11.5px; font-weight: 600; color: var(--text); }
-    .skill-value { font-size: 12px; color: var(--muted); }
+    .skill-value { font-size: 11.5px; color: var(--muted); line-height: 1.5; }
 
-    .proj-entry { margin-bottom: 12px; }
-
-    .proj-header { display: flex; align-items: center; gap: 10px; margin-bottom: 3px; }
-    .proj-name { font-size: 13px; font-weight: 700; color: var(--text); }
-
+    .proj-entry { margin-bottom: 11px; }
+    .proj-entry:last-child { margin-bottom: 0; }
+    .proj-header { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 2px; }
+    .proj-name { font-size: 12.5px; font-weight: 700; color: var(--text); }
     .proj-live {
-      font-size: 10px;
-      font-weight: 700;
-      color: #c2620e;
-      background: #fdf0e2;
-      border: 1px solid #f6c391;
+      font-family: var(--font-mono);
+      font-size: 9px;
+      font-weight: 500;
+      color: var(--accent);
+      background: rgba(15, 118, 110, 0.08);
+      border: 1px solid var(--accent);
       border-radius: 10px;
       padding: 1px 7px;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
     }
-
-    .proj-desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
-
-    .proj-link {
-      font-size: 11px;
-      font-family: 'JetBrains Mono', monospace;
-      color: var(--accent);
-    }
+    .proj-desc { font-size: 11.5px; color: var(--muted); line-height: 1.5; }
+    .proj-link { font-size: 10.5px; font-family: var(--font-mono); color: var(--faint); word-break: break-all; }
 
     @media print {
-      @page { size: Letter; margin: 18mm 16mm 18mm 16mm; }
-      body { background: #fff; font-size: 12px; }
+      @page { size: Letter; margin: 12mm 14mm; }
+      body { background: #fff; font-size: 11.5px; }
       .print-bar { display: none !important; }
-      .page-wrapper { max-width: 100%; margin: 0; border-radius: 0; box-shadow: none; }
+      .page-wrapper { max-width: 100%; margin: 0; border: none; border-radius: 0; }
       .resume { padding: 0; }
-      .r-section { break-inside: avoid; }
-      .r-entry   { break-inside: avoid; }
-      .proj-entry { break-inside: avoid; }
-      a { color: inherit !important; }
-      .proj-link { color: #006BB6 !important; }
+      /* Tighter vertical rhythm so the document lands in two pages.
+         Spacing only — no content is dropped in print. */
+      .r-section       { margin-bottom: 13px; }
+      .r-entry         { margin-bottom: 11px; }
+      .proj-entry      { margin-bottom: 8px; }
+      .r-section-title { margin-bottom: 9px; }
+      .r-header        { margin-bottom: 16px; padding-bottom: 14px; }
+      .r-summary       { line-height: 1.55; }
+      .r-entry ul      { gap: 3px; }
+      .r-entry li      { line-height: 1.45; }
+      .skills-table    { gap: 7px 32px; }
+      .skill-value     { line-height: 1.45; }
+      /* Keep individual entries intact, but let long sections flow across
+         pages — avoiding breaks on the whole section strands a page of
+         whitespace whenever a section is taller than the remaining space. */
+      .r-entry    { break-inside: avoid; }
+      .edu-row    { break-inside: avoid; }
+      .r-section-title { break-after: avoid; }
+      /* Project entries are only two or three lines; letting them break
+         costs little and avoids stranding whitespace at a page boundary. */
+      a { color: inherit !important; text-decoration: none !important; }
+      .proj-link { color: #55585f !important; }
     }
 
     @media (max-width: 640px) {
-      .resume { padding: 28px 24px; }
+      .page-wrapper { margin: 16px; }
+      .resume { padding: 26px 22px; }
+      .print-bar { padding: 12px 22px; }
       .r-header { flex-direction: column; }
       .r-contact { text-align: left; }
       .skills-table { grid-template-columns: 1fr; }
@@ -228,8 +248,11 @@
 <div class="page-wrapper">
 
   <div class="print-bar">
-    <span>📄 <strong>Tip:</strong> Click "Save as PDF" → set Destination to "Save as PDF" in the print dialog</span>
-    <button class="btn-print" onclick="window.print()">🖨 Save as PDF</button>
+    <span><strong>Tip:</strong> choose "Save as PDF" as the destination in the print dialog.</span>
+    <button class="btn-print" onclick="window.print()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+      Save as PDF
+    </button>
   </div>
 
   <div class="resume">
@@ -237,16 +260,16 @@
     <!-- HEADER -->
     <div class="r-header">
       <div>
-        <div class="r-name">Rakshith Chandupatla</div>
-        <div class="r-title">Data Analyst &amp; ML Engineer · SQL · Python · Power BI/Tableau</div>
+        <h1 class="r-name">Rakshith Chandupatla</h1>
+        <div class="r-title">Data Analyst &amp; ML Engineer · Healthcare Payer &amp; Revenue-Cycle Data</div>
       </div>
       <div class="r-contact">
-        Jersey City, NJ<br />
-        <a href="mailto:rakshith.ch04@gmail.com">rakshith.ch04@gmail.com</a><br />
+        Cincinnati / Northern Kentucky<br />
+        <a href="mailto:rakshithchandupatla1@gmail.com">rakshithchandupatla1@gmail.com</a><br />
         862-215-6222<br />
-        <a href="https://linkedin.com/in/rakshith-ch" target="_blank">linkedin.com/in/rakshith-ch</a><br />
-        <a href="https://github.com/Rakshithch" target="_blank">github.com/Rakshithch</a><br />
-        <a href="https://rakshithch.github.io" target="_blank">rakshithch.github.io</a>
+        <a href="https://linkedin.com/in/rakshith0402ch" target="_blank" rel="noopener">linkedin.com/in/rakshith0402ch</a><br />
+        <a href="https://github.com/Rakshithch" target="_blank" rel="noopener">github.com/Rakshithch</a><br />
+        <a href="https://rakshithch.github.io" target="_blank" rel="noopener">rakshithch.github.io</a>
       </div>
     </div>
 
@@ -254,11 +277,13 @@
     <div class="r-section">
       <div class="r-section-title">Summary</div>
       <p class="r-summary">
-        Data Analyst &amp; ML Engineer with 3+ years translating large-scale data into trusted dashboards,
-        KPI narratives, and predictive models across banking, insurance, and tech. Detected anomalies reducing
-        discrepancies by <strong>15%</strong> at Change Healthcare; improved model accuracy by <strong>20%</strong>
-        and processed <strong>5M+ records</strong> at Get Hire Technologies. M.S. Computer Science, Pace University
-        (GPA 3.90/4.00). Open to Data Analyst, Analytics Engineer, ML Engineer, and Data Science roles.
+        Data Analyst and ML Engineer working in healthcare payer and revenue-cycle data — claims
+        (ASC X12 EDI 837/835), HEDIS quality measures, CMS risk adjustment, and denial analytics.
+        Productionized denial-prevention and anomaly-detection models at Change Healthcare, reducing
+        denials by <strong>18%</strong>; built readmission-risk and member-stratification models
+        (<strong>ROC-AUC 0.80–0.90</strong>) at UnitedHealth Group / Optum. Open to Data Analyst,
+        Data Engineer, Analytics Engineer, and ML Engineer roles; F-1 STEM OPT work authorization,
+        open to relocation across the US.
       </p>
     </div>
 
@@ -273,34 +298,30 @@
         </div>
         <div class="r-entry-company">Change Healthcare</div>
         <ul>
-          <li>Built anomaly detection models in Python/SQL that flagged billing discrepancies, reducing them by <strong>15%</strong> and preventing <strong>$2M+</strong> in annual revenue leakage</li>
-          <li>Designed and automated ETL pipelines processing 5M+ claims records daily, cutting data prep time by <strong>25%</strong></li>
-          <li>Delivered Tableau and Power BI executive dashboards surfacing payment trends, KPIs, and risk signals to senior stakeholders</li>
-          <li>Led <strong>10+ cross-functional analytics initiatives</strong>, partnering with product and operations teams to translate business questions into validated data models</li>
+          <li>Productionized denial-prevention and anomaly-detection machine learning on large-scale claims and revenue-cycle data, embedding outputs into adjudication and payment-integrity workflows and reducing denials by <strong>18%</strong>.</li>
+          <li>Engineered claim and remittance features from ASC X12 EDI 837/835 transactions, with ongoing validation and performance monitoring to keep production data and models stable.</li>
+          <li>Partnered with product, actuarial, and clinical stakeholders to translate business rules into scalable scoring logic and decision thresholds under PHI/HIPAA constraints.</li>
+          <li>Delivered Power BI and Tableau dashboards that surfaced denial drivers, payment anomalies, and integrity signals for operations teams.</li>
         </ul>
         <div class="r-tags">
-          <span class="r-tag">Python</span><span class="r-tag">SQL</span>
-          <span class="r-tag">Machine Learning</span><span class="r-tag">Tableau</span>
-          <span class="r-tag">Power BI</span><span class="r-tag">ETL</span>
+          <span class="r-tag">Python</span><span class="r-tag">SQL</span><span class="r-tag">Snowflake</span><span class="r-tag">XGBoost</span><span class="r-tag">Power BI</span><span class="r-tag">Tableau</span>
         </div>
       </div>
 
       <div class="r-entry">
         <div class="r-entry-header">
-          <div class="r-entry-role">Data Analyst (Co-op)</div>
+          <div class="r-entry-role">Data Analyst</div>
           <div class="r-entry-date">Aug 2024 – May 2025</div>
         </div>
-        <div class="r-entry-company">Get Hire Technologies Inc</div>
+        <div class="r-entry-company">UnitedHealth Group / Optum</div>
         <ul>
-          <li>Improved ML model accuracy by <strong>20%</strong> through feature engineering and Scikit-learn model tuning on financial and operational datasets</li>
-          <li>Built SQL + Python ETL pipelines processing <strong>5M+ records</strong>, reducing pipeline run time by 30%</li>
-          <li>Developed risk scoring models that reduced false-positive risk flags by <strong>12%</strong>, improving compliance review efficiency</li>
-          <li>Delivered Power BI dashboards tracking <strong>$500K+</strong> in operational savings, used weekly by executive leadership</li>
+          <li>Developed high-throughput SQL and Python data pipelines that transformed medical and eligibility claims into reusable, model-ready cohorts and feature sets.</li>
+          <li>Built predictive models for readmission risk and member stratification (<strong>ROC-AUC 0.80–0.90</strong>), supporting care management and value-based programs.</li>
+          <li>Applied statistical testing and feature selection to improve model stability, aligning outputs with HEDIS quality reporting and CMS risk adjustment.</li>
+          <li>Automated reporting on utilization trends, care gaps, and cost drivers for clinical and operational partners.</li>
         </ul>
         <div class="r-tags">
-          <span class="r-tag">Python</span><span class="r-tag">SQL</span>
-          <span class="r-tag">Scikit-learn</span><span class="r-tag">Power BI</span>
-          <span class="r-tag">ETL</span><span class="r-tag">AWS</span>
+          <span class="r-tag">Python</span><span class="r-tag">SQL</span><span class="r-tag">HEDIS</span><span class="r-tag">Risk Adjustment</span><span class="r-tag">Power BI</span>
         </div>
       </div>
 
@@ -311,29 +332,39 @@
         </div>
         <div class="r-entry-company">Phoenix Global</div>
         <ul>
-          <li>Improved enterprise data accessibility by <strong>40%</strong> through consolidation of distributed datasets using Apache Hadoop frameworks</li>
-          <li>Performed ML experimentation using Python and SQL, improving model accuracy by <strong>18%</strong></li>
-          <li>Automated Tableau dashboards and reporting workflows, increasing reporting efficiency by <strong>30%</strong></li>
-          <li>Delivered interactive executive presentations and performance insights for business stakeholders</li>
+          <li>Integrated and standardized multi-source data from Hadoop-based platforms into analysis-ready datasets, speeding up reporting cycles.</li>
+          <li>Automated data preparation and exploratory analysis workflows, reducing manual data handling for downstream analytics.</li>
+          <li>Built Power BI executive dashboards that turned raw operational data into KPIs for leadership.</li>
         </ul>
         <div class="r-tags">
-          <span class="r-tag">Hadoop</span><span class="r-tag">Python</span>
-          <span class="r-tag">SQL</span><span class="r-tag">Tableau</span>
-          <span class="r-tag">Power BI</span><span class="r-tag">EDA</span>
+          <span class="r-tag">Python</span><span class="r-tag">SQL</span><span class="r-tag">Hadoop</span><span class="r-tag">Power BI</span><span class="r-tag">Tableau</span>
         </div>
       </div>
     </div>
 
     <!-- EDUCATION -->
     <div class="r-section">
-      <div class="r-section-title">Education</div>
+      <div class="r-section-title">Education &amp; Certification</div>
       <div class="edu-row">
         <div>
-          <div class="edu-degree">Master of Science — Computer Science</div>
-          <div class="edu-school">Pace University, New York, NY</div>
-          <div class="edu-detail">GPA: 3.90 / 4.00 · Machine Learning, Deep Learning, NLP, Computer Vision, Big Data, Cloud Computing</div>
+          <div class="edu-degree">M.S. Computer Science</div>
+          <div class="edu-school">Pace University</div>
+          <div class="edu-detail">GPA 3.90 / 4.00 · Machine Learning, Deep Learning, NLP, Computer Vision, Big Data, Cloud Computing</div>
         </div>
         <div class="edu-date">May 2025</div>
+      </div>
+      <div class="edu-row">
+        <div>
+          <div class="edu-degree">B.Tech Computer Science</div>
+          <div class="edu-school">St. Martin's Engineering College, India</div>
+        </div>
+        <div class="edu-date">June 2023</div>
+      </div>
+      <div class="edu-row">
+        <div>
+          <div class="edu-degree">AWS Certified Cloud Practitioner</div>
+          <div class="edu-school">Amazon Web Services</div>
+        </div>
       </div>
     </div>
 
@@ -343,35 +374,41 @@
 
       <div class="proj-entry">
         <div class="proj-header">
-          <span class="proj-name">Claims Analytics Dashboard</span>
-          <span class="proj-live">● LIVE</span>
+          <span class="proj-name">Claims Denial Analysis &amp; Prediction</span>
+          <span class="proj-live">Live</span>
         </div>
-        <div class="proj-desc">Interactive analytics dashboard for risk scoring, revenue-cycle KPIs, payer/provider trends, and business-facing Plotly visualizations. Built with Python, Streamlit, Scikit-learn, Random Forest.</div>
-        <div class="proj-link">https://healthcare-claims-dashboard-bhxjqyzktp7ki52i4upfol.streamlit.app</div>
+        <div class="proj-desc">50k synthetic 837/835-style claims through a Snowflake/dbt star schema, EDA, and an XGBoost denial-risk model with SHAP (AUC 0.83), surfaced in a 4-page Streamlit dashboard.</div>
+        <div class="proj-link">github.com/Rakshithch/healthcare-claims-denial-analysis</div>
       </div>
 
       <div class="proj-entry">
         <div class="proj-header"><span class="proj-name">Claims Data Warehouse — Snowflake &amp; dbt</span></div>
-        <div class="proj-desc">Snowflake and dbt analytics model with star schema, automated quality tests, and SQL views for denial rate, diagnosis cost, and monthly claims trend analysis.</div>
+        <div class="proj-desc">Kimball-style Snowflake model with dbt staging/marts, automated quality tests, and business views for denial-rate, diagnosis-cost, and monthly claims trend analysis.</div>
+        <div class="proj-link">github.com/Rakshithch/snowflake-healthcare-claims</div>
       </div>
 
       <div class="proj-entry">
         <div class="proj-header"><span class="proj-name">Large-Scale Analytics — PySpark &amp; Databricks</span></div>
-        <div class="proj-desc">Databricks/PySpark analysis for payer mix, provider ranking, Spark SQL transformations, and revenue recovery opportunity summaries at scale.</div>
-      </div>
-
-      <div class="proj-entry">
-        <div class="proj-header">
-          <span class="proj-name">RAG Q&amp;A App</span>
-          <span class="proj-live">● LIVE</span>
-        </div>
-        <div class="proj-desc">RAG app for asking questions across large document corpora with source citations and semantic search, using LangChain, FAISS vector search, HuggingFace models, and Streamlit.</div>
-        <div class="proj-link">https://healthcare-rag-cxha667k82f6yanv8cwd3r.streamlit.app</div>
+        <div class="proj-desc">Databricks/PySpark analysis for payer denial rates, provider rankings, Spark SQL transformations, and revenue recovery opportunity summaries at scale.</div>
+        <div class="proj-link">github.com/Rakshithch/healthcare-claims-pyspark</div>
       </div>
 
       <div class="proj-entry">
         <div class="proj-header"><span class="proj-name">Claims ETL Pipeline</span></div>
-        <div class="proj-desc">7-phase production ETL pipeline with 95%+ validation pass rate across 500K+ synthetic records, AWS S3 integration, and Docker containerization.</div>
+        <div class="proj-desc">7-phase production ETL pipeline for X12 EDI 837/835 claims with 95%+ validation pass rate across 500K+ synthetic records, AWS S3 integration, and Docker containerization.</div>
+        <div class="proj-link">github.com/Rakshithch/healthcare-claims-pipeline</div>
+      </div>
+
+      <!-- TODO: add the accuracy / evaluation figure for the ICD-10-CM model once confirmed,
+           to match the same TODO on index.html. -->
+      <div class="proj-entry">
+        <div class="proj-header"><span class="proj-name">ICD-10-CM Coding Model</span></div>
+        <div class="proj-desc">Fine-tuned Qwen2.5-0.5B language model that assigns ICD-10-CM diagnosis codes to clinical text. Python, Hugging Face Transformers, LLM fine-tuning.</div>
+        <div class="proj-link">huggingface.co/Rakshithch/qwen2.5-0.5b-icd10cm-coder</div>
+      </div>
+
+      <div class="proj-entry">
+        <div class="proj-desc">Further projects — including the live Claims Analytics Dashboard and a RAG Q&amp;A app — at <strong>rakshithch.github.io</strong>.</div>
       </div>
     </div>
 
@@ -381,27 +418,27 @@
       <div class="skills-table">
         <div class="skill-row">
           <span class="skill-label">Languages &amp; Query</span>
-          <span class="skill-value">Python, SQL, TypeScript, JavaScript</span>
+          <span class="skill-value">Python, SQL</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Healthcare Data</span>
+          <span class="skill-value">ASC X12 EDI 837/835 claims, HEDIS quality measures, CMS risk adjustment, denial analytics</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Data &amp; Warehouse</span>
+          <span class="skill-value">Snowflake, dbt, PySpark, Databricks, Pandas, NumPy, PostgreSQL</span>
         </div>
         <div class="skill-row">
           <span class="skill-label">ML / AI</span>
-          <span class="skill-value">Scikit-learn, PyTorch, TensorFlow, LangChain, FAISS, HuggingFace, NLP</span>
+          <span class="skill-value">Scikit-learn, XGBoost, SHAP, LangChain, FAISS, Hugging Face Transformers</span>
         </div>
         <div class="skill-row">
-          <span class="skill-label">Data &amp; Visualization</span>
-          <span class="skill-value">Pandas, NumPy, Tableau, Power BI, Streamlit, Plotly</span>
+          <span class="skill-label">Visualization</span>
+          <span class="skill-value">Power BI, Tableau, Streamlit, Plotly</span>
         </div>
         <div class="skill-row">
-          <span class="skill-label">Engineering &amp; Cloud</span>
-          <span class="skill-value">AWS S3/EC2, Snowflake, dbt, Docker, PySpark, Databricks, Hadoop, Git</span>
-        </div>
-        <div class="skill-row">
-          <span class="skill-label">Databases</span>
-          <span class="skill-value">PostgreSQL, MySQL, MongoDB, Snowflake</span>
-        </div>
-        <div class="skill-row">
-          <span class="skill-label">Analytics &amp; Modeling</span>
-          <span class="skill-value">Fraud Detection, Anomaly Detection, Risk Modeling, A/B Testing, ETL Design</span>
+          <span class="skill-label">Cloud &amp; Tooling</span>
+          <span class="skill-value">AWS (S3, Glue, Redshift, Lambda), Docker, Git, GitHub Actions</span>
         </div>
       </div>
     </div>
