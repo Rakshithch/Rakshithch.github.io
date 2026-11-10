@@ -190,6 +190,20 @@ h2{font:700 clamp(54px,7.6vw,112px)/.86 var(--display);text-transform:uppercase;
 .gloss{color:var(--line);font-variant-numeric:tabular-nums;white-space:nowrap}
 .gcard .note{border-left:0;border-top:1px solid rgba(255,255,255,.45);padding-top:12px;color:var(--line)}
 .gcard .tagline{font:500 12px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--mark);margin-top:10px}
+/* Query Flight */
+.qbot{position:absolute;z-index:2;left:0;right:0;bottom:0;padding:10px var(--gut-r) calc(12px + env(safe-area-inset-bottom,0px)) var(--gut-l);background:color-mix(in srgb,var(--bp-deep) 90%,transparent);border-top:1.5px solid var(--line)}
+.qdoors{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;max-width:720px;margin:0 auto}
+.qdoors span{border:1.5px solid var(--soft);padding:9px 4px;min-height:38px;text-align:center;font:600 clamp(17px,4.6vw,24px)/1 var(--display);text-transform:uppercase;letter-spacing:.03em;color:var(--line);white-space:nowrap}
+.qdoors span.at{border-color:var(--mark);color:var(--mark);box-shadow:inset 0 0 0 1.5px var(--mark)}
+.qline{max-width:720px;margin:10px auto 0;font:500 13px/1.6 var(--mono);color:var(--soft);overflow-wrap:anywhere}
+.qline b{color:var(--line);font-weight:500}
+.qline b.bad{color:#FF8A75}
+.qline mark{background:var(--mark);color:var(--bp-deep);padding:0 4px}
+.qflash{position:absolute;inset:0;z-index:1;pointer-events:none;opacity:0}
+.gcard pre{margin:14px 0 0;font:500 12.5px/1.55 var(--mono);white-space:pre-wrap;overflow-wrap:anywhere;color:var(--soft);border-left:2px solid var(--mark);padding-left:10px}
+.gcard table{width:100%;border-collapse:collapse;margin-top:14px;font:500 13px/1.35 var(--mono)}
+.gcard th,.gcard td{border:1px solid rgba(255,255,255,.5);padding:7px 9px;text-align:left}
+.gcard th{color:var(--mark);text-transform:uppercase;letter-spacing:.08em;font-size:11px}
 </style>
 
 <div class="paper" aria-hidden="true"></div>
@@ -598,6 +612,7 @@ h2{font:700 clamp(54px,7.6vw,112px)/.86 var(--display);text-transform:uppercase;
     <div class="eyebrow">Play mode</div>
     <h3>Pick a game.</h3>
     <button class="gopt" type="button" data-game="descent"><span class="k">3D · four landscapes · about 1 minute</span><b>Gradient Descent</b><span>Tilt a landscape and roll the ball to its lowest point, the way a model learns.</span></button>
+    <button class="gopt" type="button" data-game="query"><span class="k">3D · three queries · about 1 minute</span><b>Query Flight</b><span>Fly through a tunnel and pick the SQL clause that comes next.</span></button>
     <button class="gopt" type="button" data-game="packet"><span class="k">2D · five layers · about 1 minute</span><b>Packet Run</b><span>Steer a data packet up through the five layers of the machine.</span></button>
     <div class="cta"><button class="btn" type="button" data-close>Back to the site</button></div>
   </div>
@@ -981,6 +996,216 @@ h2{font:700 clamp(54px,7.6vw,112px)/.86 var(--display);text-transform:uppercase;
   });
   W.__gdT = function(){ return { x: bx, z: bz, vx: vx, vz: vz, state: state, gx: LV[lvl].g[0][0], gz: LV[lvl].g[0][1], loss: loss }; };
   (W.__games = W.__games || {}).descent = open;
+})();
+</script>
+
+<div class="game" id="qf" role="dialog" aria-modal="true" aria-label="Query Flight game" hidden>
+  <div class="ghud">
+    <span class="glayer" id="qname">Query Flight</span>
+    <span class="pips" id="qpips" role="img" aria-label="Hits left"><i></i><i></i><i></i></span>
+    <button class="gx" id="qexit" type="button">Exit</button>
+    <span class="gprog" id="qprog"></span>
+  </div>
+  <canvas id="qcv"></canvas>
+  <div class="qflash" id="qflash"></div>
+  <div class="qbot" id="qbot"><div class="qdoors" id="qdoors"><span></span><span></span><span></span></div><div class="qline" id="qline"></div></div>
+  <div class="gcard" id="qcard"></div>
+</div>
+
+<script>
+(function(){
+  var doc = document, W = window, root = doc.documentElement;
+  var el = doc.getElementById('qf'); if (!el) return;
+  var cv = doc.getElementById('qcv'), card = doc.getElementById('qcard'), qname = doc.getElementById('qname'), qprog = doc.getElementById('qprog');
+  var qbot = doc.getElementById('qbot'), qline = doc.getElementById('qline'), qflash = doc.getElementById('qflash');
+  var chips = doc.querySelectorAll('#qdoors span'), pips = doc.querySelectorAll('#qpips i');
+  var clamp = function(v,a,b){ return Math.max(a, Math.min(b, v)); };
+  var HW = 6, HH = 2.7, LW = 4, SP = 5, NR = 30, GAP = 50, SHIPZ = -5, NP = 140;
+  var RD = [
+    { speed:18, read:'data', readLabel:'Read the Data layer', about:'These are my projects in the Data layer.',
+      q:[['SELECT','project, stack'],['FROM','projects'],['WHERE',"layer = 'data'"],['ORDER BY','project']],
+      cols:['project','stack'], rows:[['Claims Data Warehouse','Snowflake, dbt, SQL'],['Lakehouse Pipeline','PySpark, Databricks, Delta Lake']] },
+    { speed:21, read:'models', readLabel:'Read the Models layer', about:'Most of my projects sit in the Models layer.',
+      q:[['SELECT','layer, COUNT(*) AS projects'],['FROM','projects'],['GROUP BY','layer'],['HAVING','COUNT(*) >= 2'],['ORDER BY','projects DESC']],
+      cols:['layer','projects'], rows:[['models','5'],['data','2'],['interface','2']] },
+    { speed:24, read:'interface', readLabel:'Read the Interface layer', about:'These are the three projects nearest the top of the stack.',
+      q:[['SELECT','p.project, l.name'],['FROM','projects p'],['JOIN','layers l ON l.id = p.layer_id'],['WHERE','l.depth >= 4'],['ORDER BY','l.depth DESC, p.project'],['LIMIT','3']],
+      cols:['project','name'], rows:[['ChatConnect','Interface'],['Renewable Energy Dashboard','Interface'],['Denial Prediction','Models']] }
+  ];
+  var TOTAL = 15;
+  var R = null, scene, cam, tpos, tAttr, ppos, pAttr, parts = [], ship, gateRoot, failed = false, tmp, o = { x:0, y:0, r:0 };
+  var r = 0, gi = 0, lives = 3, trav = 0, shipX = 0, tgtX = 0, kdir = 0, keys = false, lean = 0, state = 'card', gates = [], bad = [];
+  var endT = -1, right = 0, rightRound = 0, flashA = 0, shake = 0, curLane = -1, raf = 0, last = 0, opener = null;
+
+  function cx(s){ return 3.2 * Math.sin(s * .021) + 1.4 * Math.sin(s * .047); }
+  function cy(s){ return 1.3 * Math.sin(s * .03); }
+  function roll(s){ return .5 * Math.sin(s * .018); }
+  function off(s){ var ref = trav - SHIPZ; o.x = cx(s) - cx(ref); o.y = cy(s) - cy(ref); o.r = roll(s) - roll(ref); }
+
+  function label(text){
+    var c = doc.createElement('canvas'), g; c.width = 512; c.height = 160; g = c.getContext('2d');
+    var px = 118; g.font = '700 ' + px + 'px "Barlow Condensed","Arial Narrow",sans-serif';
+    while (g.measureText(text).width > 480 && px > 40) { px -= 6; g.font = '700 ' + px + 'px "Barlow Condensed","Arial Narrow",sans-serif'; }
+    g.fillStyle = '#FFFFFF'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText(text, 256, 84);
+    return new THREE.CanvasTexture(c);
+  }
+  function init(){
+    if (R || failed) return;
+    try {
+      R = new THREE.WebGLRenderer({ canvas: cv, antialias: true }); R.setClearColor(0x123A8C, 1);
+      scene = new THREE.Scene(); scene.fog = new THREE.Fog(0x123A8C, 40, 150);
+      cam = new THREE.PerspectiveCamera(62, 1, .1, 400);
+      tmp = new Float32Array(NR * 6 * 3); tpos = new Float32Array(NR * 20 * 3);
+      var tg = new THREE.BufferGeometry(); tAttr = new THREE.BufferAttribute(tpos, 3); tg.setAttribute('position', tAttr);
+      var tl = new THREE.LineSegments(tg, new THREE.LineBasicMaterial({ color: 0xFFFFFF })); tl.frustumCulled = false; scene.add(tl);
+      ppos = new Float32Array(NP * 3); var pg = new THREE.BufferGeometry(); pAttr = new THREE.BufferAttribute(ppos, 3); pg.setAttribute('position', pAttr);
+      var pts = new THREE.Points(pg, new THREE.PointsMaterial({ color: 0xC9D6F3, size: 2, sizeAttenuation: false })); pts.frustumCulled = false; scene.add(pts);
+      for (var i = 0; i < NP; i++) parts.push({ x: (Math.random() * 2 - 1) * HW * .95, y: (Math.random() * 2 - 1) * HH * .95, s: Math.random() * NR * SP });
+      var sg = new THREE.BufferGeometry();
+      sg.setAttribute('position', new THREE.BufferAttribute(new Float32Array([0,0,-1.3,-.75,0,.5, 0,0,-1.3,.75,0,.5, -.75,0,.5,0,.3,.25, .75,0,.5,0,.3,.25, 0,0,-1.3,0,.3,.25, -.75,0,.5,.75,0,.5]), 3));
+      ship = new THREE.LineSegments(sg, new THREE.LineBasicMaterial({ color: 0xFFD23F })); scene.add(ship);
+      gateRoot = new THREE.Group(); scene.add(gateRoot);
+    } catch (err) { failed = true; R = null; }
+  }
+  function size(){
+    if (!R) return;
+    var w = el.clientWidth, h = el.clientHeight; R.setPixelRatio(Math.min(W.devicePixelRatio || 1, 2)); R.setSize(w, h, false);
+    cam.aspect = w / h; cam.fov = w < h ? 80 : 62; cam.updateProjectionMatrix();
+  }
+  function clearGates(){
+    gates.forEach(function(g){ g.doors.forEach(function(d){ d.lab.material.map.dispose(); d.lab.material.dispose(); d.mat.dispose(); }); gateRoot.remove(g.group); });
+    gates = [];
+  }
+  function buildGates(){
+    var Q = RD[r].q, i, j, k, words, pool, pick, grp, door, mat, lab, e, edges, w = 1.8, h = 2.3;
+    clearGates();
+    for (i = 0; i < Q.length; i++) {
+      pool = []; for (k = 0; k < Q.length; k++) if (k !== i) pool.push(Q[k][0]);
+      words = [Q[i][0]]; for (k = 0; k < 2; k++) { pick = (Math.random() * pool.length) | 0; words.push(pool.splice(pick, 1)[0]); }
+      var ok = (Math.random() * 3) | 0, order = [words[1], words[2]]; order.splice(ok, 0, words[0]);
+      grp = new THREE.Group(); var doors = [];
+      for (j = 0; j < 3; j++) {
+        door = new THREE.Group(); door.position.x = (j - 1) * LW;
+        mat = new THREE.LineBasicMaterial({ color: 0xFFFFFF, transparent: true }); edges = [];
+        [[-w,-h,w,-h,0,-1],[w,-h,w,h,1,0],[w,h,-w,h,0,1],[-w,h,-w,-h,-1,0]].forEach(function(p){
+          var gg = new THREE.BufferGeometry(); gg.setAttribute('position', new THREE.BufferAttribute(new Float32Array([p[0],p[1],0,p[2],p[3],0]), 3));
+          e = new THREE.Line(gg, mat); e.userData = { dx: p[4], dy: p[5] }; door.add(e); edges.push(e);
+        });
+        lab = new THREE.Mesh(new THREE.PlaneGeometry(3.3, 1.03), new THREE.MeshBasicMaterial({ map: label(order[j]), transparent: true, depthWrite: false }));
+        door.add(lab); grp.add(door); doors.push({ group: door, mat: mat, lab: lab, edges: edges });
+      }
+      gateRoot.add(grp);
+      gates.push({ group: grp, doors: doors, s: trav + 80 + i * GAP, words: order, ok: ok, passed: false, burst: -1, hit: 0 });
+    }
+  }
+  function hud(){
+    var Q = RD[r].q, i, h = '', g = gates[gi];
+    qname.textContent = 'Query 0' + (r + 1) + ' of 03';
+    for (i = 0; i < pips.length; i++) pips[i].classList.toggle('off', i >= lives);
+    for (i = 0; i < Q.length; i++) h += (i < gi ? '<b' + (bad[i] ? ' class="bad"' : '') + '>' + Q[i][0] + '</b> ' : i === gi ? '<mark>____</mark> ' : '____ ') + Q[i][1] + ' ';
+    qline.textContent = ''; qline.insertAdjacentHTML('beforeend', h);
+    for (i = 0; i < 3; i++) chips[i].textContent = g ? g.words[i] : '';
+    qprog.style.transform = 'scaleX(' + (gi / Q.length).toFixed(3) + ')';
+  }
+  function btn(act, label, solid){ return '<button class="btn' + (solid ? ' solid' : '') + '" type="button" data-act="' + act + '">' + label + '</button>'; }
+  function show(kind){
+    var D = RD[r], h;
+    state = 'card'; qbot.hidden = true;
+    if (kind === 'nogl') h = '<div class="eyebrow">Query Flight</div><h3>3D is not available.</h3><p>This game needs WebGL, and this browser has it turned off. Packet Run works without it.</p><div class="cta">' + btn('exit', 'Back to the site', 1) + '</div>';
+    else if (kind === 'start') h = '<div class="eyebrow">Query Flight</div><h3>Write the query at speed.</h3><p>Every gate has three doors, and each door is an SQL clause. Fly through the door that fills the next blank in the query at the bottom of the screen. Move the mouse, drag a finger, or use the arrow keys. Three wrong doors end the query.</p><div class="cta">' + btn('go', 'Start query 01', 1) + btn('exit', 'Back to the site') + '</div>';
+    else if (kind === 'clear') h = '<div class="eyebrow">Query 0' + (r + 1) + ' ran · ' + D.rows.length + ' rows</div><h3>Result</h3><pre>' + D.q.map(function(c){ return c[0] + ' ' + c[1]; }).join('\n') + '</pre><table><thead><tr>' + D.cols.map(function(c){ return '<th>' + c + '</th>'; }).join('') + '</tr></thead><tbody>' + D.rows.map(function(rw){ return '<tr>' + rw.map(function(c){ return '<td>' + c + '</td>'; }).join('') + '</tr>'; }).join('') + '</tbody></table><p>' + D.about + '</p><div class="cta">' + (r < RD.length - 1 ? btn('next', 'Next query', 1) : btn('finish', 'Finish', 1)) + btn('read', D.readLabel) + '</div>';
+    else if (kind === 'fail') h = '<div class="eyebrow">Syntax error</div><h3>Query 0' + (r + 1) + ' failed</h3><p>That was three wrong doors. SQL clauses always come in this order: SELECT, FROM, JOIN, WHERE, GROUP BY, HAVING, ORDER BY, LIMIT.</p><div class="cta">' + btn('retry', 'Retry query', 1) + btn('exit', 'Back to the site') + '</div>';
+    else h = '<div class="eyebrow">3 of 3 queries ran</div><h3>All queries ran.</h3><p>' + right + ' of ' + TOTAL + ' gates were right the first time. SQL has been part of every data role I have held.</p><div class="cta">' + btn('contact', 'Contact me', 1) + btn('again', 'Play again') + '</div>';
+    card.innerHTML = h; card.hidden = false; card.scrollTop = 0;
+    var b = card.querySelector('button'); if (b) b.focus();
+  }
+  function start(){
+    lives = 3; gi = 0; bad = []; rightRound = 0; endT = -1; curLane = -1; kdir = 0; buildGates(); hud();
+    card.hidden = true; qbot.hidden = false; state = 'play'; last = performance.now();
+  }
+  function tunnel(){
+    var base = Math.floor(trav / SP) * SP, k, j, s, z, c, sn, lx, ly, a = 0, b, n, i = 0;
+    var L = [-HW,-HH, HW,-HH, HW,HH, -HW,HH, -LW/2,-HH, LW/2,-HH];
+    for (k = 0; k < NR; k++) { s = base + k * SP; off(s); z = -(s - trav); c = Math.cos(o.r); sn = Math.sin(o.r);
+      for (j = 0; j < 6; j++, a += 3) { lx = L[j*2]; ly = L[j*2+1]; tmp[a] = lx * c - ly * sn + o.x; tmp[a+1] = lx * sn + ly * c + o.y; tmp[a+2] = z; } }
+    function seg(p, q){ tpos[i++] = tmp[p]; tpos[i++] = tmp[p+1]; tpos[i++] = tmp[p+2]; tpos[i++] = tmp[q]; tpos[i++] = tmp[q+1]; tpos[i++] = tmp[q+2]; }
+    for (k = 0; k < NR; k++) { b = k * 18; n = (k < NR - 1 ? k + 1 : k) * 18;
+      seg(b, b+3); seg(b+3, b+6); seg(b+6, b+9); seg(b+9, b);
+      for (j = 0; j < 6; j++) seg(b + j*3, n + j*3); }
+    tAttr.needsUpdate = true;
+    for (k = 0, a = 0; k < NP; k++, a += 3) { var p = parts[k]; if (p.s < trav) p.s += NR * SP; off(p.s); c = Math.cos(o.r); sn = Math.sin(o.r);
+      ppos[a] = p.x * c - p.y * sn + o.x; ppos[a+1] = p.x * sn + p.y * c + o.y; ppos[a+2] = -(p.s - trav); }
+    pAttr.needsUpdate = true;
+  }
+  function frame(now){
+    var dt = Math.min(.05, (now - last) / 1000), i, g, z, lane, d, t;
+    last = now; raf = requestAnimationFrame(frame);
+    if (!R) return;
+    trav += (state === 'play' ? RD[r].speed : 6) * dt;
+    if (state === 'play') {
+      if (keys) { tgtX = clamp(tgtX + kdir * 13 * dt, -HW * .9, HW * .9); }
+      shipX += (tgtX - shipX) * Math.min(1, dt * 12);
+      lane = shipX < -LW / 2 ? 0 : shipX > LW / 2 ? 2 : 1;
+      if (lane !== curLane) { curLane = lane; for (i = 0; i < 3; i++) chips[i].classList.toggle('at', i === lane); }
+      g = gates[gi];
+      if (g && -(g.s - trav) >= SHIPZ) {
+        g.passed = true; g.burst = 0; g.hit = lane;
+        if (lane === g.ok) { rightRound++; flashA = .5; qflash.style.background = '#FFD23F'; g.doors[lane].mat.color.setHex(0xFFD23F); }
+        else { lives--; bad[gi] = true; flashA = .7; shake = .35; qflash.style.background = '#FF8A75'; g.doors[lane].mat.color.setHex(0xFF8A75); }
+        gi++; hud();
+        if (lives <= 0) endT = .6; else if (gi >= gates.length) endT = 1;
+      }
+      if (endT > 0) { endT -= dt; if (endT <= 0) { if (lives <= 0) show('fail'); else { right += rightRound; show('clear'); } } }
+    }
+    lean += (clamp((tgtX - shipX) * .09, -.4, .4) - lean) * Math.min(1, dt * 8);
+    tunnel();
+    for (i = 0; i < gates.length; i++) { g = gates[i]; off(g.s); z = -(g.s - trav); g.group.position.set(o.x, o.y, z); g.group.rotation.z = o.r; g.group.visible = z < 6;
+      if (g.burst >= 0) { g.burst += dt; t = g.burst; d = g.doors[g.hit];
+        d.edges.forEach(function(e){ e.position.set(e.userData.dx * t * 9, e.userData.dy * t * 9, 0); e.rotation.z = t * 5 * (e.userData.dx + e.userData.dy); });
+        d.mat.opacity = Math.max(0, 1 - t * 2.4); d.lab.material.opacity = Math.max(0, 1 - t * 4); d.lab.scale.setScalar(1 + t * 3); } }
+    shake = Math.max(0, shake - dt); flashA = Math.max(0, flashA - dt * 2.2); qflash.style.opacity = (flashA * .5).toFixed(3);
+    ship.position.set(shipX, -1.7, SHIPZ); ship.rotation.z = -lean * 1.6;
+    cam.position.set(shipX * .8 + (shake ? (Math.random() - .5) * shake : 0), .3 + (shake ? (Math.random() - .5) * shake : 0), 0);
+    cam.rotation.set(0, 0, -lean * .45);
+    R.render(scene, cam);
+  }
+  function onKey(e){
+    var d = e.type === 'keydown', k = e.key;
+    if (k === 'Escape' && d) { close(); return; }
+    if (k === 'ArrowLeft' || k === 'a' || k === 'A') { if (d) { kdir = -1; keys = true; } else if (kdir < 0) kdir = 0; if (state === 'play') e.preventDefault(); }
+    else if (k === 'ArrowRight' || k === 'd' || k === 'D') { if (d) { kdir = 1; keys = true; } else if (kdir > 0) kdir = 0; if (state === 'play') e.preventDefault(); }
+  }
+  function steer(e){ var b = cv.getBoundingClientRect(); keys = false; tgtX = clamp(((e.clientX - b.left) / b.width * 2 - 1) * HW * .95, -HW * .9, HW * .9); }
+  function open(e){
+    if (e && e.preventDefault) e.preventDefault();
+    opener = doc.activeElement; el.hidden = false; W.__play = true; root.style.overflow = 'hidden';
+    if (W.THREE) init(); else failed = true;
+    r = 0; right = 0; shipX = tgtX = 0; lives = 3;
+    W.addEventListener('keydown', onKey); W.addEventListener('keyup', onKey); W.addEventListener('resize', size);
+    if (!R) { show('nogl'); return; }
+    size(); clearGates(); show('start'); last = performance.now(); raf = requestAnimationFrame(frame);
+  }
+  function close(){
+    cancelAnimationFrame(raf); state = 'card'; el.hidden = true; W.__play = false; root.style.overflow = '';
+    W.removeEventListener('keydown', onKey); W.removeEventListener('keyup', onKey); W.removeEventListener('resize', size);
+    if (opener && opener.focus) opener.focus();
+  }
+  function goTo(id){ close(); var t = doc.getElementById(id); if (t) t.scrollIntoView(); }
+  cv.addEventListener('pointermove', steer); cv.addEventListener('pointerdown', steer);
+  doc.getElementById('qexit').addEventListener('click', close);
+  card.addEventListener('click', function(e){
+    var b = e.target.closest && e.target.closest('[data-act]'); if (!b) return;
+    var act = b.getAttribute('data-act');
+    if (act === 'go' || act === 'retry') start();
+    else if (act === 'next') { r++; start(); }
+    else if (act === 'again') { r = 0; right = 0; start(); }
+    else if (act === 'finish') show('done');
+    else if (act === 'read') goTo(RD[r].read);
+    else if (act === 'contact') goTo('contact');
+    else close();
+  });
+  W.__qfT = function(){ var g = gates[gi]; return { state: state, ok: g ? g.ok : -1, gi: gi, r: r, lives: lives }; };
+  (W.__games = W.__games || {}).query = open;
 })();
 </script>
 
