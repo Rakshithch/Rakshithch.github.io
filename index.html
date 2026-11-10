@@ -156,6 +156,40 @@ h2{font:700 clamp(54px,7.6vw,112px)/.86 var(--display);text-transform:uppercase;
   .js .rv,.name .ch{opacity:1;transform:none;transition:none}
   .dim i{transform:scaleX(1);transition:none}.hint i{animation:none}
 }
+/* Packet Run (play mode) */
+.hud nav button{font:inherit;letter-spacing:inherit;text-transform:inherit;color:var(--mark);background:none;border:0;padding:0;cursor:pointer}
+.hud nav button:hover{color:var(--line)}
+.game{position:fixed;inset:0;z-index:70;background:var(--bp);display:flex;flex-direction:column}
+.game canvas{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none}
+.ghud{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:calc(env(safe-area-inset-top,0px) + 10px) var(--gut-r) 10px var(--gut-l);border-bottom:1.5px solid var(--line);background:color-mix(in srgb,var(--bp) 88%,transparent);font:500 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.glayer{color:var(--mark);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;flex:1}
+.pips{display:flex;gap:9px;align-items:center;padding:0 6px}
+.pips i{width:11px;height:11px;border:1.5px solid var(--mark);background:var(--mark);display:block;transform:rotate(45deg)}
+.pips i.off{background:transparent;border-color:var(--soft)}
+.gx{font:500 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--line);background:transparent;border:1.5px solid var(--line);min-height:44px;padding:0 16px;cursor:pointer}
+.gx:hover{background:var(--line);color:var(--bp-deep)}
+.gprog{position:absolute;left:0;bottom:-2px;height:3px;width:100%;background:var(--mark);transform-origin:0 50%;transform:scaleX(0)}
+.gcard{position:absolute;z-index:3;left:50%;top:calc(50% + 24px);transform:translate(-50%,-50%);width:min(520px,calc(100% - 32px));max-height:calc(100% - 130px);overflow:auto;border:2px solid var(--line);background:var(--bp-deep);padding:22px 22px 24px;box-shadow:8px 8px 0 var(--mark)}
+.gcard h3{font:700 clamp(40px,9vw,60px)/.9 var(--display);text-transform:uppercase;margin:8px 0 0;text-wrap:balance}
+.gcard p{margin:14px 0 0;color:var(--soft);font-size:17px}
+.gcard ul{list-style:none;margin:16px 0 0;padding:0;border-top:1px solid rgba(255,255,255,.45)}
+.gcard li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.45);font-size:16px}
+.gcard li b{font:600 22px/1.1 var(--display);text-transform:uppercase;display:block}
+.gcard li span{color:var(--soft)}
+.gcard .cta{margin-top:20px}
+/* game menu + Gradient Descent */
+.arcade{position:fixed;inset:0;z-index:69;background:color-mix(in srgb,var(--bp-deep) 86%,transparent);display:grid;place-items:center;padding:16px max(16px, env(safe-area-inset-right,0px)) 16px max(16px, env(safe-area-inset-left,0px));overflow:auto}
+.arcade .panel{width:min(560px,100%);border:2px solid var(--line);background:var(--bp-deep);padding:22px 22px 24px;box-shadow:8px 8px 0 var(--mark)}
+.arcade h3{font:700 clamp(40px,9vw,60px)/.9 var(--display);text-transform:uppercase;margin:8px 0 16px}
+.gopt{display:flex;flex-direction:column;gap:6px;width:100%;text-align:left;margin-top:12px;padding:14px 16px 16px;border:1.5px solid var(--line);background:var(--bp);color:var(--line);font:inherit;cursor:pointer;transition:transform .2s,box-shadow .2s,border-color .2s}
+.gopt:hover{border-color:var(--mark);transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--mark)}
+.gopt .k{font:500 11px/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mark)}
+.gopt b{font:600 30px/1 var(--display);text-transform:uppercase}
+.gopt span:last-child{color:var(--soft);font-size:16px;line-height:1.4}
+.arcade .cta{margin-top:18px}
+.gloss{color:var(--line);font-variant-numeric:tabular-nums;white-space:nowrap}
+.gcard .note{border-left:0;border-top:1px solid rgba(255,255,255,.45);padding-top:12px;color:var(--line)}
+.gcard .tagline{font:500 12px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--mark);margin-top:10px}
 </style>
 
 <div class="paper" aria-hidden="true"></div>
@@ -172,7 +206,7 @@ h2{font:700 clamp(54px,7.6vw,112px)/.86 var(--display);text-transform:uppercase;
 <header class="hud">
   <a href="#cover">R. Chandupatla</a>
   <span class="sheet" id="sheet">Sheet 1 of 8 · Cover</span>
-  <nav aria-label="Sections"><a href="#hardware">Layers</a><a href="#record">Record</a><a href="#contact">Contact</a></nav>
+  <nav aria-label="Sections"><a href="#hardware">Layers</a><a href="#record">Record</a><a href="#contact">Contact</a><button type="button" data-play>Play</button></nav>
   <span class="bar" id="bar"></span>
 </header>
 
@@ -188,7 +222,7 @@ h2{font:700 clamp(54px,7.6vw,112px)/.86 var(--display);text-transform:uppercase;
       <div class="eyebrow">Software · Data · Machine learning</div>
       <h1 class="name" id="name" aria-label="Rakshith Chandupatla"><span class="ln" aria-hidden="true">Rakshith</span><span class="ln" aria-hidden="true">Chandupatla</span></h1>
       <p class="lead">I am a computer science engineer who works at every layer of the stack, from server hardware up to the screen. Scroll to take the machine apart.</p>
-      <div class="cta"><a class="btn solid" href="#hardware">Open the machine</a><a class="btn" href="#contact">Contact</a></div>
+      <div class="cta"><a class="btn solid" href="#hardware">Open the machine</a><a class="btn" href="#contact">Contact</a><button class="btn" type="button" data-play>Play a game</button></div>
       <div class="hint"><i></i>Exploded view · 5 layers</div>
     </div>
   </section>
@@ -502,6 +536,7 @@ h2{font:700 clamp(54px,7.6vw,112px)/.86 var(--display);text-transform:uppercase;
   var target = W.THREE ? new THREE.Vector3() : null;
   function frame(now){
     var dt = Math.min(.05, (now - clock) / 1000); clock = now; if (!reduce) time += dt;
+    if (W.__play) { requestAnimationFrame(frame); return; }
     var vh = W.innerHeight, vw = W.innerWidth, sy = W.scrollY, docH = Math.max(1, root.scrollHeight - vh), k = reduce ? 1 : .08, i;
     bar.style.transform = 'scaleX(' + clamp(sy / docH, 0, 1).toFixed(4) + ')';
 
@@ -535,7 +570,7 @@ h2{font:700 clamp(54px,7.6vw,112px)/.86 var(--display);text-transform:uppercase;
       var dist = lerp(14.5, 10.4, fS) * Math.max(1, .7 / asp);
       var visW = 2 * dist * Math.tan(16 * Math.PI / 180) * asp;
       var ty = lerp(0, (aS - 2) * gap, fS);
-      target.set(0, ty - (m ? 2.5 * (1 - tIn) : 0) + tiltS, 0).addScaledVector(RIGHT, m ? 0 : -visW * .17);
+      target.set(0, ty - (m ? 3.1 * (1 - tIn) : 0) + tiltS, 0).addScaledVector(RIGHT, m ? 0 : -visW * .17);
       camera.position.copy(target).addScaledVector(DIR, dist); camera.lookAt(target);
       canvas.style.opacity = m ? lerp(1, .2, clamp(tIn * 1.6, 0, 1)).toFixed(2) : 1;
       renderer.render(scene, camera);
@@ -555,6 +590,397 @@ h2{font:700 clamp(54px,7.6vw,112px)/.86 var(--display);text-transform:uppercase;
     requestAnimationFrame(frame);
   }
   requestAnimationFrame(frame);
+})();
+</script>
+
+<div class="arcade" id="arcade" role="dialog" aria-modal="true" aria-label="Choose a game" hidden>
+  <div class="panel">
+    <div class="eyebrow">Play mode</div>
+    <h3>Pick a game.</h3>
+    <button class="gopt" type="button" data-game="descent"><span class="k">3D · four landscapes · about 1 minute</span><b>Gradient Descent</b><span>Tilt a landscape and roll the ball to its lowest point, the way a model learns.</span></button>
+    <button class="gopt" type="button" data-game="packet"><span class="k">2D · five layers · about 1 minute</span><b>Packet Run</b><span>Steer a data packet up through the five layers of the machine.</span></button>
+    <div class="cta"><button class="btn" type="button" data-close>Back to the site</button></div>
+  </div>
+</div>
+
+<div class="game" id="game" role="dialog" aria-modal="true" aria-label="Packet Run game" hidden>
+  <div class="ghud">
+    <span class="glayer" id="glayer">Packet Run</span>
+    <span class="pips" id="pips" role="img" aria-label="Hits left"><i></i><i></i><i></i></span>
+    <button class="gx" id="gexit" type="button">Exit</button>
+    <span class="gprog" id="gprog"></span>
+  </div>
+  <canvas id="gcv"></canvas>
+  <div class="gcard" id="gcard"></div>
+</div>
+
+<script>
+(function(){
+  var doc = document, W = window, root = doc.documentElement;
+  var game = doc.getElementById('game'); if (!game) return;
+  var cv = doc.getElementById('gcv'), ctx = cv.getContext('2d'), card = doc.getElementById('gcard');
+  var glayer = doc.getElementById('glayer'), gprog = doc.getElementById('gprog'), pips = doc.querySelectorAll('#pips i');
+  var FAULT = '#FF8A75', MARK = '#FFD23F', BP = '#123A8C';
+  var clamp = function(v,a,b){ return Math.max(a, Math.min(b, v)); };
+  var LV = [
+    { id:'hardware', n:'01', name:'Hardware', dur:9, speed:.40, every:.66, gap:.4, kinds:['block'],
+      items:[['Server Support Engineer, Jabil','Server hardware and diagnostics on site']] },
+    { id:'systems', n:'02', name:'Systems', dur:10, speed:.45, every:.6, gap:.4, kinds:['block','mover'],
+      items:[['Linux troubleshooting','Part of my daily server work'],['AWS Certified Cloud Practitioner','Amazon Web Services'],['Scheduled publishing pipeline','GitHub Actions and the Claude API']] },
+    { id:'data', n:'03', name:'Data', dur:10, speed:.48, every:.6, gap:.38, kinds:['wall','block','wall'],
+      items:[['Claims Data Warehouse','Snowflake, dbt and SQL'],['Lakehouse Pipeline','PySpark, Databricks and Delta Lake'],['Data Analyst, UnitedHealth Group','Analytics on large datasets']] },
+    { id:'models', n:'04', name:'Models', dur:11, speed:.52, every:.54, gap:.36, kinds:['mover','mover','block'],
+      items:[['Fine-tuned Coding LLM','Qwen2.5-0.5B on Hugging Face'],['RAG Assistant','FAISS and LangChain'],['Denial Prediction','XGBoost with SHAP']] },
+    { id:'interface', n:'05', name:'Interface', dur:12, speed:.56, every:.54, gap:.34, kinds:['wall','mover','block'],
+      items:[['Renewable Energy Dashboard','Next.js 14 and TypeScript'],['ChatConnect','React Native and Firebase'],['Software Engineer, Volunteer','Community Dreams Foundation']] }
+  ];
+  var cw = 0, ch = 0, FW = 0, left = 0, py = 0, R = 10;
+  var lvl = 0, t = 0, hp = 3, inv = 0, flash = 0, obs = [], px = 0, tx = 0, kdir = 0, keys = false, spawnT = 0, lastGap = .5;
+  var running = false, raf = 0, last = 0, scroll = 0, total = 0, hits = 0, opener = null;
+
+  function size(){
+    var dpr = Math.min(W.devicePixelRatio || 1, 2); cw = game.clientWidth; ch = game.clientHeight;
+    cv.width = Math.round(cw * dpr); cv.height = Math.round(ch * dpr); ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    var nf = Math.min(560, cw - 32); if (FW) { px = px / FW * nf; tx = tx / FW * nf; }
+    FW = nf; left = (cw - FW) / 2; py = ch * .76;
+  }
+  function hud(){
+    var L = LV[lvl]; glayer.textContent = 'Layer ' + L.n + ' of 05 · ' + L.name;
+    for (var i = 0; i < pips.length; i++) pips[i].classList.toggle('off', i >= hp);
+  }
+  function btn(act, label, solid){ return '<button class="btn' + (solid ? ' solid' : '') + '" type="button" data-act="' + act + '">' + label + '</button>'; }
+  function show(kind){
+    running = false; var L = LV[lvl], h;
+    if (kind === 'start') h = '<div class="eyebrow">Packet Run</div><h3>Deliver the packet.</h3><p>Carry one data packet up through the five layers of the machine. Move the mouse or drag a finger to steer. The arrow keys also work. Avoid the faults. The packet survives two hits per layer.</p><div class="cta">' + btn('go', 'Start layer 01', 1) + btn('exit', 'Back to the site') + '</div>';
+    else if (kind === 'clear') h = '<div class="eyebrow">Layer ' + L.n + ' cleared · what I built here</div><h3>' + L.name + '</h3><ul>' + L.items.map(function(it){ return '<li><b>' + it[0] + '</b><span>' + it[1] + '</span></li>'; }).join('') + '</ul><div class="cta">' + (lvl < LV.length - 1 ? btn('next', 'Next layer: ' + LV[lvl + 1].name, 1) : btn('finish', 'Deliver the packet', 1)) + btn('read', 'Read this layer') + '</div>';
+    else if (kind === 'fail') h = '<div class="eyebrow">Packet dropped</div><h3>Layer ' + L.n + ', ' + L.name + '</h3><p>The packet took three hits. Try this layer again, or read it on the site.</p><div class="cta">' + btn('retry', 'Retry layer', 1) + btn('read', 'Read this layer') + '</div>';
+    else h = '<div class="eyebrow">Delivered · 5 of 5 layers</div><h3>Packet delivered.</h3><p>Time ' + total.toFixed(1) + ' s · hits taken ' + hits + '. That was the whole stack, from hardware to interface. I work at every one of these layers.</p><div class="cta">' + btn('contact', 'Contact me', 1) + btn('again', 'Play again') + '</div>';
+    card.innerHTML = h; card.hidden = false; card.scrollTop = 0;
+    var b = card.querySelector('button'); if (b) b.focus();
+  }
+  function start(){
+    t = 0; hp = 3; inv = 0; flash = 0; obs = []; spawnT = .8; px = tx = FW / 2; lastGap = .5; kdir = 0;
+    card.hidden = true; hud(); running = true; last = performance.now();
+  }
+  function spawn(){
+    var L = LV[lvl], k = L.kinds[(Math.random() * L.kinds.length) | 0], w, x;
+    if (k === 'wall') {
+      var g = FW * L.gap, c = clamp(lastGap + (Math.random() * 2 - 1) * .42, 0, 1); lastGap = c; x = c * (FW - g);
+      obs.push({ x: 0, y: -30, w: x, h: 22, vx: 0 }); obs.push({ x: x + g, y: -30, w: FW - x - g, h: 22, vx: 0 });
+      return 1.5;
+    }
+    w = FW * (.16 + Math.random() * .18); x = Math.random() * (FW - w);
+    obs.push({ x: x, y: -44, w: w, h: k === 'mover' ? 26 : 34, vx: k === 'mover' ? (Math.random() < .5 ? -1 : 1) * FW * (.3 + Math.random() * .3) : 0 });
+    return 1;
+  }
+  function step(dt){
+    var L = LV[lvl], v = L.speed * ch, i, o, nx, ny;
+    t += dt; total += dt; scroll += v * dt;
+    if (keys) { px = clamp(px + kdir * 1.15 * FW * dt, R, FW - R); tx = px; } else px += (tx - px) * Math.min(1, dt * 18);
+    spawnT -= dt; if (spawnT <= 0 && t < L.dur - 1.2) spawnT = L.every * spawn();
+    for (i = obs.length - 1; i >= 0; i--) {
+      o = obs[i]; o.y += v * dt;
+      if (o.vx) { o.x += o.vx * dt; if (o.x < 0) { o.x = 0; o.vx = -o.vx; } else if (o.x + o.w > FW) { o.x = FW - o.w; o.vx = -o.vx; } }
+      if (o.y > ch + 60) { obs.splice(i, 1); continue; }
+      if (inv <= 0 && o.w > 1) {
+        nx = clamp(px, o.x, o.x + o.w); ny = clamp(py, o.y, o.y + o.h);
+        if ((px - nx) * (px - nx) + (py - ny) * (py - ny) < R * R) { hp--; hits++; inv = 1.2; flash = 1; hud(); }
+      }
+    }
+    inv -= dt;
+    gprog.style.transform = 'scaleX(' + clamp(t / L.dur, 0, 1).toFixed(3) + ')';
+    if (hp <= 0) show('fail'); else if (t >= L.dur) show('clear');
+  }
+  function drawOb(o, id){
+    var x = left + o.x, y = o.y, w = o.w, h = o.h, a;
+    if (w < 2) return;
+    ctx.fillStyle = 'rgba(255,138,117,.2)'; ctx.fillRect(x, y, w, h);
+    ctx.strokeStyle = FAULT; ctx.lineWidth = 2; ctx.strokeRect(x + 1, y + 1, w - 2, h - 2);
+    ctx.lineWidth = 1; ctx.beginPath();
+    if (id === 'hardware') { ctx.rect(x + 7, y + 7, w - 14, h - 14); for (a = x + 8; a < x + w - 4; a += 10) { ctx.moveTo(a, y - 5); ctx.lineTo(a, y); ctx.moveTo(a, y + h); ctx.lineTo(a, y + h + 5); } }
+    else if (id === 'data') { for (a = x + 26; a < x + w - 4; a += 26) { ctx.moveTo(a, y); ctx.lineTo(a, y + h); } }
+    else if (id === 'models') { ctx.moveTo(x, y); ctx.lineTo(x + w, y + h); ctx.moveTo(x + w, y); ctx.lineTo(x, y + h); }
+    else { ctx.moveTo(x, y + 9); ctx.lineTo(x + w, y + 9); if (id === 'interface' && w > 40) for (a = 0; a < 3; a++) ctx.rect(x + 6 + a * 8, y + 3, 4, 4); }
+    ctx.stroke();
+  }
+  function draw(){
+    var L = LV[lvl], off = scroll % 40, a, i;
+    ctx.fillStyle = BP; ctx.fillRect(0, 0, cw, ch);
+    ctx.strokeStyle = 'rgba(255,255,255,.07)'; ctx.lineWidth = 1; ctx.beginPath();
+    for (a = off; a < ch; a += 40) { ctx.moveTo(0, a); ctx.lineTo(cw, a); }
+    for (a = (cw / 2) % 40; a < cw; a += 40) { ctx.moveTo(a, 0); ctx.lineTo(a, ch); }
+    ctx.stroke();
+    ctx.font = '700 ' + Math.round(FW * .78) + 'px "Barlow Condensed","Arial Narrow",sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.strokeStyle = 'rgba(255,255,255,.13)'; ctx.lineWidth = 1.5; ctx.strokeText(L.n, cw / 2, ch * .45);
+    ctx.strokeStyle = '#FFFFFF'; ctx.lineWidth = 1.5; ctx.beginPath();
+    ctx.moveTo(left, 0); ctx.lineTo(left, ch); ctx.moveTo(left + FW, 0); ctx.lineTo(left + FW, ch);
+    for (a = (scroll % 80) - 80; a < ch; a += 80) { ctx.moveTo(left - 8, a); ctx.lineTo(left, a); ctx.moveTo(left + FW, a); ctx.lineTo(left + FW + 8, a); }
+    ctx.stroke();
+    for (i = 0; i < obs.length; i++) drawOb(obs[i], L.id);
+    if (inv <= 0 || Math.floor(inv * 12) % 2 === 0) {
+      var x = left + px;
+      ctx.strokeStyle = MARK; ctx.lineWidth = 1.5; ctx.beginPath();
+      ctx.moveTo(x, py + 16); ctx.lineTo(x, py + 46); ctx.moveTo(x - 7, py + 14); ctx.lineTo(x - 7, py + 30); ctx.moveTo(x + 7, py + 14); ctx.lineTo(x + 7, py + 30); ctx.stroke();
+      ctx.fillStyle = MARK; ctx.beginPath(); ctx.moveTo(x, py - 13); ctx.lineTo(x + 13, py); ctx.lineTo(x, py + 13); ctx.lineTo(x - 13, py); ctx.closePath(); ctx.fill();
+      ctx.fillStyle = BP; ctx.fillRect(x - 3, py - 3, 6, 6);
+    }
+    if (flash > 0) { ctx.fillStyle = 'rgba(255,138,117,' + (flash * .28).toFixed(3) + ')'; ctx.fillRect(0, 0, cw, ch); }
+  }
+  function loop(now){
+    var dt = Math.min(.05, (now - last) / 1000); last = now;
+    if (running) step(dt);
+    flash = Math.max(0, flash - dt * 3);
+    draw(); raf = requestAnimationFrame(loop);
+  }
+  function onKey(e){
+    var d = e.type === 'keydown', k = e.key;
+    if (k === 'Escape' && d) { close(); return; }
+    if (k === 'ArrowLeft' || k === 'a' || k === 'A') { if (d) { kdir = -1; keys = true; } else if (kdir < 0) kdir = 0; if (running) e.preventDefault(); }
+    else if (k === 'ArrowRight' || k === 'd' || k === 'D') { if (d) { kdir = 1; keys = true; } else if (kdir > 0) kdir = 0; if (running) e.preventDefault(); }
+  }
+  function steer(e){ keys = false; tx = clamp(e.clientX - cv.getBoundingClientRect().left - left, R, FW - R); }
+  function open(e){
+    if (e) e.preventDefault();
+    opener = doc.activeElement; game.hidden = false; W.__play = true; root.style.overflow = 'hidden';
+    size(); lvl = 0; total = 0; hits = 0; hp = 3; obs = []; px = tx = FW / 2; hud(); gprog.style.transform = 'scaleX(0)'; show('start');
+    last = performance.now(); raf = requestAnimationFrame(loop);
+    W.addEventListener('keydown', onKey); W.addEventListener('keyup', onKey); W.addEventListener('resize', size);
+  }
+  function close(){
+    cancelAnimationFrame(raf); running = false; game.hidden = true; W.__play = false; root.style.overflow = '';
+    W.removeEventListener('keydown', onKey); W.removeEventListener('keyup', onKey); W.removeEventListener('resize', size);
+    if (opener && opener.focus) opener.focus();
+  }
+  function goTo(id){ close(); var el = doc.getElementById(id); if (el) el.scrollIntoView(); }
+  cv.addEventListener('pointermove', steer); cv.addEventListener('pointerdown', steer);
+  doc.getElementById('gexit').addEventListener('click', close);
+  card.addEventListener('click', function(e){
+    var b = e.target.closest && e.target.closest('[data-act]'); if (!b) return;
+    var act = b.getAttribute('data-act');
+    if (act === 'go' || act === 'retry') start();
+    else if (act === 'next') { lvl++; start(); }
+    else if (act === 'again') { lvl = 0; total = 0; hits = 0; start(); }
+    else if (act === 'finish') show('done');
+    else if (act === 'read') goTo(LV[lvl].id);
+    else if (act === 'contact') goTo('contact');
+    else close();
+  });
+  (W.__games = W.__games || {}).packet = open;
+})();
+</script>
+
+<div class="game" id="gd" role="dialog" aria-modal="true" aria-label="Gradient Descent game" hidden>
+  <div class="ghud">
+    <span class="glayer" id="dname">Gradient Descent</span>
+    <span class="gloss" id="dloss">Loss 1.000</span>
+    <button class="gx" id="dexit" type="button">Exit</button>
+    <span class="gprog" id="dprog"></span>
+  </div>
+  <canvas id="dcv"></canvas>
+  <div class="gcard" id="dcard"></div>
+</div>
+
+<script>
+(function(){
+  var doc = document, W = window, arc = doc.getElementById('arcade'); if (!arc) return;
+  var opener = null;
+  function key(e){ if (e.key === 'Escape') close(); }
+  function open(e){
+    if (e) e.preventDefault();
+    opener = doc.activeElement; arc.hidden = false; W.addEventListener('keydown', key);
+    var b = arc.querySelector('button'); if (b) b.focus();
+  }
+  function close(){ arc.hidden = true; W.removeEventListener('keydown', key); if (opener && opener.focus) opener.focus(); }
+  arc.addEventListener('click', function(e){
+    var b = e.target.closest && e.target.closest('[data-game]');
+    if (b) { var g = (W.__games || {})[b.getAttribute('data-game')]; close(); if (g) g(); return; }
+    if (e.target === arc || (e.target.closest && e.target.closest('[data-close]'))) close();
+  });
+  Array.prototype.forEach.call(doc.querySelectorAll('[data-play]'), function(el){ el.addEventListener('click', open); });
+})();
+</script>
+
+<script>
+(function(){
+  var doc = document, W = window, root = doc.documentElement;
+  var el = doc.getElementById('gd'); if (!el) return;
+  var cv = doc.getElementById('dcv'), card = doc.getElementById('dcard');
+  var dname = doc.getElementById('dname'), dloss = doc.getElementById('dloss'), dprog = doc.getElementById('dprog');
+  var clamp = function(v,a,b){ return Math.max(a, Math.min(b, v)); };
+  var lerp = function(a,b,t){ return a + (b-a)*t; };
+  var S = 10, N = 56, TILT = .2, G = 9, T = 7.5, BR = .42, TRAIL = 70;
+  var LV = [
+    { name:'Convex bowl', start:[-6.5,6.5], g:[[4,-4,-3.2,2.6]], wave:0,
+      title:'Denial Prediction', text:'An XGBoost model with SHAP, so every prediction comes with its reasons.', tags:'XGBoost · SHAP · Streamlit',
+      note:'One valley and no traps. This is the easy case, and real models rarely get one this simple.' },
+    { name:'Local minimum', start:[-6.5,5.5], g:[[6,-5,-3.4,2.3],[0,.5,-2.1,2.3],[3,-2.5,1.6,1.8]], wave:0,
+      title:'RAG Assistant', text:'A retrieval app that answers questions from source documents.', tags:'FAISS · LangChain · Python',
+      note:'The dip on the way was a local minimum. A model can stop there and think it has finished.' },
+    { name:'Saddle point', start:[-7.5,3], g:[[6.5,0,-3.2,2.3],[.5,-5.5,3,2.7],[.5,5.5,3,2.7],[-3,0,-1.8,1.8],[-4,-5.5,-1.5,1.8]], wave:0,
+      title:'MindWell Chatbot', text:'A DialoGPT chatbot that I built as my capstone project.', tags:'DialoGPT · Python',
+      note:'The pass between the two hills was a saddle point. The ground is almost flat there, so learning slows down.' },
+    { name:'Noisy loss', start:[7,7], g:[[-6,-6,-3.4,2.2],[3,3,-2,2.1],[-2,3.5,-1.7,1.9],[3,-3.5,-1.8,2],[-1.5,-1.5,-1.6,1.7],[-3.5,-3.5,1.8,1.7]], wave:.3,
+      title:'Fine-tuned Coding LLM', text:'I fine-tuned Qwen2.5-0.5B to assign ICD-10-CM medical codes and published it on Hugging Face.', tags:'LLM fine-tuning · Hugging Face',
+      note:'The surface kept moving because real training data is noisy. The model still has to find its way down.' }
+  ];
+  var R = null, scene, cam, grp, pos, col, pAttr, cAttr, ball, halo, trail, tpos, ring, beam, bpos, camK = 1, failed = false;
+  var lvl = 0, state = 'card', time = 0, grow = 0, rip = 0, rt = 0, wonT = 0, hold = 0, elapsed = 0, total = 0;
+  var bx = 0, bz = 0, vx = 0, vz = 0, hmin = 0, hstart = 1, loss = 1;
+  var tiltX = 0, tiltZ = 0, tgX = 0, tgZ = 0, drag = null, kL = 0, kR = 0, kU = 0, kD = 0, raf = 0, last = 0, opener = null;
+
+  function H(L, x, z, t){
+    var h = .008 * (x*x + z*z), i, g, dx, dz;
+    for (i = 0; i < L.g.length; i++) { g = L.g[i]; dx = x - g[0]; dz = z - g[1]; h += g[2] * Math.exp(-(dx*dx + dz*dz) / (2 * g[3] * g[3])); }
+    if (L.wave) h += L.wave * Math.sin(x * .9 + t * 1.6) * Math.cos(z * .8 - t * 1.1);
+    return h;
+  }
+  function ease(t){ t = clamp(t, 0, 1); return 1 - Math.pow(1 - t, 3); }
+  function D(x, z){
+    var L = LV[lvl], g0 = L.g[0], d = Math.sqrt((x-g0[0])*(x-g0[0]) + (z-g0[1])*(z-g0[1]));
+    return H(L, x, z, time) * ease(grow) + (rip > 0 ? rip * .45 * Math.sin(d * 1.3 - rt * 9) * Math.exp(-d * .22) : 0);
+  }
+  function shape(){
+    var L = LV[lvl], n = N + 1, i, j, k = 0, x, z, h, d2, d, w, c, g0 = L.g[0], e = ease(grow);
+    for (j = 0; j < n; j++) { z = -S + 2 * S * j / N;
+      for (i = 0; i < n; i++, k += 3) { x = -S + 2 * S * i / N; h = H(L, x, z, time);
+        d2 = (x-g0[0])*(x-g0[0]) + (z-g0[1])*(z-g0[1]); d = Math.sqrt(d2);
+        c = clamp((h - hmin) / (3 - hmin), 0, 1); w = Math.exp(-d2 / 5) * .9;
+        col[k] = lerp(lerp(1, .42, c), 1, w); col[k+1] = lerp(lerp(1, .58, c), .82, w); col[k+2] = lerp(lerp(1, .95, c), .25, w);
+        pos[k+1] = h * e + (rip > 0 ? rip * .45 * Math.sin(d * 1.3 - rt * 9) * Math.exp(-d * .22) : 0);
+      } }
+    pAttr.needsUpdate = true; cAttr.needsUpdate = true;
+  }
+  function init(){
+    if (R || failed) return;
+    try {
+      R = new THREE.WebGLRenderer({ canvas: cv, antialias: true }); R.setClearColor(0x123A8C, 1);
+      scene = new THREE.Scene(); scene.fog = new THREE.Fog(0x123A8C, 20, 50);
+      cam = new THREE.PerspectiveCamera(38, 1, .1, 300);
+      grp = new THREE.Group(); scene.add(grp);
+      var n = N + 1, i, j, k = 0, tri = [], li = [], a;
+      pos = new Float32Array(n * n * 3); col = new Float32Array(n * n * 3);
+      for (j = 0; j < n; j++) for (i = 0; i < n; i++, k += 3) { pos[k] = -S + 2 * S * i / N; pos[k+2] = -S + 2 * S * j / N; }
+      for (j = 0; j < n; j++) for (i = 0; i < n; i++) { a = j * n + i;
+        if (i < N) li.push(a, a + 1); if (j < N) li.push(a, a + n);
+        if (i < N && j < N) tri.push(a, a + n, a + 1, a + 1, a + n, a + n + 1); }
+      pAttr = new THREE.BufferAttribute(pos, 3); cAttr = new THREE.BufferAttribute(col, 3);
+      var mg = new THREE.BufferGeometry(); mg.setAttribute('position', pAttr); mg.setIndex(tri);
+      var mesh = new THREE.Mesh(mg, new THREE.MeshBasicMaterial({ color: 0x0F3380, side: THREE.DoubleSide, polygonOffset: true, polygonOffsetFactor: 1, polygonOffsetUnits: 1 }));
+      var lg = new THREE.BufferGeometry(); lg.setAttribute('position', pAttr); lg.setAttribute('color', cAttr); lg.setIndex(li);
+      var lines = new THREE.LineSegments(lg, new THREE.LineBasicMaterial({ vertexColors: true }));
+      mesh.frustumCulled = false; lines.frustumCulled = false; grp.add(mesh); grp.add(lines);
+      ball = new THREE.Mesh(new THREE.SphereGeometry(BR, 24, 16), new THREE.MeshBasicMaterial({ color: 0xFFD23F })); grp.add(ball);
+      halo = new THREE.Mesh(new THREE.SphereGeometry(BR * 1.9, 20, 12), new THREE.MeshBasicMaterial({ color: 0xFFD23F, transparent: true, opacity: .22, depthWrite: false })); grp.add(halo);
+      tpos = new Float32Array(TRAIL * 3); var tg = new THREE.BufferGeometry(); tg.setAttribute('position', new THREE.BufferAttribute(tpos, 3));
+      trail = new THREE.Line(tg, new THREE.LineBasicMaterial({ color: 0xFFD23F })); trail.frustumCulled = false; grp.add(trail);
+      ring = new THREE.Mesh(new THREE.RingGeometry(.86, 1, 48), new THREE.MeshBasicMaterial({ color: 0xFFD23F, side: THREE.DoubleSide, transparent: true, opacity: .9, depthWrite: false, depthTest: false })); ring.renderOrder = 5; ring.rotation.x = -Math.PI / 2; grp.add(ring);
+      bpos = new Float32Array(6); var bg = new THREE.BufferGeometry(); bg.setAttribute('position', new THREE.BufferAttribute(bpos, 3));
+      beam = new THREE.Line(bg, new THREE.LineBasicMaterial({ color: 0xFFD23F, transparent: true, opacity: .7 })); beam.frustumCulled = false; grp.add(beam);
+    } catch (err) { failed = true; R = null; }
+  }
+  function size(){
+    if (!R) return;
+    var w = el.clientWidth, h = el.clientHeight; R.setPixelRatio(Math.min(W.devicePixelRatio || 1, 2)); R.setSize(w, h, false);
+    cam.aspect = w / h; cam.updateProjectionMatrix(); camK = Math.max(1, 1.3 / cam.aspect);
+    scene.fog.near = 20 * camK; scene.fog.far = 50 * camK;
+  }
+  function setLevel(){
+    var L = LV[lvl], g0 = L.g[0], i, k;
+    hmin = H({ g: L.g, wave: 0 }, g0[0], g0[1], 0); bx = L.start[0]; bz = L.start[1]; vx = vz = 0;
+    hstart = H({ g: L.g, wave: 0 }, bx, bz, 0); loss = 1; grow = 0; rip = 0; hold = 0; elapsed = 0; tiltX = tiltZ = tgX = tgZ = 0;
+    for (i = 0, k = 0; i < TRAIL; i++, k += 3) { tpos[k] = bx; tpos[k+1] = BR; tpos[k+2] = bz; }
+    dname.textContent = 'Landscape 0' + (lvl + 1) + ' of 04 · ' + L.name;
+  }
+  function btn(act, label, solid){ return '<button class="btn' + (solid ? ' solid' : '') + '" type="button" data-act="' + act + '">' + label + '</button>'; }
+  function show(kind){
+    var L = LV[lvl], h;
+    state = 'card';
+    if (kind === 'nogl') h = '<div class="eyebrow">Gradient Descent</div><h3>3D is not available.</h3><p>This game needs WebGL, and this browser has it turned off. Packet Run works without it.</p><div class="cta">' + btn('exit', 'Back to the site', 1) + '</div>';
+    else if (kind === 'start') h = '<div class="eyebrow">Gradient Descent</div><h3>Find the lowest point.</h3><p>A model learns by moving downhill on its own error. Tilt the landscape to roll the ball into the deepest valley, marked in yellow. Move the mouse, drag a finger, or use the arrow keys. Hold the ball there until the loss reaches zero.</p><div class="cta">' + btn('go', 'Start landscape 01', 1) + btn('exit', 'Back to the site') + '</div>';
+    else if (kind === 'clear') h = '<div class="eyebrow">Minimum found in ' + elapsed.toFixed(1) + ' s · what I built</div><h3>' + L.title + '</h3><p>' + L.text + '</p><div class="tagline">' + L.tags + '</div><p class="note">' + L.note + '</p><div class="cta">' + (lvl < LV.length - 1 ? btn('next', 'Next: ' + LV[lvl + 1].name, 1) : btn('finish', 'Finish training', 1)) + btn('read', 'Read the Models layer') + '</div>';
+    else h = '<div class="eyebrow">Converged · 4 of 4 landscapes</div><h3>Model trained.</h3><p>Total time ' + total.toFixed(1) + ' s. Every model I build learns this way: one step at a time, downhill, past the traps.</p><div class="cta">' + btn('contact', 'Contact me', 1) + btn('again', 'Play again') + '</div>';
+    card.innerHTML = h; card.hidden = false; card.scrollTop = 0;
+    var b = card.querySelector('button'); if (b) b.focus();
+  }
+  function start(){ setLevel(); card.hidden = true; state = 'play'; last = performance.now(); }
+  function physics(dt){
+    var L = LV[lvl], e = .05, gx, gz, lim = S - BR, damp, g0 = L.g[0], d;
+    gx = (H(L, bx + e, bz, time) - H(L, bx - e, bz, time)) / (2 * e); gz = (H(L, bx, bz + e, time) - H(L, bx, bz - e, time)) / (2 * e);
+    vx += (-G * gx + T * tiltX) * dt; vz += (-G * gz + T * tiltZ) * dt;
+    damp = Math.exp(-1.1 * dt); vx *= damp; vz *= damp; bx += vx * dt; bz += vz * dt;
+    if (bx > lim) { bx = lim; vx = -vx * .4; } else if (bx < -lim) { bx = -lim; vx = -vx * .4; }
+    if (bz > lim) { bz = lim; vz = -vz * .4; } else if (bz < -lim) { bz = -lim; vz = -vz * .4; }
+    loss = clamp((H({ g: L.g, wave: 0 }, bx, bz, 0) - hmin) / (hstart - hmin), 0, 1.5);
+    d = Math.sqrt((bx-g0[0])*(bx-g0[0]) + (bz-g0[1])*(bz-g0[1]));
+    hold = (d < 1 && loss < .05) ? hold + dt : 0;
+    if (hold > .5) { state = 'won'; wonT = 0; rip = 1; rt = 0; loss = 0; total += elapsed; }
+  }
+  function frame(now){
+    var dt = Math.min(.05, (now - last) / 1000), L = LV[lvl], g0 = L.g[0], i, y, kx = kR - kL, kz = kD - kU;
+    last = now; time += dt; raf = requestAnimationFrame(frame);
+    if (!R) return;
+    if (kx || kz) { tgX = kx; tgZ = kz; }
+    if (state !== 'play') { tgX = 0; tgZ = 0; }
+    tiltX += (tgX - tiltX) * Math.min(1, dt * 8); tiltZ += (tgZ - tiltZ) * Math.min(1, dt * 8);
+    if (state === 'play') { grow = Math.min(1, grow + dt / .9); if (grow >= 1) { elapsed += dt; physics(dt / 2); if (state === 'play') physics(dt / 2); } }
+    else if (state === 'won') { wonT += dt; rt += dt; rip = Math.max(0, 1 - wonT / 1.3); vx *= .9; vz *= .9; bx += (g0[0] - bx) * dt * 4; bz += (g0[1] - bz) * dt * 4; if (wonT > 1.1) show('clear'); }
+    shape();
+    y = D(bx, bz) + BR; ball.position.set(bx, y, bz); halo.position.copy(ball.position); halo.scale.setScalar(1 + Math.sin(time * 5) * .12);
+    if (grow < 1) { for (i = 0; i < TRAIL * 3; i += 3) { tpos[i] = bx; tpos[i+1] = y - BR * .6; tpos[i+2] = bz; } }
+    else for (i = TRAIL * 3 - 1; i >= 3; i--) tpos[i] = tpos[i - 3];
+    tpos[0] = bx; tpos[1] = y - BR * .6; tpos[2] = bz; trail.geometry.attributes.position.needsUpdate = true;
+    y = D(g0[0], g0[1]); ring.position.set(g0[0], y + .1, g0[1]); ring.scale.setScalar(1 + Math.sin(time * 3) * .12);
+    bpos[0] = g0[0]; bpos[1] = y; bpos[2] = g0[1]; bpos[3] = g0[0]; bpos[4] = y + 7; bpos[5] = g0[1]; beam.geometry.attributes.position.needsUpdate = true;
+    grp.rotation.x = tiltZ * TILT; grp.rotation.z = -tiltX * TILT;
+    cam.position.set(bx * .1, 15.5 * camK, 17.5 * camK + bz * .1); cam.lookAt(bx * .14, -1.2, bz * .14);
+    dloss.textContent = 'Loss ' + Math.min(loss, 1.5).toFixed(3); dprog.style.transform = 'scaleX(' + clamp(1 - loss, 0, 1).toFixed(3) + ')';
+    R.render(scene, cam);
+  }
+  function onKey(e){
+    var d = e.type === 'keydown' ? 1 : 0, k = e.key, hit = true;
+    if (k === 'Escape' && d) { close(); return; }
+    if (k === 'ArrowLeft' || k === 'a' || k === 'A') kL = d; else if (k === 'ArrowRight' || k === 'd' || k === 'D') kR = d;
+    else if (k === 'ArrowUp' || k === 'w' || k === 'W') kU = d; else if (k === 'ArrowDown' || k === 's' || k === 'S') kD = d; else hit = false;
+    if (hit && !d && !(kL || kR || kU || kD)) { tgX = 0; tgZ = 0; }
+    if (hit && state === 'play') e.preventDefault();
+  }
+  function onMove(e){
+    if (e.pointerType === 'mouse') { var r = cv.getBoundingClientRect(); tgX = clamp(((e.clientX - r.left) / r.width * 2 - 1) * 1.7, -1, 1); tgZ = clamp(((e.clientY - r.top) / r.height * 2 - 1) * 1.7, -1, 1); }
+    else if (drag) { tgX = clamp((e.clientX - drag.x) / 80, -1, 1); tgZ = clamp((e.clientY - drag.y) / 80, -1, 1); }
+  }
+  function onDown(e){ if (e.pointerType !== 'mouse') { drag = { x: e.clientX, y: e.clientY }; try { cv.setPointerCapture(e.pointerId); } catch (err) {} } }
+  function onUp(e){ if (e.pointerType !== 'mouse') { drag = null; tgX = 0; tgZ = 0; } }
+  function open(e){
+    if (e && e.preventDefault) e.preventDefault();
+    opener = doc.activeElement; el.hidden = false; W.__play = true; root.style.overflow = 'hidden';
+    if (W.THREE) init(); else failed = true;
+    kL = kR = kU = kD = 0; lvl = 0; total = 0;
+    W.addEventListener('keydown', onKey); W.addEventListener('keyup', onKey); W.addEventListener('resize', size);
+    if (!R) { show('nogl'); return; }
+    size(); setLevel(); grow = 1; show('start'); last = performance.now(); raf = requestAnimationFrame(frame);
+  }
+  function close(){
+    cancelAnimationFrame(raf); state = 'card'; el.hidden = true; W.__play = false; root.style.overflow = '';
+    W.removeEventListener('keydown', onKey); W.removeEventListener('keyup', onKey); W.removeEventListener('resize', size);
+    if (opener && opener.focus) opener.focus();
+  }
+  function goTo(id){ close(); var t = doc.getElementById(id); if (t) t.scrollIntoView(); }
+  cv.addEventListener('pointermove', onMove); cv.addEventListener('pointerdown', onDown);
+  cv.addEventListener('pointerup', onUp); cv.addEventListener('pointercancel', onUp);
+  doc.getElementById('dexit').addEventListener('click', close);
+  card.addEventListener('click', function(e){
+    var b = e.target.closest && e.target.closest('[data-act]'); if (!b) return;
+    var act = b.getAttribute('data-act');
+    if (act === 'go') start();
+    else if (act === 'next') { lvl++; start(); }
+    else if (act === 'again') { lvl = 0; total = 0; start(); }
+    else if (act === 'finish') show('done');
+    else if (act === 'read') goTo('models');
+    else if (act === 'contact') goTo('contact');
+    else close();
+  });
+  W.__gdT = function(){ return { x: bx, z: bz, vx: vx, vz: vz, state: state, gx: LV[lvl].g[0][0], gz: LV[lvl].g[0][1], loss: loss }; };
+  (W.__games = W.__games || {}).descent = open;
 })();
 </script>
 
